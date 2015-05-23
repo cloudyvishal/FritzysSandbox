@@ -1,0 +1,11 @@
+G:\Projects_Under_Company\FritzysPetCareProsSandbox\MobileWeb\bin\MobileWeb.dll.config
+G:\Projects_Under_Company\FritzysPetCareProsSandbox\MobileWeb\bin\MobileWeb.dll
+G:\Projects_Under_Company\FritzysPetCareProsSandbox\MobileWeb\bin\MobileWeb.pdb
+G:\Projects_Under_Company\FritzysPetCareProsSandbox\MobileWeb\obj\Debug\MobileWeb.csprojResolveAssemblyReference.cache
+G:\Projects_Under_Company\FritzysPetCareProsSandbox\MobileWeb\obj\Debug\MobileWeb.dll
+G:\Projects_Under_Company\FritzysPetCareProsSandbox\MobileWeb\obj\Debug\MobileWeb.pdb
+G:\Projects_Under_Company\FritzysPetCareProsSandbox\MobileWeb\bin\BusinessLogicHandler.dll
+G:\Projects_Under_Company\FritzysPetCareProsSandbox\MobileWeb\bin\DataBaseHandler35.dll
+G:\Projects_Under_Company\FritzysPetCareProsSandbox\MobileWeb\bin\Interop.SQLDMO.dll
+G:\Projects_Under_Company\FritzysPetCareProsSandbox\MobileWeb\bin\BusinessLogicHandler.pdb
+G:\Projects_Under_Company\FritzysPetCareProsSandbox\MobileWeb\bin\DataBaseHandler35.pdb

@@ -1,0 +1,1730 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AE9088C6-8099-4704-9877-0BBC990B738A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MobileWeb</RootNamespace>
+    <AssemblyName>MobileWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="banners_Cat1.xml" />
+    <Content Include="Cat_Anal_Gland_Expression.aspx" />
+    <Content Include="Cat_Blueberry_Facial.aspx" />
+    <Content Include="Cat_BrushOut.aspx" />
+    <Content Include="Cat_Cuts_and_Trims.aspx" />
+    <Content Include="Cat_De_Shedding.aspx" />
+    <Content Include="Cat_Flea_and_Tick.aspx" />
+    <Content Include="Cat_FritzyFreshSpa.aspx" />
+    <Content Include="Cat_Holidays.aspx" />
+    <Content Include="Cat_Medicated_Bath.aspx" />
+    <Content Include="Cat_Pad_Treatment.aspx" />
+    <Content Include="Cat_Remoisturizing.aspx" />
+    <Content Include="Cat_Service_1.aspx" />
+    <Content Include="Cat_Service_2.aspx" />
+    <Content Include="Cat_SuperBowl.aspx" />
+    <Content Include="Cat_Teeth_Brushing.aspx" />
+    <Content Include="Cat_ValentinesDay.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Dog_and_Pet_Anal_Gland_Expression.aspx" />
+    <Content Include="Dog_and_Pet_Blueberry_Facial.aspx" />
+    <Content Include="Dog_and_Pet_BrushOut.aspx" />
+    <Content Include="Dog_and_Pet_Cuts_and_Trims.aspx" />
+    <Content Include="Dog_and_Pet_De_Shedding.aspx" />
+    <Content Include="Dog_and_Pet_Flea_and_Tick.aspx" />
+    <Content Include="Dog_and_Pet_FritzyFreshSpa.aspx" />
+    <Content Include="Dog_and_Pet_Holidays.aspx" />
+    <Content Include="Dog_and_Pet_Medicated_Bath.aspx" />
+    <Content Include="Dog_and_Pet_MothersDay.aspx" />
+    <Content Include="Dog_and_Pet_Pad_Treatment.aspx" />
+    <Content Include="Dog_and_Pet_Remoisturizing.aspx" />
+    <Content Include="Dog_and_Pet_Service_1.aspx" />
+    <Content Include="Dog_and_Pet_Service_2.aspx" />
+    <Content Include="Dog_and_Pet_SuperBowl.aspx" />
+    <Content Include="Dog_and_Pet_Teeth_Brushing.aspx" />
+    <Content Include="Dog_and_Pet_ValentinesDay.aspx" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\1.png" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\2.png" />
+    <Content Include="Images\3.jpg" />
+    <Content Include="Images\3.png" />
+    <Content Include="Images\4.jpg" />
+    <Content Include="Images\4.png" />
+    <Content Include="Images\about_us_image.jpg" />
+    <Content Include="Images\about_us_title.jpg" />
+    <Content Include="Images\back_button.jpg" />
+    <Content Include="Images\button-bg.jpg" />
+    <Content Include="Images\buy_button.jpg" />
+    <Content Include="Images\catPaw.jpg" />
+    <Content Include="Images\click_for_cupon.png" />
+    <Content Include="Images\contact_us_title.jpg" />
+    <Content Include="Images\delete.png" />
+    <Content Include="Images\dogPaw.jpg" />
+    <Content Include="Images\dog_cat_title.jpg" />
+    <Content Include="Images\flea_tick_title.jpg" />
+    <Content Include="Images\for_cat.jpg" />
+    <Content Include="Images\for_dog.jpg" />
+    <Content Include="Images\for_your_cats.jpg" />
+    <Content Include="Images\for_your_dog.jpg" />
+    <Content Include="Images\home_banner.jpg" />
+    <Content Include="Images\home_bottom.jpg" />
+    <Content Include="Images\home_menu_title.jpg" />
+    <Content Include="Images\home_title.jpg" />
+    <Content Include="Images\hover-list-style.png" />
+    <Content Include="Images\inner-page-footer.jpg" />
+    <Content Include="Images\join_fritzy_club_title.jpg" />
+    <Content Include="Images\mobile_grooming_services_title.jpg" />
+    <Content Include="Images\normal-list-style.png" />
+    <Content Include="Images\normal_menu.png" />
+    <Content Include="Images\open-menu.png" />
+    <Content Include="Images\pet_product_and-_supplies_title.jpg" />
+    <Content Include="Images\product-img.jpg" />
+    <Content Include="Images\regis_divider.jpg" />
+    <Content Include="Images\service-list-bg.jpg" />
+    <Content Include="Images\tab_b.png" />
+    <Content Include="Images\top-banner.jpg" />
+    <Content Include="Images\visit-van.jpg" />
+    <Content Include="Images\visit_our_van_title.jpg" />
+    <Content Include="MB_AboutUs.aspx" />
+    <Content Include="MB_Appointment_Registration.aspx" />
+    <Content Include="MB_Common_Services.aspx" />
+    <Content Include="MB_ContactUs.aspx" />
+    <Content Include="MB_Controls\Product_Flea.ascx" />
+    <Content Include="MB_Controls\Services_Cat.ascx" />
+    <Content Include="MB_Controls\Services_Common.ascx" />
+    <Content Include="MB_Controls\Services_Dog.ascx" />
+    <Content Include="MB_Flea_Tick.aspx" />
+    <Content Include="MB_Index.aspx" />
+    <Content Include="MB_Login.aspx" />
+    <Content Include="MB_Logout.aspx" />
+    <Content Include="MB_Menu.aspx" />
+    <Content Include="MB_NewsDetails.aspx" />
+    <Content Include="MB_Pet_Product_Supplies.aspx" />
+    <Content Include="MB_PrintCoupon.aspx" />
+    <Content Include="MB_PrintFinalCoupon.aspx" />
+    <Content Include="MB_Registration.aspx" />
+    <Content Include="MB_Schedule_Appointment.aspx" />
+    <Content Include="MB_ServiceDetails.aspx" />
+    <Content Include="MB_Services.aspx" />
+    <Content Include="MB_Visit_Our_Van.aspx" />
+    <Content Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="StoreData\1232432423424243.htm" />
+    <Content Include="StoreData\633753676999908686.txt" />
+    <Content Include="StoreData\633753677851013330.txt" />
+    <Content Include="StoreData\633753682552636010.txt" />
+    <Content Include="StoreData\633753683026079570.txt" />
+    <Content Include="StoreData\633753684686413322.txt" />
+    <Content Include="StoreData\633753685177513358.txt" />
+    <Content Include="StoreData\633753686240183210.txt" />
+    <Content Include="StoreData\633753687125975798.txt" />
+    <Content Include="StoreData\633753687695826842.txt" />
+    <Content Include="StoreData\633754377405805838.txt" />
+    <Content Include="StoreData\633754381196166854.txt" />
+    <Content Include="StoreData\633754383636823094.txt" />
+    <Content Include="StoreData\633754385175749042.txt" />
+    <Content Include="StoreData\633754509547934270.txt" />
+    <Content Include="StoreData\633755227483005746.txt" />
+    <Content Include="StoreData\633755239778163122.txt" />
+    <Content Include="StoreData\633755246275746290.txt" />
+    <Content Include="StoreData\633755249549850698.txt" />
+    <Content Include="StoreData\633755250177671234.txt" />
+    <Content Include="StoreData\633755274914394110.txt" />
+    <Content Include="StoreData\633755288499724250.txt" />
+    <Content Include="StoreData\633755300458002314.txt" />
+    <Content Include="StoreData\633755300717693138.txt" />
+    <Content Include="StoreData\633755301220668326.txt" />
+    <Content Include="StoreData\633755312439874430.txt" />
+    <Content Include="StoreData\633755313373636382.txt" />
+    <Content Include="StoreData\633755318642453822.txt" />
+    <Content Include="StoreData\633755319873407078.txt" />
+    <Content Include="StoreData\633755321011546646.txt" />
+    <Content Include="StoreData\633755321792181638.txt" />
+    <Content Include="StoreData\633755322637192454.txt" />
+    <Content Include="StoreData\633755323508766110.txt" />
+    <Content Include="StoreData\633755323846582934.txt" />
+    <Content Include="StoreData\633755324061741938.txt" />
+    <Content Include="StoreData\633759762960583382.txt" />
+    <Content Include="StoreData\633759764134660910.txt" />
+    <Content Include="StoreData\633760303266220142.txt" />
+    <Content Include="StoreData\633760303987635626.txt" />
+    <Content Include="StoreData\633760304571837581.txt" />
+    <Content Include="StoreData\633760305172425095.txt" />
+    <Content Include="StoreData\633760307819898362.txt" />
+    <Content Include="StoreData\633760309421913952.txt" />
+    <Content Include="StoreData\633760321187248698.txt" />
+    <Content Include="StoreData\633760321639439092.txt" />
+    <Content Include="StoreData\633760387346368190.txt" />
+    <Content Include="StoreData\633760387690122590.txt" />
+    <Content Include="StoreData\633760391599703882.txt" />
+    <Content Include="StoreData\633760589779740554.txt" />
+    <Content Include="StoreData\633783918434995852.txt" />
+    <Content Include="StoreData\633785623529763325.txt" />
+    <Content Include="StoreData\633785625854964218.txt" />
+    <Content Include="StoreData\633786412376202865.txt" />
+    <Content Include="StoreData\633786413394816172.txt" />
+    <Content Include="StoreData\633786415169381493.txt" />
+    <Content Include="StoreData\633786416693004496.txt" />
+    <Content Include="StoreData\633786417703336394.txt" />
+    <Content Include="StoreData\633786419020080425.txt" />
+    <Content Include="StoreData\633786419990880314.txt" />
+    <Content Include="StoreData\633786420366825032.txt" />
+    <Content Include="StoreData\633786423202816982.txt" />
+    <Content Include="StoreData\633786499557035651.txt" />
+    <Content Include="StoreData\633786502147637662.txt" />
+    <Content Include="StoreData\633786503169784286.txt" />
+    <Content Include="StoreData\633786504660650593.txt" />
+    <Content Include="StoreData\633786505032485133.txt" />
+    <Content Include="StoreData\633786506991022021.txt" />
+    <Content Include="StoreData\633786508739874074.txt" />
+    <Content Include="StoreData\633786535871350817.txt" />
+    <Content Include="StoreData\633791475010971473.txt" />
+    <Content Include="StoreData\633818988859582100.txt" />
+    <Content Include="StoreData\633819023185553646.txt" />
+    <Content Include="StoreData\633819024675582254.txt" />
+    <Content Include="StoreData\633819097676515095.txt" />
+    <Content Include="StoreData\633820038418069214.txt" />
+    <Content Include="StoreData\633820038912922465.txt" />
+    <Content Include="StoreData\633838573086661384.txt" />
+    <Content Include="StoreData\633892435565326492.txt" />
+    <Content Include="StoreData\633925861574588603.txt" />
+    <Content Include="StoreData\634871217873703175.txt" />
+    <Content Include="StoreData\634871219340787385.txt" />
+    <Content Include="StoreData\635193223445776250.txt" />
+    <Content Include="StoreData\635208127805697500.txt" />
+    <Content Include="StoreData\AboutUs.htm" />
+    <Content Include="StoreData\aloecat.htm" />
+    <Content Include="StoreData\Appointment.htm" />
+    <Content Include="StoreData\Baner\About Us\54N7Vf3Ma4nO2fL.jpeg" />
+    <Content Include="StoreData\Baner\About Us\a9kQKQTB4tO78ki.jpeg" />
+    <Content Include="StoreData\Baner\About Us\banner01[1].jpg" />
+    <Content Include="StoreData\Baner\About Us\banner03[1].jpg" />
+    <Content Include="StoreData\Baner\About Us\lPL7jzJVujwmAGS.jpeg" />
+    <Content Include="StoreData\Baner\About Us\nqt9QLqo7VSXpj9.jpeg" />
+    <Content Include="StoreData\Baner\About Us\OsaCVeZxgzbr6GL.jpg" />
+    <Content Include="StoreData\Baner\About Us\P04o3GrlHMdA3Xg.jpeg" />
+    <Content Include="StoreData\Baner\About Us\Tmx6EYr7QZEfWDI.jpeg" />
+    <Content Include="StoreData\Baner\About Us\uJd8TNP0raCnUMC.jpeg" />
+    <Content Include="StoreData\Baner\About Us\WhSo3UTU6LqmFEK.jpg" />
+    <Content Include="StoreData\Baner\Contact Us\banner01.jpg" />
+    <Content Include="StoreData\Baner\Contact Us\banner03.jpg" />
+    <Content Include="StoreData\Baner\Contact Us\banner05.jpg" />
+    <Content Include="StoreData\Baner\Contact Us\banner07.jpg" />
+    <Content Include="StoreData\Baner\Contact Us\banner08.jpg" />
+    <Content Include="StoreData\Baner\Contact Us\FEvBPHsprWPvh3R.jpeg" />
+    <Content Include="StoreData\Baner\flash_banner.jpg" />
+    <Content Include="StoreData\Baner\Flea\4.jpg" />
+    <Content Include="StoreData\Baner\Flea\8.jpg" />
+    <Content Include="StoreData\Baner\Flea\banner03.jpg" />
+    <Content Include="StoreData\Baner\Flea\banner06.jpg" />
+    <Content Include="StoreData\Baner\Flea\banner09.jpg" />
+    <Content Include="StoreData\Baner\Flea\banner11.jpg" />
+    <Content Include="StoreData\Baner\Flea\image5.jpg" />
+    <Content Include="StoreData\Baner\Fritzy Friend\31.jpg" />
+    <Content Include="StoreData\Baner\Fritzy Friend\4.jpg" />
+    <Content Include="StoreData\Baner\Fritzy Friend\9%281%29.jpg" />
+    <Content Include="StoreData\Baner\Fritzy Friend\banner01.jpg" />
+    <Content Include="StoreData\Baner\Fritzy Friend\banner02.jpg" />
+    <Content Include="StoreData\Baner\Fritzy Friend\image5.jpg" />
+    <Content Include="StoreData\Baner\Home\1.jpg" />
+    <Content Include="StoreData\Baner\Home\2.jpg" />
+    <Content Include="StoreData\Baner\Home\2GSCnP4NLTdCOLT.jpeg" />
+    <Content Include="StoreData\Baner\Home\4.jpg" />
+    <Content Include="StoreData\Baner\Home\4BGtwMdA4viEe74.jpeg" />
+    <Content Include="StoreData\Baner\Home\4Jcf5N3zP7xEGFH.jpeg" />
+    <Content Include="StoreData\Baner\Home\5.jpg" />
+    <Content Include="StoreData\Baner\Home\7.jpg" />
+    <Content Include="StoreData\Baner\Home\7bOMlF7A8SGQHEn.jpeg" />
+    <Content Include="StoreData\Baner\Home\8.jpg" />
+    <Content Include="StoreData\Baner\Home\b8r74mTlcPJoYnX.jpeg" />
+    <Content Include="StoreData\Baner\Home\banner01.jpg" />
+    <Content Include="StoreData\Baner\Home\banner01[1].jpg" />
+    <Content Include="StoreData\Baner\Home\banner01[2].jpg" />
+    <Content Include="StoreData\Baner\Home\banner01[4].jpg" />
+    <Content Include="StoreData\Baner\Home\banner02.jpg" />
+    <Content Include="StoreData\Baner\Home\banner02[1].jpg" />
+    <Content Include="StoreData\Baner\Home\banner02[2].jpg" />
+    <Content Include="StoreData\Baner\Home\banner02[3].jpg" />
+    <Content Include="StoreData\Baner\Home\banner03.jpg" />
+    <Content Include="StoreData\Baner\Home\banner03[1].jpg" />
+    <Content Include="StoreData\Baner\Home\banner03[2].jpg" />
+    <Content Include="StoreData\Baner\Home\banner03[3].jpg" />
+    <Content Include="StoreData\Baner\Home\banner04.jpg" />
+    <Content Include="StoreData\Baner\Home\banner04[1].jpg" />
+    <Content Include="StoreData\Baner\Home\banner04[2].jpg" />
+    <Content Include="StoreData\Baner\Home\banner05.jpg" />
+    <Content Include="StoreData\Baner\Home\banner05[1].jpg" />
+    <Content Include="StoreData\Baner\Home\banner05[2].jpg" />
+    <Content Include="StoreData\Baner\Home\banner06.jpg" />
+    <Content Include="StoreData\Baner\Home\banner06[1].jpg" />
+    <Content Include="StoreData\Baner\Home\banner07.jpg" />
+    <Content Include="StoreData\Baner\Home\banner07[1].jpg" />
+    <Content Include="StoreData\Baner\Home\banner08.jpg" />
+    <Content Include="StoreData\Baner\Home\banner08[1].jpg" />
+    <Content Include="StoreData\Baner\Home\banner09.jpg" />
+    <Content Include="StoreData\Baner\Home\banner09[2].jpg" />
+    <Content Include="StoreData\Baner\Home\banner11.jpg" />
+    <Content Include="StoreData\Baner\Home\banner11[3].jpg" />
+    <Content Include="StoreData\Baner\Home\banner12.jpg" />
+    <Content Include="StoreData\Baner\Home\banner12[1].jpg" />
+    <Content Include="StoreData\Baner\Home\bGjJEdEHYYIOxwt.jpeg" />
+    <Content Include="StoreData\Baner\Home\CZECp6E4NE0vrpp.jpeg" />
+    <Content Include="StoreData\Baner\Home\ETt6VOv0qF3lZvG.jpeg" />
+    <Content Include="StoreData\Baner\Home\hQNkdHsrCe8s88P.jpeg" />
+    <Content Include="StoreData\Baner\Home\HYbiQbCGrkn8WjW.jpeg" />
+    <Content Include="StoreData\Baner\Home\I2e0uRa9F3RHIGA.jpeg" />
+    <Content Include="StoreData\Baner\Home\iJd7r2oFk2SN2qG.jpeg" />
+    <Content Include="StoreData\Baner\Home\IPpmWYWpw6aqiEu.jpeg" />
+    <Content Include="StoreData\Baner\Home\o1Bl2gOuxvDwDuo.jpeg" />
+    <Content Include="StoreData\Baner\Home\qGGHZBJ9tEBC2vO.jpeg" />
+    <Content Include="StoreData\Baner\Home\rsCVbiLXl8DuvY3.jpeg" />
+    <Content Include="StoreData\Baner\Home\sGQ5OVAzimfnS8A.jpeg" />
+    <Content Include="StoreData\Baner\Home\UrCsXHJwMIGKDCX.jpeg" />
+    <Content Include="StoreData\Baner\Home\UZeIvGyWFHWOxK0.jpeg" />
+    <Content Include="StoreData\Baner\Home\WCDRAioK3Jk3gxh.jpeg" />
+    <Content Include="StoreData\Baner\Home\WPuyxlQGh91QERk.jpeg" />
+    <Content Include="StoreData\Baner\Home\yP3Jt4sNEiUx7Q5.jpeg" />
+    <Content Include="StoreData\Baner\img3.jpg" />
+    <Content Include="StoreData\Baner\NewsDetail\4.jpg" />
+    <Content Include="StoreData\Baner\NewsDetail\banner01.jpg" />
+    <Content Include="StoreData\Baner\NewsDetail\banner02.jpg" />
+    <Content Include="StoreData\Baner\NewsDetail\banner05.jpg" />
+    <Content Include="StoreData\Baner\NewsDetail\banner09.jpg" />
+    <Content Include="StoreData\Baner\NewsDetail\banner11.jpg" />
+    <Content Include="StoreData\Baner\NewsDetail\image5.jpg" />
+    <Content Include="StoreData\Baner\Not.jpg" />
+    <Content Include="StoreData\Baner\Product\banner07.jpg" />
+    <Content Include="StoreData\Baner\Product\banner09.jpg" />
+    <Content Include="StoreData\Baner\Product\banner11.jpg" />
+    <Content Include="StoreData\Baner\Product\fresh1.jpg" />
+    <Content Include="StoreData\Baner\Product\image5.jpg" />
+    <Content Include="StoreData\Baner\Product\IsAPRljk0ZO4JfL.jpeg" />
+    <Content Include="StoreData\Baner\Product\Kb6cmNZApr0WpM6.jpeg" />
+    <Content Include="StoreData\Baner\Product\wZmuF8Vty8531YV.jpeg" />
+    <Content Include="StoreData\Baner\Product\xFGGgS6E8tepMGn.jpeg" />
+    <Content Include="StoreData\Baner\QCMN6444SCW.jpg" />
+    <Content Include="StoreData\Baner\Registration\4.jpg" />
+    <Content Include="StoreData\Baner\Registration\banner01.jpg" />
+    <Content Include="StoreData\Baner\Registration\banner03.jpg" />
+    <Content Include="StoreData\Baner\Registration\banner05.jpg" />
+    <Content Include="StoreData\Baner\Registration\banner08.jpg" />
+    <Content Include="StoreData\Baner\Registration\banner12.jpg" />
+    <Content Include="StoreData\Baner\Registration\image5.jpg" />
+    <Content Include="StoreData\Baner\ServiceDetail\banner01[1].jpg" />
+    <Content Include="StoreData\Baner\ServiceDetail\banner02[1].jpg" />
+    <Content Include="StoreData\Baner\ServiceDetail\banner03.jpg" />
+    <Content Include="StoreData\Baner\ServiceDetail\banner03[1].jpg" />
+    <Content Include="StoreData\Baner\ServiceDetail\banner04[1].jpg" />
+    <Content Include="StoreData\Baner\ServiceDetail\banner05[1].jpg" />
+    <Content Include="StoreData\Baner\ServiceDetail\banner06[2].jpg" />
+    <Content Include="StoreData\Baner\ServiceDetail\banner07[3].jpg" />
+    <Content Include="StoreData\Baner\ServiceDetail\banner08[1].jpg" />
+    <Content Include="StoreData\Baner\ServiceDetail\banner09.jpg" />
+    <Content Include="StoreData\Baner\ServiceDetail\banner09[1].jpg" />
+    <Content Include="StoreData\Baner\ServiceDetail\banner11[1].jpg" />
+    <Content Include="StoreData\Baner\ServiceDetail\banner12[1].jpg" />
+    <Content Include="StoreData\Baner\ServiceDetail\image5.jpg" />
+    <Content Include="StoreData\Baner\ServiceDetail\s12.jpg" />
+    <Content Include="StoreData\Baner\ServiceDetail\ser1.jpg" />
+    <Content Include="StoreData\Baner\Services\banner01.jpg" />
+    <Content Include="StoreData\Baner\Services\banner01[1].jpg" />
+    <Content Include="StoreData\Baner\Services\banner01[2].jpg" />
+    <Content Include="StoreData\Baner\Services\banner01[4].jpg" />
+    <Content Include="StoreData\Baner\Services\banner02.jpg" />
+    <Content Include="StoreData\Baner\Services\banner02[1].jpg" />
+    <Content Include="StoreData\Baner\Services\banner02[2].jpg" />
+    <Content Include="StoreData\Baner\Services\banner02[3].jpg" />
+    <Content Include="StoreData\Baner\Services\banner03.jpg" />
+    <Content Include="StoreData\Baner\Services\banner03[1].jpg" />
+    <Content Include="StoreData\Baner\Services\banner03[2].jpg" />
+    <Content Include="StoreData\Baner\Services\banner04.jpg" />
+    <Content Include="StoreData\Baner\Services\banner04[1].jpg" />
+    <Content Include="StoreData\Baner\Services\banner04[3].jpg" />
+    <Content Include="StoreData\Baner\Services\banner05.jpg" />
+    <Content Include="StoreData\Baner\Services\banner05[1].jpg" />
+    <Content Include="StoreData\Baner\Services\banner05[2].jpg" />
+    <Content Include="StoreData\Baner\Services\banner05[4].jpg" />
+    <Content Include="StoreData\Baner\Services\banner06[1].jpg" />
+    <Content Include="StoreData\Baner\Services\banner06[2].jpg" />
+    <Content Include="StoreData\Baner\Services\banner06[3].jpg" />
+    <Content Include="StoreData\Baner\Services\banner07[1].jpg" />
+    <Content Include="StoreData\Baner\Services\banner07[2].jpg" />
+    <Content Include="StoreData\Baner\Services\banner08[2].jpg" />
+    <Content Include="StoreData\Baner\Services\banner09.jpg" />
+    <Content Include="StoreData\Baner\Services\banner09[1].jpg" />
+    <Content Include="StoreData\Baner\Services\banner11.jpg" />
+    <Content Include="StoreData\Baner\Services\banner12.jpg" />
+    <Content Include="StoreData\Baner\Services\banner12[2].jpg" />
+    <Content Include="StoreData\Baner\Services\image5.jpg" />
+    <Content Include="StoreData\Baner\ZWXJ9690OFS.jpg" />
+    <Content Include="StoreData\BannerNew\0image4.jpg" />
+    <Content Include="StoreData\BannerNew\1022image2.jpg" />
+    <Content Include="StoreData\BannerNew\10banner09.jpg" />
+    <Content Include="StoreData\BannerNew\10banner11[3].jpg" />
+    <Content Include="StoreData\BannerNew\111.jpg" />
+    <Content Include="StoreData\BannerNew\112.jpg" />
+    <Content Include="StoreData\BannerNew\1136banner05.jpg" />
+    <Content Include="StoreData\BannerNew\11banner10.jpg" />
+    <Content Include="StoreData\BannerNew\11banner12[1].jpg" />
+    <Content Include="StoreData\BannerNew\122GSCnP4NLTdCOLT.jpeg" />
+    <Content Include="StoreData\BannerNew\1237banner06.jpg" />
+    <Content Include="StoreData\BannerNew\12banner11.jpg" />
+    <Content Include="StoreData\BannerNew\131.jpg" />
+    <Content Include="StoreData\BannerNew\1340banner09.jpg" />
+    <Content Include="StoreData\BannerNew\13banner04.jpg" />
+    <Content Include="StoreData\BannerNew\13banner12.jpg" />
+    <Content Include="StoreData\BannerNew\1416fXA9quz2oCLIpbB.jpeg" />
+    <Content Include="StoreData\BannerNew\144.jpg" />
+    <Content Include="StoreData\BannerNew\14banner02[2].jpg" />
+    <Content Include="StoreData\BannerNew\14banner13.jpg" />
+    <Content Include="StoreData\BannerNew\1521image1.jpg" />
+    <Content Include="StoreData\BannerNew\15banner14.jpg" />
+    <Content Include="StoreData\BannerNew\163banner04.jpg" />
+    <Content Include="StoreData\BannerNew\168eAHZYGDqv0NJEin.jpeg" />
+    <Content Include="StoreData\BannerNew\169B09vfvaVlQMW6OG.jpeg" />
+    <Content Include="StoreData\BannerNew\17.jpg" />
+    <Content Include="StoreData\BannerNew\1714eAHZYGDqv0NJEin.jpeg" />
+    <Content Include="StoreData\BannerNew\1817Gap751ZBRd3bZxP.jpeg" />
+    <Content Include="StoreData\BannerNew\1923banner04.jpg" />
+    <Content Include="StoreData\BannerNew\1banner01.jpg" />
+    <Content Include="StoreData\BannerNew\1banner03[1].jpg" />
+    <Content Include="StoreData\BannerNew\2024image4.jpg" />
+    <Content Include="StoreData\BannerNew\204banner02[2].jpg" />
+    <Content Include="StoreData\BannerNew\206banner12.jpg" />
+    <Content Include="StoreData\BannerNew\212.jpg" />
+    <Content Include="StoreData\BannerNew\2125image5.jpg" />
+    <Content Include="StoreData\BannerNew\216banner12.jpg" />
+    <Content Include="StoreData\BannerNew\2236banner05.jpg" />
+    <Content Include="StoreData\BannerNew\2337banner06.jpg" />
+    <Content Include="StoreData\BannerNew\234banner02[2].jpg" />
+    <Content Include="StoreData\BannerNew\2440banner09.jpg" />
+    <Content Include="StoreData\BannerNew\2513B09vfvaVlQMW6OG.jpeg" />
+    <Content Include="StoreData\BannerNew\2639banner08.jpg" />
+    <Content Include="StoreData\BannerNew\2715EZQ3v5KUy9BjSwd.jpeg" />
+    <Content Include="StoreData\BannerNew\2815EZQ3v5KUy9BjSwd.jpeg" />
+    <Content Include="StoreData\BannerNew\289image3.jpg" />
+    <Content Include="StoreData\BannerNew\29122GSCnP4NLTdCOLT.jpeg" />
+    <Content Include="StoreData\BannerNew\2916fXA9quz2oCLIpbB.jpeg" />
+    <Content Include="StoreData\BannerNew\295banner05[2].jpg" />
+    <Content Include="StoreData\BannerNew\2banner01[1].jpg" />
+    <Content Include="StoreData\BannerNew\3015EZQ3v5KUy9BjSwd.jpeg" />
+    <Content Include="StoreData\BannerNew\3115EZQ3v5KUy9BjSwd.jpeg" />
+    <Content Include="StoreData\BannerNew\324image4.jpg" />
+    <Content Include="StoreData\BannerNew\32banner01.jpg" />
+    <Content Include="StoreData\BannerNew\33banner02.jpg" />
+    <Content Include="StoreData\BannerNew\34banner03.jpg" />
+    <Content Include="StoreData\BannerNew\35banner04.jpg" />
+    <Content Include="StoreData\BannerNew\36banner05.jpg" />
+    <Content Include="StoreData\BannerNew\37banner06.jpg" />
+    <Content Include="StoreData\BannerNew\38banner07.jpg" />
+    <Content Include="StoreData\BannerNew\39banner08.jpg" />
+    <Content Include="StoreData\BannerNew\3banner02.jpg" />
+    <Content Include="StoreData\BannerNew\3banner02[3].jpg" />
+    <Content Include="StoreData\BannerNew\40banner09.jpg" />
+    <Content Include="StoreData\BannerNew\41banner10.jpg" />
+    <Content Include="StoreData\BannerNew\42banner11 - New Customer Coupon.jpg" />
+    <Content Include="StoreData\BannerNew\434banner03.jpg" />
+    <Content Include="StoreData\BannerNew\43banner12.jpg" />
+    <Content Include="StoreData\BannerNew\44Book On-Line %245 Off 090725.jpg" />
+    <Content Include="StoreData\BannerNew\45Book On-Line Free TB 090730.jpg" />
+    <Content Include="StoreData\BannerNew\4banner03.jpg" />
+    <Content Include="StoreData\BannerNew\4banner04[1].jpg" />
+    <Content Include="StoreData\BannerNew\540banner09.jpg" />
+    <Content Include="StoreData\BannerNew\5banner04.jpg" />
+    <Content Include="StoreData\BannerNew\5banner05[2].jpg" />
+    <Content Include="StoreData\BannerNew\639banner08.jpg" />
+    <Content Include="StoreData\BannerNew\6banner05.jpg" />
+    <Content Include="StoreData\BannerNew\6banner06[1].jpg" />
+    <Content Include="StoreData\BannerNew\722image2.jpg" />
+    <Content Include="StoreData\BannerNew\79B09vfvaVlQMW6OG.jpeg" />
+    <Content Include="StoreData\BannerNew\7banner06.jpg" />
+    <Content Include="StoreData\BannerNew\7banner07[1].jpg" />
+    <Content Include="StoreData\BannerNew\8banner07.jpg" />
+    <Content Include="StoreData\BannerNew\8banner08[1].jpg" />
+    <Content Include="StoreData\BannerNew\924image4.jpg" />
+    <Content Include="StoreData\BannerNew\9banner08.jpg" />
+    <Content Include="StoreData\BannerNew\9banner09[2].jpg" />
+    <Content Include="StoreData\Banner\Cat\img\image10.jpg" />
+    <Content Include="StoreData\Banner\Cat\img\image11.jpg" />
+    <Content Include="StoreData\Banner\Cat\img\image4.jpg" />
+    <Content Include="StoreData\Banner\Cat\img\image9.jpg" />
+    <Content Include="StoreData\Banner\Cat_Dog\image1.jpg" />
+    <Content Include="StoreData\Banner\Cat_Dog\image2.jpg" />
+    <Content Include="StoreData\Banner\Cat_Dog\image3.jpg" />
+    <Content Include="StoreData\Banner\Cat_Dog\image4.jpg" />
+    <Content Include="StoreData\Banner\Cat_Dog\image5.jpg" />
+    <Content Include="StoreData\Banner\Cat_Dog\img\image1.jpg" />
+    <Content Include="StoreData\Banner\Cat_Dog\img\image2.jpg" />
+    <Content Include="StoreData\Banner\Cat_Dog\img\image3.jpg" />
+    <Content Include="StoreData\Banner\Cat_Dog\img\image4.jpg" />
+    <Content Include="StoreData\Banner\Dog\image1.jpg" />
+    <Content Include="StoreData\Banner\Dog\image2.jpg" />
+    <Content Include="StoreData\Banner\Dog\image3.jpg" />
+    <Content Include="StoreData\Banner\Dog\image4.jpg" />
+    <Content Include="StoreData\Banner\Dog\image5.jpg" />
+    <Content Include="StoreData\Banner\Dog\img\image1.jpg" />
+    <Content Include="StoreData\Banner\Dog\img\image2.jpg" />
+    <Content Include="StoreData\Cat Brush Out Service.htm" />
+    <Content Include="StoreData\cat fritze .htm" />
+    <Content Include="StoreData\CatAnalGlandExpression.htm" />
+    <Content Include="StoreData\catflea.htm" />
+    <Content Include="StoreData\catFURminator .htm" />
+    <Content Include="StoreData\cathiot.htm" />
+    <Content Include="StoreData\catre.htm" />
+    <Content Include="StoreData\catser.htm" />
+    <Content Include="StoreData\catservice.htm" />
+    <Content Include="StoreData\catservicess.htm" />
+    <Content Include="StoreData\CAtspa.htm" />
+    <Content Include="StoreData\CatStyles .htm" />
+    <Content Include="StoreData\catteath.htm" />
+    <Content Include="StoreData\Cliping.htm" />
+    <Content Include="StoreData\Coupon\About Us\lPL7jzJVujwmAGS.jpeg" />
+    <Content Include="StoreData\Coupon\About Us\P04o3GrlHMdA3Xg.jpeg" />
+    <Content Include="StoreData\Coupon\About Us\Tmx6EYr7QZEfWDI.jpeg" />
+    <Content Include="StoreData\Coupon\banner11 - New Customer Coupon.jpg" />
+    <Content Include="StoreData\Coupon\CommonCoupon2.jpg" />
+    <Content Include="StoreData\Coupon\Fritzy Friend\banner01.jpg" />
+    <Content Include="StoreData\Coupon\Home\1.jpg" />
+    <Content Include="StoreData\Coupon\Home\2.jpg" />
+    <Content Include="StoreData\Coupon\Home\2GSCnP4NLTdCOLT.jpeg" />
+    <Content Include="StoreData\Coupon\Home\4.jpg" />
+    <Content Include="StoreData\Coupon\Home\4Jcf5N3zP7xEGFH.jpeg" />
+    <Content Include="StoreData\Coupon\Home\5.jpg" />
+    <Content Include="StoreData\Coupon\Home\7.jpg" />
+    <Content Include="StoreData\Coupon\Home\8.jpg" />
+    <Content Include="StoreData\Coupon\Home\banner01.jpg" />
+    <Content Include="StoreData\Coupon\Home\banner02[2].jpg" />
+    <Content Include="StoreData\Coupon\Home\bGjJEdEHYYIOxwt.jpeg" />
+    <Content Include="StoreData\Coupon\Home\CZECp6E4NE0vrpp.jpeg" />
+    <Content Include="StoreData\Coupon\Home\ETt6VOv0qF3lZvG.jpeg" />
+    <Content Include="StoreData\Coupon\Home\hQNkdHsrCe8s88P.jpeg" />
+    <Content Include="StoreData\Coupon\Home\HYbiQbCGrkn8WjW.jpeg" />
+    <Content Include="StoreData\Coupon\Home\I2e0uRa9F3RHIGA.jpeg" />
+    <Content Include="StoreData\Coupon\Home\iJd7r2oFk2SN2qG.jpeg" />
+    <Content Include="StoreData\Coupon\Home\IPpmWYWpw6aqiEu.jpeg" />
+    <Content Include="StoreData\Coupon\Home\qGGHZBJ9tEBC2vO.jpeg" />
+    <Content Include="StoreData\Coupon\Home\rsCVbiLXl8DuvY3.jpeg" />
+    <Content Include="StoreData\Coupon\Home\sGQ5OVAzimfnS8A.jpeg" />
+    <Content Include="StoreData\Coupon\Home\UrCsXHJwMIGKDCX.jpeg" />
+    <Content Include="StoreData\Coupon\Home\UZeIvGyWFHWOxK0.jpeg" />
+    <Content Include="StoreData\Coupon\Home\WCDRAioK3Jk3gxh.jpeg" />
+    <Content Include="StoreData\Coupon\Home\WPuyxlQGh91QERk.jpeg" />
+    <Content Include="StoreData\Coupon\Home\yP3Jt4sNEiUx7Q5.jpeg" />
+    <Content Include="StoreData\Coupon\Not.jpg" />
+    <Content Include="StoreData\cutstylescat.htm" />
+    <Content Include="StoreData\cutstylesdog.htm" />
+    <Content Include="StoreData\Dog Anal Gland Service.htm" />
+    <Content Include="StoreData\Dog Brush Out Service.htm" />
+    <Content Include="StoreData\dog food.htm" />
+    <Content Include="StoreData\DogAndPetService1.htm" />
+    <Content Include="StoreData\DogAndPetService2.htm" />
+    <Content Include="StoreData\dsfgdfg.htm" />
+    <Content Include="StoreData\dsfgdsfgsdfg.htm" />
+    <Content Include="StoreData\Email\AddPet.htm" />
+    <Content Include="StoreData\Email\Appointment.htm" />
+    <Content Include="StoreData\Email\Appointment_Admin.htm" />
+    <Content Include="StoreData\Email\ContactUs.htm" />
+    <Content Include="StoreData\Email\DeletePet.htm" />
+    <Content Include="StoreData\Email\ForgotPassword.htm" />
+    <Content Include="StoreData\Email\PetUpdate.htm" />
+    <Content Include="StoreData\Email\Registration.htm" />
+    <Content Include="StoreData\Email\Suggestion.htm" />
+    <Content Include="StoreData\Email\UpdateUser.htm" />
+    <Content Include="StoreData\facial.htm" />
+    <Content Include="StoreData\FacialCat.htm" />
+    <Content Include="StoreData\flash\Fritzy.swf" />
+    <Content Include="StoreData\flash\ieupdate.js" />
+    <Content Include="StoreData\flash\swfobject.js" />
+    <Content Include="StoreData\Flea .htm" />
+    <Content Include="StoreData\flea.htm" />
+    <Content Include="StoreData\fleatickcat.htm" />
+    <Content Include="StoreData\FootPadCat.htm" />
+    <Content Include="StoreData\footpads.htm" />
+    <Content Include="StoreData\freshspa.htm" />
+    <Content Include="StoreData\freshspadog.htm" />
+    <Content Include="StoreData\Friend.htm" />
+    <Content Include="StoreData\FriendLogo\AMIT1042RQH.gif" />
+    <Content Include="StoreData\FriendLogo\BDLA1448JVP.jpg" />
+    <Content Include="StoreData\FriendLogo\BFPL1195IKJ.jpg" />
+    <Content Include="StoreData\FriendLogo\BICC1493LUI.gif" />
+    <Content Include="StoreData\FriendLogo\BIYG1337KFA.gif" />
+    <Content Include="StoreData\FriendLogo\BNOV1175GWW.jpg" />
+    <Content Include="StoreData\FriendLogo\BVBQ1416MZP.jpg" />
+    <Content Include="StoreData\FriendLogo\BZJC1358PXO.jpg" />
+    <Content Include="StoreData\FriendLogo\CDFV1833UFD.jpg" />
+    <Content Include="StoreData\FriendLogo\CEOL1540DUE.jpg" />
+    <Content Include="StoreData\FriendLogo\CPCH1693HBC.jpg" />
+    <Content Include="StoreData\FriendLogo\CZHJ1668XCS.jpg" />
+    <Content Include="StoreData\FriendLogo\DSDR1972BMU.jpg" />
+    <Content Include="StoreData\FriendLogo\DSKM1898MHE.jpg" />
+    <Content Include="StoreData\FriendLogo\EBCD2263CUK.jpg" />
+    <Content Include="StoreData\FriendLogo\EBX[2313FSD.jpg" />
+    <Content Include="StoreData\FriendLogo\EFQB2547DFU.jpg" />
+    <Content Include="StoreData\FriendLogo\EOZP2331ZBO.jpg" />
+    <Content Include="StoreData\FriendLogo\EREO2325GKG.gif" />
+    <Content Include="StoreData\FriendLogo\E[NI2427FTP.jpg" />
+    <Content Include="StoreData\FriendLogo\FCHM2854WKJ.jpg" />
+    <Content Include="StoreData\FriendLogo\FMXL2796RYK.jpg" />
+    <Content Include="StoreData\FriendLogo\FRCM2804DXP.jpg" />
+    <Content Include="StoreData\FriendLogo\FTET2560DWQ.jpg" />
+    <Content Include="StoreData\FriendLogo\FUDV2721FPY.gif" />
+    <Content Include="StoreData\FriendLogo\FXJE2562AOI.jpg" />
+    <Content Include="StoreData\FriendLogo\GFKX3113QON.gif" />
+    <Content Include="StoreData\FriendLogo\GIAH3198VPJ.jpg" />
+    <Content Include="StoreData\FriendLogo\GYLM3237OWP.gif" />
+    <Content Include="StoreData\FriendLogo\IDCM3627SYI.gif" />
+    <Content Include="StoreData\FriendLogo\IHSB3648OHZ.jpg" />
+    <Content Include="StoreData\FriendLogo\LBNU4700CVP.jpg" />
+    <Content Include="StoreData\FriendLogo\LFTY4920ZFH.jpg" />
+    <Content Include="StoreData\FriendLogo\LIIT4852JWQ.jpg" />
+    <Content Include="StoreData\FriendLogo\LROI4975YPA.gif" />
+    <Content Include="StoreData\FriendLogo\MKIH5170UHU.jpg" />
+    <Content Include="StoreData\FriendLogo\MSQZ5324HAJ.jpg" />
+    <Content Include="StoreData\FriendLogo\M[MN5261HIM.jpg" />
+    <Content Include="StoreData\FriendLogo\M[ZE5295IEK.gif" />
+    <Content Include="StoreData\FriendLogo\NSBB5359OLT.jpg" />
+    <Content Include="StoreData\FriendLogo\NUFY5561YGH.jpg" />
+    <Content Include="StoreData\FriendLogo\OBLH6000CZH.jpg" />
+    <Content Include="StoreData\FriendLogo\OIAI5981RGL.jpg" />
+    <Content Include="StoreData\FriendLogo\OIIT5869HBT.jpg" />
+    <Content Include="StoreData\FriendLogo\PJEE6351BSK.jpg" />
+    <Content Include="StoreData\FriendLogo\PUAS6128EUR.jpg" />
+    <Content Include="StoreData\FriendLogo\PVIQ6180HPX.jpg" />
+    <Content Include="StoreData\FriendLogo\PXOY6137KVC.jpg" />
+    <Content Include="StoreData\FriendLogo\QT[O6524TJW.gif" />
+    <Content Include="StoreData\FriendLogo\QXLP3457K[R.jpeg" />
+    <Content Include="StoreData\FriendLogo\RUEG6764FYS.jpg" />
+    <Content Include="StoreData\FriendLogo\SGEI7130RBO.gif" />
+    <Content Include="StoreData\FriendLogo\SGHV7351UOK.jpg" />
+    <Content Include="StoreData\FriendLogo\SJCJ7157KPV.jpg" />
+    <Content Include="StoreData\FriendLogo\SLNB7188KJD.gif" />
+    <Content Include="StoreData\FriendLogo\SZOR7385XID.jpg" />
+    <Content Include="StoreData\FriendLogo\TJII7449WTJ.jpg" />
+    <Content Include="StoreData\FriendLogo\TNRC7446MLB.jpg" />
+    <Content Include="StoreData\FriendLogo\TXJS7696ZAI.jpg" />
+    <Content Include="StoreData\FriendLogo\UNSW7878NZM.jpg" />
+    <Content Include="StoreData\FriendLogo\UYDK8036IYG.gif" />
+    <Content Include="StoreData\FriendLogo\VESO8375PRB.jpg" />
+    <Content Include="StoreData\FriendLogo\VJZL8220PKX.jpg" />
+    <Content Include="StoreData\FriendLogo\VTHN8323MAI.gif" />
+    <Content Include="StoreData\FriendLogo\WJFO8538FHT.gif" />
+    <Content Include="StoreData\FriendLogo\WZVD8687EUQ.jpg" />
+    <Content Include="StoreData\FriendLogo\XCNX8943T[U.jpg" />
+    <Content Include="StoreData\FriendLogo\YJSC9289DMZ.jpg" />
+    <Content Include="StoreData\FriendLogo\YXWM9367OFE.jpg" />
+    <Content Include="StoreData\FriendLogo\Y[TD9157AZU.jpg" />
+    <Content Include="StoreData\FriendLogo\ZJFF9694DUJ.jpg" />
+    <Content Include="StoreData\FriendLogo\[CCG9956GYQ.jpg" />
+    <Content Include="StoreData\FriendLogo\[PFG9838ZZJ.jpg" />
+    <Content Include="StoreData\FriendLogo\[[UT6671JLP.jpeg" />
+    <Content Include="StoreData\fritze .htm" />
+    <Content Include="StoreData\fur1.htm" />
+    <Content Include="StoreData\furcat.htm" />
+    <Content Include="StoreData\GiftCard.htm" />
+    <Content Include="StoreData\HomeServices\AECA1046XOZ.jpg" />
+    <Content Include="StoreData\HomeServices\AJHD1064TCQ.jpg" />
+    <Content Include="StoreData\HomeServices\AMVG1001YLD.jpg" />
+    <Content Include="StoreData\HomeServices\BBEP1361ETR.jpg" />
+    <Content Include="StoreData\HomeServices\BBJD1276GIC.jpg" />
+    <Content Include="StoreData\HomeServices\BGCX1272FYY.jpg" />
+    <Content Include="StoreData\HomeServices\BLDY1352LJS.jpg" />
+    <Content Include="StoreData\HomeServices\BNDW1487[ZC.jpg" />
+    <Content Include="StoreData\HomeServices\BUK[1236OUM.jpg" />
+    <Content Include="StoreData\HomeServices\BVAY1248OBB.jpg" />
+    <Content Include="StoreData\HomeServices\BVWX1353BSY.jpg" />
+    <Content Include="StoreData\HomeServices\BZUH1201ZFP.jpg" />
+    <Content Include="StoreData\HomeServices\CNRH1652XXF.jpg" />
+    <Content Include="StoreData\HomeServices\CQRS1695RNQ.jpg" />
+    <Content Include="StoreData\HomeServices\CVGE1862EHR.jpg" />
+    <Content Include="StoreData\HomeServices\CVPN1710OOH.jpg" />
+    <Content Include="StoreData\HomeServices\CWVN1760MDB.jpg" />
+    <Content Include="StoreData\HomeServices\DJGB1928ECQ.jpg" />
+    <Content Include="StoreData\HomeServices\DLMP1983ALL.jpg" />
+    <Content Include="StoreData\HomeServices\DQPZ1916WHH.jpg" />
+    <Content Include="StoreData\HomeServices\DUNR1879IJV.jpg" />
+    <Content Include="StoreData\HomeServices\DYUT1990LEF.jpg" />
+    <Content Include="StoreData\HomeServices\EEBJ2246RQM.jpg" />
+    <Content Include="StoreData\HomeServices\EMFI2359OBF.jpg" />
+    <Content Include="StoreData\HomeServices\EMHI2217[[Z.jpg" />
+    <Content Include="StoreData\HomeServices\EMQB2530ILX.jpg" />
+    <Content Include="StoreData\HomeServices\EOOG2451RML.jpg" />
+    <Content Include="StoreData\HomeServices\ETNL2217MDH.jpg" />
+    <Content Include="StoreData\HomeServices\FGMK2600JRR.jpg" />
+    <Content Include="StoreData\HomeServices\FJTK2850IOT.jpg" />
+    <Content Include="StoreData\HomeServices\FQ[O2579IJZ.jpg" />
+    <Content Include="StoreData\HomeServices\F[JE2780XLR.jpg" />
+    <Content Include="StoreData\HomeServices\GJ[C3051CVX.jpg" />
+    <Content Include="StoreData\HomeServices\GKMS6189WUX.jpg" />
+    <Content Include="StoreData\HomeServices\GYKB2935RGM.jpg" />
+    <Content Include="StoreData\HomeServices\HEHJ3424DWW.jpg" />
+    <Content Include="StoreData\HomeServices\HFFS3483RBI.jpg" />
+    <Content Include="StoreData\HomeServices\HJKG3531KGN.jpg" />
+    <Content Include="StoreData\HomeServices\HKWU3372ARL.jpg" />
+    <Content Include="StoreData\HomeServices\HMLN3564JPX.jpg" />
+    <Content Include="StoreData\HomeServices\HOBQ3519CLG.jpg" />
+    <Content Include="StoreData\HomeServices\HOXJ3399DPS.jpg" />
+    <Content Include="StoreData\HomeServices\HVBR3575DMI.jpg" />
+    <Content Include="StoreData\HomeServices\HVNF3474CGN.jpg" />
+    <Content Include="StoreData\HomeServices\HWMJ3571JOJ.jpg" />
+    <Content Include="StoreData\HomeServices\HWRL3537ZLK.jpg" />
+    <Content Include="StoreData\HomeServices\HXDH3534KDO.jpg" />
+    <Content Include="StoreData\HomeServices\IBFG3835VOJ.jpg" />
+    <Content Include="StoreData\HomeServices\IPUY3911GGY.jpg" />
+    <Content Include="StoreData\HomeServices\ISNQ3714DVS.jpg" />
+    <Content Include="StoreData\HomeServices\IXTI3790IN[.jpg" />
+    <Content Include="StoreData\HomeServices\IZIR3768YBU.jpg" />
+    <Content Include="StoreData\HomeServices\JBGT4226OCS.jpg" />
+    <Content Include="StoreData\HomeServices\JMQG4017HND.jpg" />
+    <Content Include="StoreData\HomeServices\JQSC4033WJP.jpg" />
+    <Content Include="StoreData\HomeServices\JUBH4266HFO.jpg" />
+    <Content Include="StoreData\HomeServices\JUSR4143DKT.jpg" />
+    <Content Include="StoreData\HomeServices\J[RY4010OOK.jpg" />
+    <Content Include="StoreData\HomeServices\KMWW4427NJR.jpg" />
+    <Content Include="StoreData\HomeServices\KQYR4627NCW.jpg" />
+    <Content Include="StoreData\HomeServices\KRMM4445SGX.jpg" />
+    <Content Include="StoreData\HomeServices\LAED4968QZK.jpg" />
+    <Content Include="StoreData\HomeServices\LFKZ4677MZH.jpg" />
+    <Content Include="StoreData\HomeServices\LNSB4711WQJ.jpg" />
+    <Content Include="StoreData\HomeServices\LSFY4754ZNC.jpg" />
+    <Content Include="StoreData\HomeServices\LTAV4775YIY.jpg" />
+    <Content Include="StoreData\HomeServices\LTJF4824RFZ.jpg" />
+    <Content Include="StoreData\HomeServices\LWRC4943LIX.jpg" />
+    <Content Include="StoreData\HomeServices\LZON4966WKH.jpg" />
+    <Content Include="StoreData\HomeServices\LZPY4658EPY.jpg" />
+    <Content Include="StoreData\HomeServices\L[KP4814YJM.jpg" />
+    <Content Include="StoreData\HomeServices\L[ZX4951ZTT.jpg" />
+    <Content Include="StoreData\HomeServices\MBGS5040MOK.jpg" />
+    <Content Include="StoreData\HomeServices\MGLW5019TMY.jpg" />
+    <Content Include="StoreData\HomeServices\MGZX5306UWT.jpg" />
+    <Content Include="StoreData\HomeServices\MHHO5138HQX.jpg" />
+    <Content Include="StoreData\HomeServices\MNFZ5030HTY.jpg" />
+    <Content Include="StoreData\HomeServices\MNGW5244TER.jpg" />
+    <Content Include="StoreData\HomeServices\MORW5054R[P.jpg" />
+    <Content Include="StoreData\HomeServices\MPDZ5162UNR.jpg" />
+    <Content Include="StoreData\HomeServices\MWKX5301SDO.jpg" />
+    <Content Include="StoreData\HomeServices\MXEY5000KCO.jpg" />
+    <Content Include="StoreData\HomeServices\MYSG5119PKA.jpg" />
+    <Content Include="StoreData\HomeServices\NGYI5623QDW.jpg" />
+    <Content Include="StoreData\HomeServices\NLML5654LQR.jpg" />
+    <Content Include="StoreData\HomeServices\NMKM5656LMO.jpg" />
+    <Content Include="StoreData\HomeServices\Not.jpg" />
+    <Content Include="StoreData\HomeServices\NPMK5353NZR.jpg" />
+    <Content Include="StoreData\HomeServices\NPTX5564EMY.jpg" />
+    <Content Include="StoreData\HomeServices\NSAY5473MHL.jpg" />
+    <Content Include="StoreData\HomeServices\NYKH5347MBE.jpg" />
+    <Content Include="StoreData\HomeServices\NZZS5625JLF.jpg" />
+    <Content Include="StoreData\HomeServices\ODB[5988BRP.jpg" />
+    <Content Include="StoreData\HomeServices\OILS5989HVY.jpg" />
+    <Content Include="StoreData\HomeServices\OKOV5919ZAQ.jpg" />
+    <Content Include="StoreData\HomeServices\OOUG5766AUY.jpg" />
+    <Content Include="StoreData\HomeServices\OOYX5901FXF.jpg" />
+    <Content Include="StoreData\HomeServices\OTRH5706FKQ.jpg" />
+    <Content Include="StoreData\HomeServices\OUIJ5754TOP.jpg" />
+    <Content Include="StoreData\HomeServices\OYVL5825QND.jpg" />
+    <Content Include="StoreData\HomeServices\PCMW6291BZU.jpg" />
+    <Content Include="StoreData\HomeServices\PDTC6309XIY.jpg" />
+    <Content Include="StoreData\HomeServices\PYKG6358XVM.jpg" />
+    <Content Include="StoreData\HomeServices\QBMS6555S[J.jpg" />
+    <Content Include="StoreData\HomeServices\QKKI6624VFK.jpg" />
+    <Content Include="StoreData\HomeServices\QN[V6564KRF.jpg" />
+    <Content Include="StoreData\HomeServices\QORI6523GBR.jpg" />
+    <Content Include="StoreData\HomeServices\QRIF6634VZW.jpg" />
+    <Content Include="StoreData\HomeServices\QUJQ6650ZMT.jpg" />
+    <Content Include="StoreData\HomeServices\QWGC6411TIF.jpg" />
+    <Content Include="StoreData\HomeServices\RCGB6714BJX.jpg" />
+    <Content Include="StoreData\HomeServices\ROXV6960YIE.jpg" />
+    <Content Include="StoreData\HomeServices\RPEV6886PZU.jpg" />
+    <Content Include="StoreData\HomeServices\RWKK6998IXI.jpg" />
+    <Content Include="StoreData\HomeServices\SCWH7199SPR.jpg" />
+    <Content Include="StoreData\HomeServices\SEGE7079YYQ.jpg" />
+    <Content Include="StoreData\HomeServices\SHMM7244LWL.jpg" />
+    <Content Include="StoreData\HomeServices\SIUM7364FTY.jpg" />
+    <Content Include="StoreData\HomeServices\SIVP7282MUM.jpg" />
+    <Content Include="StoreData\HomeServices\SKCF1549TNV.jpg" />
+    <Content Include="StoreData\HomeServices\SLIL7109JTA.jpg" />
+    <Content Include="StoreData\HomeServices\SLNZ7133TIB.jpg" />
+    <Content Include="StoreData\HomeServices\SPU[7096VPC.jpg" />
+    <Content Include="StoreData\HomeServices\SWMR7278BBC.jpg" />
+    <Content Include="StoreData\HomeServices\SWNM7273[WK.jpg" />
+    <Content Include="StoreData\HomeServices\TEMI7748WRJ.jpg" />
+    <Content Include="StoreData\HomeServices\THTF7426EIG.jpg" />
+    <Content Include="StoreData\HomeServices\TYNE7440QNX.jpg" />
+    <Content Include="StoreData\HomeServices\TYZF7580UVK.jpg" />
+    <Content Include="StoreData\HomeServices\UWLG7852IOM.jpg" />
+    <Content Include="StoreData\HomeServices\UXXW7864LMK.jpg" />
+    <Content Include="StoreData\HomeServices\UZMP7778GZO.jpg" />
+    <Content Include="StoreData\HomeServices\VAYH8115DMW.jpg" />
+    <Content Include="StoreData\HomeServices\VBRJ8238KGK.jpg" />
+    <Content Include="StoreData\HomeServices\VKPO8347DCK.jpg" />
+    <Content Include="StoreData\HomeServices\VKWJ8228LMJ.jpg" />
+    <Content Include="StoreData\HomeServices\VM[H8439CCC.jpg" />
+    <Content Include="StoreData\HomeServices\VQ[J8233NLZ.jpg" />
+    <Content Include="StoreData\HomeServices\VU[F8249VEF.jpg" />
+    <Content Include="StoreData\HomeServices\WBGJ8445VJY.jpg" />
+    <Content Include="StoreData\HomeServices\WBSX8558OKQ.jpg" />
+    <Content Include="StoreData\HomeServices\WDJS8698YWF.jpg" />
+    <Content Include="StoreData\HomeServices\WJYW8532STB.jpg" />
+    <Content Include="StoreData\HomeServices\WPUT8547[OF.jpg" />
+    <Content Include="StoreData\HomeServices\WRPI8773XXK.jpg" />
+    <Content Include="StoreData\HomeServices\XALJ8992OOL.jpg" />
+    <Content Include="StoreData\HomeServices\XATK9056UUL.jpg" />
+    <Content Include="StoreData\HomeServices\XCHE9092KLN.jpg" />
+    <Content Include="StoreData\HomeServices\XDKY8838ERM.jpg" />
+    <Content Include="StoreData\HomeServices\XEGS8833XXF.jpg" />
+    <Content Include="StoreData\HomeServices\XEIC8864LWG.jpg" />
+    <Content Include="StoreData\HomeServices\XIIO8948ORL.jpg" />
+    <Content Include="StoreData\HomeServices\XMUZ9012ZLL.jpg" />
+    <Content Include="StoreData\HomeServices\XPDR8989UDX.jpg" />
+    <Content Include="StoreData\HomeServices\XPUV8963LEW.jpg" />
+    <Content Include="StoreData\HomeServices\XQNJ9055LZJ.jpg" />
+    <Content Include="StoreData\HomeServices\XQXZ9084PVR.jpg" />
+    <Content Include="StoreData\HomeServices\XSFW8827CKL.jpg" />
+    <Content Include="StoreData\HomeServices\YBVE9214ZHI.jpg" />
+    <Content Include="StoreData\HomeServices\YCMU9353XPQ.jpg" />
+    <Content Include="StoreData\HomeServices\YGDD9202UQS.jpg" />
+    <Content Include="StoreData\HomeServices\YLII9250TZK.jpg" />
+    <Content Include="StoreData\HomeServices\YQT[9156WLU.jpg" />
+    <Content Include="StoreData\HomeServices\ZCZT9773TCT.jpg" />
+    <Content Include="StoreData\HomeServices\ZDSW9525VBL.jpg" />
+    <Content Include="StoreData\HomeServices\ZJCD9792OOV.jpg" />
+    <Content Include="StoreData\HomeServices\ZOUD9558[NE.jpg" />
+    <Content Include="StoreData\HomeServices\ZRPM9817TTH.jpg" />
+    <Content Include="StoreData\HomeServices\ZSUT9823OYC.jpg" />
+    <Content Include="StoreData\HomeServices\ZSVY9575ZPD.jpg" />
+    <Content Include="StoreData\HomeServices\ZWKM9655ODD.jpg" />
+    <Content Include="StoreData\HomeServices\[FOI9932NLJ.jpg" />
+    <Content Include="StoreData\Hot Spot.htm" />
+    <Content Include="StoreData\Images\AFCX1082VNW.jpg" />
+    <Content Include="StoreData\Images\AMQJ1126ZYL.jpeg" />
+    <Content Include="StoreData\Images\APT[1082IHL.jpg" />
+    <Content Include="StoreData\Images\ASOV1135LES.jpeg" />
+    <Content Include="StoreData\Images\BDJX1223PFJ.jpg" />
+    <Content Include="StoreData\Images\BIRT2666EHH.jpg" />
+    <Content Include="StoreData\Images\BJNE1390DSB.jpg" />
+    <Content Include="StoreData\Images\BPSL1459PZA.jpg" />
+    <Content Include="StoreData\Images\BYIX1187TGE.JPG" />
+    <Content Include="StoreData\Images\CCDX1619YLW.jpg" />
+    <Content Include="StoreData\Images\CDRL1818VHR.JPG" />
+    <Content Include="StoreData\Images\CGHW1779XUX.jpg" />
+    <Content Include="StoreData\Images\CGKU1860DSM.jpg" />
+    <Content Include="StoreData\Images\CSGO1742SRU.jpg" />
+    <Content Include="StoreData\Images\CUQN1545FGS.jpg" />
+    <Content Include="StoreData\Images\C[QC1839ZSV.JPG" />
+    <Content Include="StoreData\Images\DFSB1929TCD.jpg" />
+    <Content Include="StoreData\Images\DONJ2068GCN.jpg" />
+    <Content Include="StoreData\Images\DPOC1951IRY.jpg" />
+    <Content Include="StoreData\Images\EJGN2479NEC.jpg" />
+    <Content Include="StoreData\Images\EOYT2319JUD.jpg" />
+    <Content Include="StoreData\Images\EPYF2430QBO.jpg" />
+    <Content Include="StoreData\Images\EQRV2273ETV.jpg" />
+    <Content Include="StoreData\Images\ERPZ2219RLD.jpg" />
+    <Content Include="StoreData\Images\ESWE2539ZEZ.jpg" />
+    <Content Include="StoreData\Images\EYOS2539RTO.jpg" />
+    <Content Include="StoreData\Images\FDLT2652VJU.jpg" />
+    <Content Include="StoreData\Images\FEMQ2764HYM.jpg" />
+    <Content Include="StoreData\Images\FTLJ2818ZVD.jpg" />
+    <Content Include="StoreData\Images\GBRT2927LPX.jpg" />
+    <Content Include="StoreData\Images\GEYE3240PHU.jpg" />
+    <Content Include="StoreData\Images\GMIW2942URH.jpg" />
+    <Content Include="StoreData\Images\GOGQ3110VNH.jpg" />
+    <Content Include="StoreData\Images\GPBU3004[CU.jpg" />
+    <Content Include="StoreData\Images\GTGF3208ICH.jpg" />
+    <Content Include="StoreData\Images\GTVF3081TMY.jpg" />
+    <Content Include="StoreData\Images\GWGJ3183VPS.jpg" />
+    <Content Include="StoreData\Images\GXIS2996CZR.jpg" />
+    <Content Include="StoreData\Images\HBPT3533SWF.jpg" />
+    <Content Include="StoreData\Images\HNKM3556VUZ.jpg" />
+    <Content Include="StoreData\Images\HOSN3350ULD.jpg" />
+    <Content Include="StoreData\Images\HUGT3328RLZ.gif" />
+    <Content Include="StoreData\Images\HWSC3382HSJ.jpg" />
+    <Content Include="StoreData\Images\HXOE4975VOO.jpg" />
+    <Content Include="StoreData\Images\IOFI3936OZT.jpg" />
+    <Content Include="StoreData\Images\IPQJ3646QJX.jpg" />
+    <Content Include="StoreData\Images\ISEG3628VKI.jpg" />
+    <Content Include="StoreData\Images\IVTU3874PXZ.jpg" />
+    <Content Include="StoreData\Images\JGWC4269YJP.jpg" />
+    <Content Include="StoreData\Images\JJXJ4261TWC.jpg" />
+    <Content Include="StoreData\Images\JQBW4183UBB.jpg" />
+    <Content Include="StoreData\Images\JRJL4199VOL.jpg" />
+    <Content Include="StoreData\Images\JRVT4130OWC.jpg" />
+    <Content Include="StoreData\Images\JYGY4180FIN.jpg" />
+    <Content Include="StoreData\Images\JYHG4094DBC.jpg" />
+    <Content Include="StoreData\Images\KKMR4319WUL.jpg" />
+    <Content Include="StoreData\Images\KNDO4593YUO.jpg" />
+    <Content Include="StoreData\Images\KV[A4491INR.jpg" />
+    <Content Include="StoreData\Images\KWYZ4365SUV.jpg" />
+    <Content Include="StoreData\Images\LGBV4784CPJ.jpg" />
+    <Content Include="StoreData\Images\LMJL4800ZLT.jpg" />
+    <Content Include="StoreData\Images\LNJW4810MTZ.jpg" />
+    <Content Include="StoreData\Images\LOEZ4652ICV.jpg" />
+    <Content Include="StoreData\Images\LOIZ4717IDT.jpg" />
+    <Content Include="StoreData\Images\LPJC4736KBU.jpg" />
+    <Content Include="StoreData\Images\LWHU4879QVQ.jpg" />
+    <Content Include="StoreData\Images\LWYW4920SPW.jpg" />
+    <Content Include="StoreData\Images\LYTM4785FTW.jpg" />
+    <Content Include="StoreData\Images\MODN5119BDD.JPG" />
+    <Content Include="StoreData\Images\MX[E5210RHG.jpg" />
+    <Content Include="StoreData\Images\NAMT5579YNH.jpg" />
+    <Content Include="StoreData\Images\NLYN5588OGW.jpg" />
+    <Content Include="StoreData\Images\Not.jpg" />
+    <Content Include="StoreData\Images\NPRR5398QNU.jpg" />
+    <Content Include="StoreData\Images\NTVZ5539IJT.JPG" />
+    <Content Include="StoreData\Images\NZWB5611DYO.jpg" />
+    <Content Include="StoreData\Images\OBKM5735FJG.jpg" />
+    <Content Include="StoreData\Images\ODYK5787SRW.jpg" />
+    <Content Include="StoreData\Images\OHEE5881WUS.jpg" />
+    <Content Include="StoreData\Images\OKOV5999BBJ.jpg" />
+    <Content Include="StoreData\Images\OLCQ6001GLG.jpg" />
+    <Content Include="StoreData\Images\OQKW5762XWV.jpeg" />
+    <Content Include="StoreData\Images\ORBO5775QHS.jpg" />
+    <Content Include="StoreData\Images\OWDV5901WVF.jpg" />
+    <Content Include="StoreData\Images\OWQK5812GRM.jpg" />
+    <Content Include="StoreData\Images\O[RC5864GUX.jpg" />
+    <Content Include="StoreData\Images\PMKB6300TNH.jpg" />
+    <Content Include="StoreData\Images\PNHC6056SMT.jpg" />
+    <Content Include="StoreData\Images\PQEO6225SPY.jpeg" />
+    <Content Include="StoreData\Images\PQYH6025EIZ.jpg" />
+    <Content Include="StoreData\Images\PRDX6320SER.jpg" />
+    <Content Include="StoreData\Images\PTER6129UFV.jpg" />
+    <Content Include="StoreData\Images\PWZZ6171ZNX.jpeg" />
+    <Content Include="StoreData\Images\P[UV6349GSP.jpg" />
+    <Content Include="StoreData\Images\QBXB6609FPB.jpg" />
+    <Content Include="StoreData\Images\QGDH6491NMJ.jpg" />
+    <Content Include="StoreData\Images\QJNM6374J[D.jpg" />
+    <Content Include="StoreData\Images\QLQJ6654QJX.jpg" />
+    <Content Include="StoreData\Images\QNQE6367TOC.jpg" />
+    <Content Include="StoreData\Images\QWWL6518VDY.jpg" />
+    <Content Include="StoreData\Images\QYZG6570MTI.jpg" />
+    <Content Include="StoreData\Images\REZJ6815MIX.jpg" />
+    <Content Include="StoreData\Images\RFDP6785SNE.jpg" />
+    <Content Include="StoreData\Images\RIQQ6948SPX.jpeg" />
+    <Content Include="StoreData\Images\RPLB6783JBR.jpg" />
+    <Content Include="StoreData\Images\RQNW6840PNG.jpg" />
+    <Content Include="StoreData\Images\RVGB6923NMY.JPG" />
+    <Content Include="StoreData\Images\RZYT6776EJD.jpg" />
+    <Content Include="StoreData\Images\SCAL7389GGL.jpg" />
+    <Content Include="StoreData\Images\SFVM7355TXY.jpg" />
+    <Content Include="StoreData\Images\SGLM7083UPH.jpg" />
+    <Content Include="StoreData\Images\SGSU7164FRE.jpg" />
+    <Content Include="StoreData\Images\SHEO7379CZU.jpg" />
+    <Content Include="StoreData\Images\Sunset.jpg" />
+    <Content Include="StoreData\Images\SZBK7368REE.jpg" />
+    <Content Include="StoreData\Images\TCR[7430CLW.jpg" />
+    <Content Include="StoreData\Images\TDEB7611OPT.jpg" />
+    <Content Include="StoreData\Images\THUY7686[SH.jpg" />
+    <Content Include="StoreData\Images\TICK7573GJW.jpg" />
+    <Content Include="StoreData\Images\TIGW7580OTO.jpg" />
+    <Content Include="StoreData\Images\TMWJ7452HGK.JPG" />
+    <Content Include="StoreData\Images\TWTV7677XDK.gif" />
+    <Content Include="StoreData\Images\UKVT7874XWG.jpg" />
+    <Content Include="StoreData\Images\UMSN8094JDL.jpg" />
+    <Content Include="StoreData\Images\UPWS7971GT[.jpg" />
+    <Content Include="StoreData\Images\USHR7750NQG.jpg" />
+    <Content Include="StoreData\Images\UWAU8030CWE.jpg" />
+    <Content Include="StoreData\Images\VFLW8265CUB.jpg" />
+    <Content Include="StoreData\Images\VMCQ8166EHB.jpg" />
+    <Content Include="StoreData\Images\VPYZ8144IBZ.jpg" />
+    <Content Include="StoreData\Images\VTNR8147TXN.jpg" />
+    <Content Include="StoreData\Images\VWNK8107DYQ.jpeg" />
+    <Content Include="StoreData\Images\VXMR8262OTX.jpg" />
+    <Content Include="StoreData\Images\VXOW8286FQL.jpg" />
+    <Content Include="StoreData\Images\WCWD8519UWQ.jpeg" />
+    <Content Include="StoreData\Images\WDNU8638BPC.JPG" />
+    <Content Include="StoreData\Images\WFCI8635AWP.jpg" />
+    <Content Include="StoreData\Images\WGSP8612LWS.jpg" />
+    <Content Include="StoreData\Images\WIDM8767KKC.jpg" />
+    <Content Include="StoreData\Images\WJAM8528COF.jpg" />
+    <Content Include="StoreData\Images\WJFH8537NIG.JPG" />
+    <Content Include="StoreData\Images\WKVG8587PWO.jpg" />
+    <Content Include="StoreData\Images\WOQC8484WJQ.jpg" />
+    <Content Include="StoreData\Images\WOU[8727DLO.jpg" />
+    <Content Include="StoreData\Images\WRFR8781QML.jpg" />
+    <Content Include="StoreData\Images\WWSS8710GWM.jpg" />
+    <Content Include="StoreData\Images\W[YM8624ODU.jpeg" />
+    <Content Include="StoreData\Images\XCMZ9056MFT.jpg" />
+    <Content Include="StoreData\Images\XJUB8983EEW.jpg" />
+    <Content Include="StoreData\Images\XNWZ9106NDG.JPG" />
+    <Content Include="StoreData\Images\XUDL8795IER.jpg" />
+    <Content Include="StoreData\Images\XVNS8989C[E.jpg" />
+    <Content Include="StoreData\Images\XXUX9130[RG.JPG" />
+    <Content Include="StoreData\Images\X[UM8998MNO.jpg" />
+    <Content Include="StoreData\Images\YHJK9168VWZ.jpg" />
+    <Content Include="StoreData\Images\YIVI9155KCZ.jpg" />
+    <Content Include="StoreData\Images\YLQR9420FJI.jpg" />
+    <Content Include="StoreData\Images\YLSG9478QUN.jpg" />
+    <Content Include="StoreData\Images\YRGZ9476SJE.jpg" />
+    <Content Include="StoreData\Images\ZBNE9804IEJ.jpg" />
+    <Content Include="StoreData\Images\ZEWP9633DWP.jpg" />
+    <Content Include="StoreData\Images\ZHJK9596JEL.jpeg" />
+    <Content Include="StoreData\Images\ZMKQ9809LXH.jpg" />
+    <Content Include="StoreData\Images\[EOP9925SLR.jpg" />
+    <Content Include="StoreData\Images\[K[B9878GVL.jpg" />
+    <Content Include="StoreData\Images\[MCB9957BOC.jpg" />
+    <Content Include="StoreData\Medicated .htm" />
+    <Content Include="StoreData\MedicatedBaths.htm" />
+    <Content Include="StoreData\MedicatedBathsCat.htm" />
+    <Content Include="StoreData\mobile.htm" />
+    <Content Include="StoreData\MobileBannerNew\0image4.jpg" />
+    <Content Include="StoreData\MobileBannerNew\10banner09.jpg" />
+    <Content Include="StoreData\MobileBannerNew\111.jpg" />
+    <Content Include="StoreData\MobileBannerNew\112.jpg" />
+    <Content Include="StoreData\MobileBannerNew\11banner10.jpg" />
+    <Content Include="StoreData\MobileBannerNew\12banner11.jpg" />
+    <Content Include="StoreData\MobileBannerNew\13banner12.jpg" />
+    <Content Include="StoreData\MobileBannerNew\14banner13.jpg" />
+    <Content Include="StoreData\MobileBannerNew\15banner14.jpg" />
+    <Content Include="StoreData\MobileBannerNew\17.jpg" />
+    <Content Include="StoreData\MobileBannerNew\1banner01.jpg" />
+    <Content Include="StoreData\MobileBannerNew\212.jpg" />
+    <Content Include="StoreData\MobileBannerNew\3banner02.jpg" />
+    <Content Include="StoreData\MobileBannerNew\4banner03.jpg" />
+    <Content Include="StoreData\MobileBannerNew\5banner04.jpg" />
+    <Content Include="StoreData\MobileBannerNew\6banner05.jpg" />
+    <Content Include="StoreData\MobileBannerNew\7banner06.jpg" />
+    <Content Include="StoreData\MobileBannerNew\8banner07.jpg" />
+    <Content Include="StoreData\MobileBannerNew\9banner08.jpg" />
+    <Content Include="StoreData\Products.htm" />
+    <Content Include="StoreData\Product\AFDT1063DDJ.jpg" />
+    <Content Include="StoreData\Product\AJXO1008SID.jpg" />
+    <Content Include="StoreData\Product\AKEH1038RUY.jpg" />
+    <Content Include="StoreData\Product\AMJ[1117QPB.gif" />
+    <Content Include="StoreData\Product\BGDY1513GBI.jpg" />
+    <Content Include="StoreData\Product\CFCN1563BJM.jpg" />
+    <Content Include="StoreData\Product\CGBT1556YSP.JPG" />
+    <Content Include="StoreData\Product\CLVE1580WY[.jpg" />
+    <Content Include="StoreData\Product\CQHR1547XKX.jpg" />
+    <Content Include="StoreData\Product\CSBQ1561CBT.jpg" />
+    <Content Include="StoreData\Product\CYJF1718NRG.jpg" />
+    <Content Include="StoreData\Product\DIZM2079ALA.JPG" />
+    <Content Include="StoreData\Product\DYUP1965EYM.jpg" />
+    <Content Include="StoreData\Product\EEBQ2503SJZ.jpg" />
+    <Content Include="StoreData\Product\EKDU2239PRT.jpg" />
+    <Content Include="StoreData\Product\EPST2359[ZM.JPG" />
+    <Content Include="StoreData\Product\ESOF2457KKK.jpg" />
+    <Content Include="StoreData\Product\FNOD2611TTM.gif" />
+    <Content Include="StoreData\Product\FOTZ2642BTP.jpg" />
+    <Content Include="StoreData\Product\FXJC2812XPY.jpg" />
+    <Content Include="StoreData\Product\FYGD2824XUU.jpg" />
+    <Content Include="StoreData\Product\GFN[3054PBX.jpg" />
+    <Content Include="StoreData\Product\GMGW3233BZE.jpg" />
+    <Content Include="StoreData\Product\GSOJ2954SZT.jpg" />
+    <Content Include="StoreData\Product\HQVZ3264TUK.jpg" />
+    <Content Include="StoreData\Product\HRIE3380LRJ.jpg" />
+    <Content Include="StoreData\Product\IFOM3607ETE.jpg" />
+    <Content Include="StoreData\Product\JRGA4202KWL.jpg" />
+    <Content Include="StoreData\Product\KFMS4620YVK.jpg" />
+    <Content Include="StoreData\Product\KHAZ4422LTL.jpg" />
+    <Content Include="StoreData\Product\KJD[4323SUX.jpg" />
+    <Content Include="StoreData\Product\KYMK4522GNP.jpg" />
+    <Content Include="StoreData\Product\LXTO4642WNS.jpg" />
+    <Content Include="StoreData\Product\LXZE4847ICG.jpg" />
+    <Content Include="StoreData\Product\NFBD5594MS[.jpg" />
+    <Content Include="StoreData\Product\NHFJ5404SKO.jpg" />
+    <Content Include="StoreData\Product\NLHW5434EDM.jpg" />
+    <Content Include="StoreData\Product\NLMU5620BCT.jpg" />
+    <Content Include="StoreData\Product\Not.jpg" />
+    <Content Include="StoreData\Product\NYZT5614UPY.jpg" />
+    <Content Include="StoreData\Product\PNED6283QVQ.jpg" />
+    <Content Include="StoreData\Product\PPBZ6140USK.jpg" />
+    <Content Include="StoreData\Product\QBKV6396JDM.jpg" />
+    <Content Include="StoreData\Product\QJYY6380NJH.gif" />
+    <Content Include="StoreData\Product\QPFD6368HTB.jpg" />
+    <Content Include="StoreData\Product\QSND6611F[D.jpg" />
+    <Content Include="StoreData\Product\RDRC6930VVG.jpg" />
+    <Content Include="StoreData\Product\RKRI6887RTY.jpg" />
+    <Content Include="StoreData\Product\RQML7050IRQ.jpg" />
+    <Content Include="StoreData\Product\RQYN6742TGG.jpg" />
+    <Content Include="StoreData\Product\RUEC7004IVD.jpg" />
+    <Content Include="StoreData\Product\SDGD7358ECL.jpg" />
+    <Content Include="StoreData\Product\TCFX7689VMF.jpg" />
+    <Content Include="StoreData\Product\VBDB8138VYU.gif" />
+    <Content Include="StoreData\Product\VNBO8114SQE.JPG" />
+    <Content Include="StoreData\Product\WSGR8701VLB.gif" />
+    <Content Include="StoreData\Product\XFSW8974LYH.JPG" />
+    <Content Include="StoreData\Product\XQVU8816MWQ.jpg" />
+    <Content Include="StoreData\Product\YRZU9409BHF.jpg" />
+    <Content Include="StoreData\Product\ZDMT9635BPE.jpg" />
+    <Content Include="StoreData\Product\ZDQF9688NKO.jpg" />
+    <Content Include="StoreData\Product\ZUYG9678ZBV.jpg" />
+    <Content Include="StoreData\Product\[KWP9936VXS.jpg" />
+    <Content Include="StoreData\RegistrationUpdate.htm" />
+    <Content Include="StoreData\Registratio_Full.htm" />
+    <Content Include="StoreData\remo.htm" />
+    <Content Include="StoreData\Service Extension.htm" />
+    <Content Include="StoreData\ServicePageServices\BDHC1389YXJ.jpg" />
+    <Content Include="StoreData\ServicePageServices\BEWV1460DBQ.jpg" />
+    <Content Include="StoreData\ServicePageServices\BJSU1281LLO.jpg" />
+    <Content Include="StoreData\ServicePageServices\BNGV1357YSG.jpg" />
+    <Content Include="StoreData\ServicePageServices\BTQV1271OJU.jpg" />
+    <Content Include="StoreData\ServicePageServices\CCIG1657PKO.jpg" />
+    <Content Include="StoreData\ServicePageServices\CESJ1763QBU.jpg" />
+    <Content Include="StoreData\ServicePageServices\CMLM1626ZIF.jpg" />
+    <Content Include="StoreData\ServicePageServices\COKG1818LAH.jpg" />
+    <Content Include="StoreData\ServicePageServices\CUOI1793IGX.jpg" />
+    <Content Include="StoreData\ServicePageServices\CZVG1759JLN.jpg" />
+    <Content Include="StoreData\ServicePageServices\DBBK1942ISO.jpg" />
+    <Content Include="StoreData\ServicePageServices\DDCG1902IZU.jpg" />
+    <Content Include="StoreData\ServicePageServices\DPUF1959BWN.jpg" />
+    <Content Include="StoreData\ServicePageServices\ETKC2501OOF.jpg" />
+    <Content Include="StoreData\ServicePageServices\FPPQ2705ZEO.jpg" />
+    <Content Include="StoreData\ServicePageServices\GGXS3087WWW.jpg" />
+    <Content Include="StoreData\ServicePageServices\GINN3221TVJ.jpg" />
+    <Content Include="StoreData\ServicePageServices\GUOH2966JWH.jpg" />
+    <Content Include="StoreData\ServicePageServices\G[WO2922[TQ.jpg" />
+    <Content Include="StoreData\ServicePageServices\HSIV3351CVF.jpg" />
+    <Content Include="StoreData\ServicePageServices\ICTP3878VQJ.jpg" />
+    <Content Include="StoreData\ServicePageServices\JUUU1034CWX.jpg" />
+    <Content Include="StoreData\ServicePageServices\JVWE4135PJI.jpg" />
+    <Content Include="StoreData\ServicePageServices\JYRP4165BIX.jpg" />
+    <Content Include="StoreData\ServicePageServices\K[ED4404XCB.jpg" />
+    <Content Include="StoreData\ServicePageServices\LUGK4710UKQ.jpg" />
+    <Content Include="StoreData\ServicePageServices\LUUR4785CUJ.jpg" />
+    <Content Include="StoreData\ServicePageServices\LX[R4652KBO.jpg" />
+    <Content Include="StoreData\ServicePageServices\MUFV5024PEN.jpg" />
+    <Content Include="StoreData\ServicePageServices\NJKH5642K[T.jpg" />
+    <Content Include="StoreData\ServicePageServices\Not.jpg" />
+    <Content Include="StoreData\ServicePageServices\NZWT5430QKE.jpg" />
+    <Content Include="StoreData\ServicePageServices\ODFB5689LUU.jpg" />
+    <Content Include="StoreData\ServicePageServices\PXKL6085YUV.jpg" />
+    <Content Include="StoreData\ServicePageServices\QEGN6495PMM.jpg" />
+    <Content Include="StoreData\ServicePageServices\QPZN6574JQR.jpg" />
+    <Content Include="StoreData\ServicePageServices\Q[AF6688UCV.jpg" />
+    <Content Include="StoreData\ServicePageServices\RFRJ6889CPN.jpg" />
+    <Content Include="StoreData\ServicePageServices\RKNK6805EFP.jpg" />
+    <Content Include="StoreData\ServicePageServices\RSEM6782SPY.jpg" />
+    <Content Include="StoreData\ServicePageServices\RVHZ6841IRT.jpg" />
+    <Content Include="StoreData\ServicePageServices\RXYH7025LAU.jpg" />
+    <Content Include="StoreData\ServicePageServices\SDHL7377RCY.jpg" />
+    <Content Include="StoreData\ServicePageServices\SXIH7078OUC.jpg" />
+    <Content Include="StoreData\ServicePageServices\TDVS7502ZZP.jpg" />
+    <Content Include="StoreData\ServicePageServices\TJYX7664EGK.jpg" />
+    <Content Include="StoreData\ServicePageServices\TOTY7644BXN.jpg" />
+    <Content Include="StoreData\ServicePageServices\TQXG7509JXR.jpg" />
+    <Content Include="StoreData\ServicePageServices\UMCR8074JRP.jpg" />
+    <Content Include="StoreData\ServicePageServices\VCGT8277QCS.jpg" />
+    <Content Include="StoreData\ServicePageServices\VDWU8120LCH.jpg" />
+    <Content Include="StoreData\ServicePageServices\VPCU8297ZLP.jpg" />
+    <Content Include="StoreData\ServicePageServices\WBMP8763YTX.jpg" />
+    <Content Include="StoreData\ServicePageServices\WGDE8591HJN.jpg" />
+    <Content Include="StoreData\ServicePageServices\WVFJ8763MJY.jpg" />
+    <Content Include="StoreData\ServicePageServices\XAAD8941SPN.jpg" />
+    <Content Include="StoreData\ServicePageServices\XBKA8966BGM.jpg" />
+    <Content Include="StoreData\ServicePageServices\XERP8894JXI.jpg" />
+    <Content Include="StoreData\ServicePageServices\XXIZ9058ITT.jpg" />
+    <Content Include="StoreData\ServicePageServices\YQZG9465DTO.jpg" />
+    <Content Include="StoreData\ServicePageServices\ZDBN9764DAE.jpg" />
+    <Content Include="StoreData\ServicePageServices\ZIZJ9533ZJM.jpg" />
+    <Content Include="StoreData\ServicePageServices\ZMVL9626SZD.jpg" />
+    <Content Include="StoreData\ServicePageServices\ZWOK9804KMJ.jpg" />
+    <Content Include="StoreData\ServicePageServices\[PCW9877QDO.jpg" />
+    <Content Include="StoreData\ServicePageServices\[TCM8408GQG.jpg" />
+    <Content Include="StoreData\Spa.htm" />
+    <Content Include="StoreData\SpareCat1.htm" />
+    <Content Include="StoreData\SpareCat2.htm" />
+    <Content Include="StoreData\StaticeContent\AboutUs.htm" />
+    <Content Include="StoreData\StaticeContent\Appointment.htm" />
+    <Content Include="StoreData\StaticeContent\FleaTickAndHotspot_Product.htm" />
+    <Content Include="StoreData\StaticeContent\Friend.htm" />
+    <Content Include="StoreData\StaticeContent\GiftCard.htm" />
+    <Content Include="StoreData\StaticeContent\HomePage_Product.htm" />
+    <Content Include="StoreData\StaticeContent\Products.htm" />
+    <Content Include="StoreData\StaticeContent\RegistrationUpdate.htm" />
+    <Content Include="StoreData\StaticeContent\Registration_Basic.htm" />
+    <Content Include="StoreData\StaticeContent\Registratio_Full.htm" />
+    <Content Include="StoreData\StaticeContent\VisitOurVan.htm" />
+    <Content Include="StoreData\StaticeContent\WhatsNew.htm" />
+    <Content Include="StoreData\SuperKittyBowl.htm" />
+    <Content Include="StoreData\SuperPuppyBowl.htm" />
+    <Content Include="StoreData\teath.htm" />
+    <Content Include="StoreData\teeth.htm" />
+    <Content Include="StoreData\teethdog.htm" />
+    <Content Include="StoreData\TEstDelete.htm" />
+    <Content Include="StoreData\ThanksgivingCat.htm" />
+    <Content Include="StoreData\ThanksgivingDog.htm" />
+    <Content Include="StoreData\ValentineKitty.htm" />
+    <Content Include="StoreData\ValentinePup.htm" />
+    <Content Include="StoreData\VisitVan\1.jpg" />
+    <Content Include="StoreData\VisitVan\2.jpg" />
+    <Content Include="StoreData\VisitVan\3.jpg" />
+    <Content Include="StoreData\VisitVan\4.jpg" />
+    <Content Include="Style\Style.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="mobileweb_Cat_MothersDay.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cat_Anal_Gland_Expression.aspx.cs">
+      <DependentUpon>Cat_Anal_Gland_Expression.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cat_Anal_Gland_Expression.aspx.designer.cs">
+      <DependentUpon>Cat_Anal_Gland_Expression.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Blueberry_Facial.aspx.cs">
+      <DependentUpon>Cat_Blueberry_Facial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cat_Blueberry_Facial.aspx.designer.cs">
+      <DependentUpon>Cat_Blueberry_Facial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_BrushOut.aspx.cs">
+      <DependentUpon>Cat_BrushOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cat_BrushOut.aspx.designer.cs">
+      <DependentUpon>Cat_BrushOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Cuts_and_Trims.aspx.cs">
+      <DependentUpon>Cat_Cuts_and_Trims.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cat_Cuts_and_Trims.aspx.designer.cs">
+      <DependentUpon>Cat_Cuts_and_Trims.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_De_Shedding.aspx.cs">
+      <DependentUpon>Cat_De_Shedding.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cat_De_Shedding.aspx.designer.cs">
+      <DependentUpon>Cat_De_Shedding.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Flea_and_Tick.aspx.cs">
+      <DependentUpon>Cat_Flea_and_Tick.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cat_Flea_and_Tick.aspx.designer.cs">
+      <DependentUpon>Cat_Flea_and_Tick.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_FritzyFreshSpa.aspx.cs">
+      <DependentUpon>Cat_FritzyFreshSpa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cat_FritzyFreshSpa.aspx.designer.cs">
+      <DependentUpon>Cat_FritzyFreshSpa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Holidays.aspx.cs">
+      <DependentUpon>Cat_Holidays.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cat_Holidays.aspx.designer.cs">
+      <DependentUpon>Cat_Holidays.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Medicated_Bath.aspx.cs">
+      <DependentUpon>Cat_Medicated_Bath.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cat_Medicated_Bath.aspx.designer.cs">
+      <DependentUpon>Cat_Medicated_Bath.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Pad_Treatment.aspx.cs">
+      <DependentUpon>Cat_Pad_Treatment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cat_Pad_Treatment.aspx.designer.cs">
+      <DependentUpon>Cat_Pad_Treatment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Remoisturizing.aspx.cs">
+      <DependentUpon>Cat_Remoisturizing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cat_Remoisturizing.aspx.designer.cs">
+      <DependentUpon>Cat_Remoisturizing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Service_1.aspx.cs">
+      <DependentUpon>Cat_Service_1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cat_Service_1.aspx.designer.cs">
+      <DependentUpon>Cat_Service_1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Service_2.aspx.cs">
+      <DependentUpon>Cat_Service_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cat_Service_2.aspx.designer.cs">
+      <DependentUpon>Cat_Service_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_SuperBowl.aspx.cs">
+      <DependentUpon>Cat_SuperBowl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cat_SuperBowl.aspx.designer.cs">
+      <DependentUpon>Cat_SuperBowl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Teeth_Brushing.aspx.cs">
+      <DependentUpon>Cat_Teeth_Brushing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cat_Teeth_Brushing.aspx.designer.cs">
+      <DependentUpon>Cat_Teeth_Brushing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_ValentinesDay.aspx.cs">
+      <DependentUpon>Cat_ValentinesDay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cat_ValentinesDay.aspx.designer.cs">
+      <DependentUpon>Cat_ValentinesDay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\Enumeration.cs" />
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dog_and_Pet_Anal_Gland_Expression.aspx.cs">
+      <DependentUpon>Dog_and_Pet_Anal_Gland_Expression.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dog_and_Pet_Anal_Gland_Expression.aspx.designer.cs">
+      <DependentUpon>Dog_and_Pet_Anal_Gland_Expression.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dog_and_Pet_Blueberry_Facial.aspx.cs">
+      <DependentUpon>Dog_and_Pet_Blueberry_Facial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dog_and_Pet_Blueberry_Facial.aspx.designer.cs">
+      <DependentUpon>Dog_and_Pet_Blueberry_Facial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dog_and_Pet_BrushOut.aspx.cs">
+      <DependentUpon>Dog_and_Pet_BrushOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dog_and_Pet_BrushOut.aspx.designer.cs">
+      <DependentUpon>Dog_and_Pet_BrushOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dog_and_Pet_Cuts_and_Trims.aspx.cs">
+      <DependentUpon>Dog_and_Pet_Cuts_and_Trims.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dog_and_Pet_Cuts_and_Trims.aspx.designer.cs">
+      <DependentUpon>Dog_and_Pet_Cuts_and_Trims.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dog_and_Pet_De_Shedding.aspx.cs">
+      <DependentUpon>Dog_and_Pet_De_Shedding.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dog_and_Pet_De_Shedding.aspx.designer.cs">
+      <DependentUpon>Dog_and_Pet_De_Shedding.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dog_and_Pet_Flea_and_Tick.aspx.cs">
+      <DependentUpon>Dog_and_Pet_Flea_and_Tick.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dog_and_Pet_Flea_and_Tick.aspx.designer.cs">
+      <DependentUpon>Dog_and_Pet_Flea_and_Tick.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dog_and_Pet_FritzyFreshSpa.aspx.cs">
+      <DependentUpon>Dog_and_Pet_FritzyFreshSpa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dog_and_Pet_FritzyFreshSpa.aspx.designer.cs">
+      <DependentUpon>Dog_and_Pet_FritzyFreshSpa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dog_and_Pet_Holidays.aspx.cs">
+      <DependentUpon>Dog_and_Pet_Holidays.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dog_and_Pet_Holidays.aspx.designer.cs">
+      <DependentUpon>Dog_and_Pet_Holidays.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dog_and_Pet_Medicated_Bath.aspx.cs">
+      <DependentUpon>Dog_and_Pet_Medicated_Bath.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dog_and_Pet_Medicated_Bath.aspx.designer.cs">
+      <DependentUpon>Dog_and_Pet_Medicated_Bath.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dog_and_Pet_MothersDay.aspx.cs">
+      <DependentUpon>Dog_and_Pet_MothersDay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dog_and_Pet_MothersDay.aspx.designer.cs">
+      <DependentUpon>Dog_and_Pet_MothersDay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dog_and_Pet_Pad_Treatment.aspx.cs">
+      <DependentUpon>Dog_and_Pet_Pad_Treatment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dog_and_Pet_Pad_Treatment.aspx.designer.cs">
+      <DependentUpon>Dog_and_Pet_Pad_Treatment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dog_and_Pet_Remoisturizing.aspx.cs">
+      <DependentUpon>Dog_and_Pet_Remoisturizing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dog_and_Pet_Remoisturizing.aspx.designer.cs">
+      <DependentUpon>Dog_and_Pet_Remoisturizing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dog_and_Pet_Service_1.aspx.cs">
+      <DependentUpon>Dog_and_Pet_Service_1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dog_and_Pet_Service_1.aspx.designer.cs">
+      <DependentUpon>Dog_and_Pet_Service_1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dog_and_Pet_Service_2.aspx.cs">
+      <DependentUpon>Dog_and_Pet_Service_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dog_and_Pet_Service_2.aspx.designer.cs">
+      <DependentUpon>Dog_and_Pet_Service_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dog_and_Pet_SuperBowl.aspx.cs">
+      <DependentUpon>Dog_and_Pet_SuperBowl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dog_and_Pet_SuperBowl.aspx.designer.cs">
+      <DependentUpon>Dog_and_Pet_SuperBowl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dog_and_Pet_Teeth_Brushing.aspx.cs">
+      <DependentUpon>Dog_and_Pet_Teeth_Brushing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dog_and_Pet_Teeth_Brushing.aspx.designer.cs">
+      <DependentUpon>Dog_and_Pet_Teeth_Brushing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dog_and_Pet_ValentinesDay.aspx.cs">
+      <DependentUpon>Dog_and_Pet_ValentinesDay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dog_and_Pet_ValentinesDay.aspx.designer.cs">
+      <DependentUpon>Dog_and_Pet_ValentinesDay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\Inner_Page_MB_MasterPage.Master.cs">
+      <DependentUpon>Inner_Page_MB_MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\Inner_Page_MB_MasterPage.Master.designer.cs">
+      <DependentUpon>Inner_Page_MB_MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\MB_MasterPage.Master.cs">
+      <DependentUpon>MB_MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\MB_MasterPage.Master.designer.cs">
+      <DependentUpon>MB_MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MB_AboutUs.aspx.cs">
+      <DependentUpon>MB_AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MB_AboutUs.aspx.designer.cs">
+      <DependentUpon>MB_AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MB_Appointment_Registration.aspx.cs">
+      <DependentUpon>MB_Appointment_Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MB_Appointment_Registration.aspx.designer.cs">
+      <DependentUpon>MB_Appointment_Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MB_Common_Services.aspx.cs">
+      <DependentUpon>MB_Common_Services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MB_Common_Services.aspx.designer.cs">
+      <DependentUpon>MB_Common_Services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MB_ContactUs.aspx.cs">
+      <DependentUpon>MB_ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MB_ContactUs.aspx.designer.cs">
+      <DependentUpon>MB_ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MB_Controls\Product_Flea.ascx.cs">
+      <DependentUpon>Product_Flea.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MB_Controls\Product_Flea.ascx.designer.cs">
+      <DependentUpon>Product_Flea.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MB_Controls\Services_Cat.ascx.cs">
+      <DependentUpon>Services_Cat.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MB_Controls\Services_Cat.ascx.designer.cs">
+      <DependentUpon>Services_Cat.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MB_Controls\Services_Common.ascx.cs">
+      <DependentUpon>Services_Common.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MB_Controls\Services_Common.ascx.designer.cs">
+      <DependentUpon>Services_Common.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MB_Controls\Services_Dog.ascx.cs">
+      <DependentUpon>Services_Dog.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MB_Controls\Services_Dog.ascx.designer.cs">
+      <DependentUpon>Services_Dog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MB_Flea_Tick.aspx.cs">
+      <DependentUpon>MB_Flea_Tick.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MB_Flea_Tick.aspx.designer.cs">
+      <DependentUpon>MB_Flea_Tick.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MB_Index.aspx.cs">
+      <DependentUpon>MB_Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MB_Index.aspx.designer.cs">
+      <DependentUpon>MB_Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MB_Login.aspx.cs">
+      <DependentUpon>MB_Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MB_Login.aspx.designer.cs">
+      <DependentUpon>MB_Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MB_Logout.aspx.cs">
+      <DependentUpon>MB_Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MB_Logout.aspx.designer.cs">
+      <DependentUpon>MB_Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MB_Menu.aspx.cs">
+      <DependentUpon>MB_Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MB_Menu.aspx.designer.cs">
+      <DependentUpon>MB_Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MB_NewsDetails.aspx.cs">
+      <DependentUpon>MB_NewsDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MB_NewsDetails.aspx.designer.cs">
+      <DependentUpon>MB_NewsDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MB_Pet_Product_Supplies.aspx.cs">
+      <DependentUpon>MB_Pet_Product_Supplies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MB_Pet_Product_Supplies.aspx.designer.cs">
+      <DependentUpon>MB_Pet_Product_Supplies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MB_PrintCoupon.aspx.cs">
+      <DependentUpon>MB_PrintCoupon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MB_PrintCoupon.aspx.designer.cs">
+      <DependentUpon>MB_PrintCoupon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MB_PrintFinalCoupon.aspx.cs">
+      <DependentUpon>MB_PrintFinalCoupon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MB_PrintFinalCoupon.aspx.designer.cs">
+      <DependentUpon>MB_PrintFinalCoupon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MB_Registration.aspx.cs">
+      <DependentUpon>MB_Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MB_Registration.aspx.designer.cs">
+      <DependentUpon>MB_Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MB_Schedule_Appointment.aspx.cs">
+      <DependentUpon>MB_Schedule_Appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MB_Schedule_Appointment.aspx.designer.cs">
+      <DependentUpon>MB_Schedule_Appointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MB_ServiceDetails.aspx.cs">
+      <DependentUpon>MB_ServiceDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MB_ServiceDetails.aspx.designer.cs">
+      <DependentUpon>MB_ServiceDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MB_Services.aspx.cs">
+      <DependentUpon>MB_Services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MB_Services.aspx.designer.cs">
+      <DependentUpon>MB_Services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MB_Visit_Our_Van.aspx.cs">
+      <DependentUpon>MB_Visit_Our_Van.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MB_Visit_Our_Van.aspx.designer.cs">
+      <DependentUpon>MB_Visit_Our_Van.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="mobileweb_Cat_MothersDay.aspx.cs">
+      <DependentUpon>mobileweb_Cat_MothersDay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mobileweb_Cat_MothersDay.aspx.designer.cs">
+      <DependentUpon>mobileweb_Cat_MothersDay.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="StoreData\Coupon\Contact Us\" />
+    <Folder Include="StoreData\Coupon\NewsDetail\" />
+    <Folder Include="StoreData\Coupon\Product\" />
+    <Folder Include="StoreData\Coupon\Registration\" />
+    <Folder Include="StoreData\Coupon\Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPages\MB_MasterPage.Master" />
+    <Content Include="MasterPages\Inner_Page_MB_MasterPage.Master" />
+    <Content Include="StoreData\Baner\About Us\Thumbs.db" />
+    <Content Include="StoreData\Baner\Contact Us\Thumbs.db" />
+    <Content Include="StoreData\Baner\Flea\Thumbs.db" />
+    <Content Include="StoreData\Baner\Fritzy Friend\Thumbs.db" />
+    <Content Include="StoreData\Baner\Home\Thumbs.db" />
+    <Content Include="StoreData\Baner\Home\vssver2.scc" />
+    <Content Include="StoreData\Baner\Product\Thumbs.db" />
+    <Content Include="StoreData\Baner\Services\vssver2.scc" />
+    <Content Include="StoreData\Baner\Thumbs.db" />
+    <Content Include="StoreData\Baner\vssver2.scc" />
+    <Content Include="StoreData\Banner\Cat\banners.xml.bak" />
+    <Content Include="StoreData\Banner\Cat\img\.DS_Store" />
+    <Content Include="StoreData\Banner\Cat_Dog\banners.xml.bak" />
+    <Content Include="StoreData\Banner\Cat_Dog\img\.DS_Store" />
+    <Content Include="StoreData\Banner\Dog\banners.xml.bak" />
+    <Content Include="StoreData\Banner\Dog\img\.DS_Store" />
+    <Content Include="StoreData\Coupon\About Us\Thumbs.db" />
+    <Content Include="StoreData\Coupon\Flea\Thumbs.db" />
+    <Content Include="StoreData\Coupon\Fritzy Friend\Thumbs.db" />
+    <Content Include="StoreData\Coupon\Home\Thumbs.db" />
+    <Content Include="StoreData\Coupon\Home\vssver2.scc" />
+    <Content Include="StoreData\Coupon\ServiceDetail\Thumbs.db" />
+    <Content Include="StoreData\Coupon\Thumbs.db" />
+    <Content Include="StoreData\Email\vssver2.scc" />
+    <Content Include="StoreData\flash\vssver2.scc" />
+    <Content Include="StoreData\FriendLogo\vssver2.scc" />
+    <Content Include="StoreData\Images\vssver2.scc" />
+    <Content Include="StoreData\Product\Thumbs.db" />
+    <Content Include="StoreData\Product\vssver2.scc" />
+    <Content Include="StoreData\vssver2.scc" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLogicHandler\BusinessLogicHandler.csproj">
+      <Project>{e305cd3d-6af9-4295-be17-65d2baf1f5cc}</Project>
+      <Name>BusinessLogicHandler</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55108</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50372/FritzysMobile/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

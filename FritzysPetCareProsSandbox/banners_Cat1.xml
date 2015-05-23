@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+  <bannerTime>5</bannerTime>
+  <!--Home-->
+  <bannerName name="Home1">
+    <numberOfBanners>9</numberOfBanners>
+    <banners showHeader="true">
+      
+    </banners>
+  </bannerName>
+  <bannerName name="Home2">
+    <numberOfBanners>4</numberOfBanners>
+    <banners showHeader="true">
+      
+    </banners>
+  </bannerName>
+  <bannerName name="Home3">
+    <numberOfBanners>4</numberOfBanners>
+    <banners showHeader="true">
+      
+    </banners>
+  </bannerName>
+  <bannerName name="Home4">
+    <numberOfBanners>11</numberOfBanners>
+    <banners showHeader="true">
+      
+    </banners>
+  </bannerName>
+  <!--Service-->
+  <bannerName name="Services1">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Services2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Services3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Services4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Service Detail -->
+  <bannerName name="ServiceD1">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="ServiceD2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="ServiceD3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="ServiceD4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Product-->
+  <bannerName name="Product1">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Product2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Product3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Product4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Flea-->
+  <bannerName name="Flea1">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Flea2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Flea3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Flea4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Fritzy Friend-->
+  <bannerName name="Friend1">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Friend2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Friend3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Friend4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--About Us-->
+  <bannerName name="AboutUs1">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="AboutUs2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="AboutUs3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="AboutUs4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Contact Us-->
+  <bannerName name="ContactUs1">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="ContactUs2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="ContactUs3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="ContactUs4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Registration-->
+  <bannerName name="Registration1">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Registration2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Registration3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Registration4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--News Details-->
+  <bannerName name="News Details1">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="News Details2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="News Details3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="News Details4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Cat_FritzyFreshSpa1 -->
+  <bannerName name="Cat_FritzyFreshSpa1">
+    <numberOfBanners>2</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_FritzyFreshSpa12">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_FritzyFreshSpa13">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_FritzyFreshSpa14">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Cat_Cuts_and_Trims -->
+  <bannerName name="Cat_Cuts_and_Trims1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_Cuts_and_Trims2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_Cuts_and_Trims3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_Cuts_and_Trims4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Cat_Flea_and_Tick -->
+  <bannerName name="Cat_Flea_and_Tick1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_Flea_and_Tick2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_Flea_and_Tick3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_Flea_and_Tick4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Cat_BrushOut -->
+  <bannerName name="Cat_BrushOut1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_BrushOut2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_BrushOut3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_BrushOut4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Cat_Blueberry_Facial -->
+  <bannerName name="Cat_Blueberry_Facial1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_Blueberry_Facial2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_Blueberry_Facial3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_Blueberry_Facial4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Cat_De_Shedding -->
+  <bannerName name="Cat_De_Shedding1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_De_Shedding2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_De_Shedding3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_De_Shedding4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Cat_De_Shedding -->
+  <bannerName name="Cat_Holidays1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_Holidays2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_Holidays3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_Holidays4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Cat_Medicated_Bath -->
+  <bannerName name="Cat_Medicated_Bath1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_Medicated_Bath2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_Medicated_Bath3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_Medicated_Bath4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Cat_Pad_Treatment -->
+  <bannerName name="Cat_Pad_Treatment1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_Pad_Treatment2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_Pad_Treatment3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_Pad_Treatment4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Cat_Remoisturizing -->
+  <bannerName name="Cat_Remoisturizing1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_Remoisturizing2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_Remoisturizing3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_Remoisturizing4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Cat_SuperBowl -->
+  <bannerName name="Cat_SuperBowl1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_SuperBowl2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_SuperBowl3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_SuperBowl4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Cat_Teeth_Brushing -->
+  <bannerName name="Cat_Teeth_Brushing1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_Teeth_Brushing2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_Teeth_Brushing3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_Teeth_Brushing4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Cat_ValentinesDay -->
+  <bannerName name="Cat_ValentinesDay1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_ValentinesDay2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_ValentinesDay3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_ValentinesDay4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Cat_MothersDay -->
+  <bannerName name="Cat_MothersDay1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_MothersDay2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_MothersDay3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Cat_MothersDay4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_FritzyFreshSpa1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_FritzyFreshSpa2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_FritzyFreshSpa3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_FritzyFreshSpa4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Dog_and_Pet_Anal_Gland_Expression -->
+  <bannerName name="Dog_and_Pet_Anal_Gland_Expression1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Anal_Gland_Expression2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Anal_Gland_Expression3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Anal_Gland_Expression4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Dog_and_Pet_Blueberry_Facial -->
+  <bannerName name="Dog_and_Pet_Blueberry_Facial1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Blueberry_Facial2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Blueberry_Facial3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Blueberry_Facial4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Dog_and_Pet_BrushOut -->
+  <bannerName name="Dog_and_Pet_BrushOut1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_BrushOut2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_BrushOut3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_BrushOut4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Dog_and_Pet_Cuts_and_Trims1 -->
+  <bannerName name="Dog_and_Pet_Cuts_and_Trims1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Cuts_and_Trims2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Cuts_and_Trims3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Cuts_and_Trims4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Dog_and_Pet_De_Shedding -->
+  <bannerName name="Dog_and_Pet_De_Shedding1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_De_Shedding2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_De_Shedding3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_De_Shedding4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Dog_and_Pet_Flea_and_Tick -->
+  <bannerName name="Dog_and_Pet_Flea_and_Tick1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Flea_and_Tick2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Flea_and_Tick3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Flea_and_Tick4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Dog_and_Pet_Holidays -->
+  <bannerName name="Dog_and_Pet_Holidays1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Holidays2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Holidays3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Holidays4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Dog_and_Pet_Medicated_Bath -->
+  <bannerName name="Dog_and_Pet_Medicated_Bath1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Medicated_Bath2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Medicated_Bath3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Medicated_Bath4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Dog_and_Pet_Pad_Treatment -->
+  <bannerName name="Dog_and_Pet_Pad_Treatment11">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Pad_Treatment2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Pad_Treatment3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Pad_Treatment4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Dog_and_Pet_Pad_Treatment -->
+  <bannerName name="Dog_and_Pet_Remoisturizing1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Remoisturizing2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Remoisturizing3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Remoisturizing4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Dog_and_Pet_SuperBowl -->
+  <bannerName name="Dog_and_Pet_SuperBowl1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_SuperBowl2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_SuperBowl3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_SuperBowl4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Dog_and_Pet_Teeth_Brushing -->
+  <bannerName name="Dog_and_Pet_Teeth_Brushing1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Teeth_Brushing2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Teeth_Brushing3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_Teeth_Brushing4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Dog_and_Pet_ValentinesDay -->
+  <bannerName name="Dog_and_Pet_ValentinesDay1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_ValentinesDay2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_ValentinesDay3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_ValentinesDay4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <!--Dog_and_Pet_MothersDay -->
+  <bannerName name="Dog_and_Pet_MothersDay1">
+    <numberOfBanners>1</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_MothersDay2">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_MothersDay3">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+  <bannerName name="Dog_and_Pet_MothersDay4">
+    <numberOfBanners>0</numberOfBanners>
+    <banners showHeader="true">
+    </banners>
+  </bannerName>
+</rotator>
