@@ -36,3 +36,8 @@ J:\TAAPAS_Repository\FritzysSandbox\FritzysSandbox\BusinessLogicHandler\bin\Debu
 J:\TAAPAS_Repository\FritzysSandbox\FritzysSandbox\BusinessLogicHandler\obj\Debug\BusinessLogicHandler.csprojResolveAssemblyReference.cache
 J:\TAAPAS_Repository\FritzysSandbox\FritzysSandbox\BusinessLogicHandler\obj\Debug\BusinessLogicHandler.dll
 J:\TAAPAS_Repository\FritzysSandbox\FritzysSandbox\BusinessLogicHandler\obj\Debug\BusinessLogicHandler.pdb
+C:\Users\Vishal\Documents\GitHub\FritzysSandbox\BusinessLogicHandler\bin\Debug\BusinessLogicHandler.dll
+C:\Users\Vishal\Documents\GitHub\FritzysSandbox\BusinessLogicHandler\bin\Debug\BusinessLogicHandler.pdb
+C:\Users\Vishal\Documents\GitHub\FritzysSandbox\BusinessLogicHandler\obj\Debug\BusinessLogicHandler.csprojResolveAssemblyReference.cache
+C:\Users\Vishal\Documents\GitHub\FritzysSandbox\BusinessLogicHandler\obj\Debug\BusinessLogicHandler.dll
+C:\Users\Vishal\Documents\GitHub\FritzysSandbox\BusinessLogicHandler\obj\Debug\BusinessLogicHandler.pdb

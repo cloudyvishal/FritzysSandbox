@@ -49,3 +49,12 @@ J:\TAAPAS_Repository\FritzysSandbox\FritzysSandbox\MobileWeb\bin\DataBaseHandler
 J:\TAAPAS_Repository\FritzysSandbox\FritzysSandbox\MobileWeb\obj\Debug\FritzysMobile.csprojResolveAssemblyReference.cache
 J:\TAAPAS_Repository\FritzysSandbox\FritzysSandbox\MobileWeb\obj\Debug\MobileWeb.dll
 J:\TAAPAS_Repository\FritzysSandbox\FritzysSandbox\MobileWeb\obj\Debug\MobileWeb.pdb
+C:\Users\Vishal\Documents\GitHub\FritzysSandbox\MobileWeb\bin\MobileWeb.dll.config
+C:\Users\Vishal\Documents\GitHub\FritzysSandbox\MobileWeb\bin\MobileWeb.dll
+C:\Users\Vishal\Documents\GitHub\FritzysSandbox\MobileWeb\bin\MobileWeb.pdb
+C:\Users\Vishal\Documents\GitHub\FritzysSandbox\MobileWeb\bin\BusinessLogicHandler.dll
+C:\Users\Vishal\Documents\GitHub\FritzysSandbox\MobileWeb\bin\DataBaseHandler35.dll
+C:\Users\Vishal\Documents\GitHub\FritzysSandbox\MobileWeb\bin\BusinessLogicHandler.pdb
+C:\Users\Vishal\Documents\GitHub\FritzysSandbox\MobileWeb\obj\Debug\FritzysMobile.csprojResolveAssemblyReference.cache
+C:\Users\Vishal\Documents\GitHub\FritzysSandbox\MobileWeb\obj\Debug\MobileWeb.dll
+C:\Users\Vishal\Documents\GitHub\FritzysSandbox\MobileWeb\obj\Debug\MobileWeb.pdb
