@@ -677,6 +677,7 @@
     <Content Include="FritzyFriends.aspx" />
     <Content Include="GiftCard.aspx" />
     <Content Include="GlobalHandler.asax" />
+    <Content Include="GroomerAppointments.aspx" />
     <Content Include="Images\aboutusBanner.jpg" />
     <Content Include="Images\aboutusImg1.jpg" />
     <Content Include="Images\aboutusTitle.jpg" />
@@ -976,6 +977,7 @@
     <Content Include="Script\addListServices.js" />
     <Content Include="Script\barackslideshow.js" />
     <Content Include="Script\be_slide.js" />
+    <Content Include="Script\colorBox.js" />
     <Content Include="Script\core.js" />
     <Content Include="Script\Demo.js" />
     <Content Include="Script\ie9.min.js" />
@@ -2034,6 +2036,7 @@
     <Content Include="StoreData\VisitVan\3.jpg" />
     <Content Include="StoreData\VisitVan\4.jpg" />
     <Content Include="Style\Admin.css" />
+    <Content Include="Style\colorbox.css" />
     <Content Include="Style\Styles.css" />
     <Content Include="VisitOurVan.aspx" />
     <Content Include="Web.config">
@@ -3066,6 +3069,13 @@
     </Compile>
     <Compile Include="GlobalHandler.asax.cs">
       <DependentUpon>GlobalHandler.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GroomerAppointments.aspx.cs">
+      <DependentUpon>GroomerAppointments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GroomerAppointments.aspx.designer.cs">
+      <DependentUpon>GroomerAppointments.aspx</DependentUpon>
     </Compile>
     <Compile Include="Handler\Capcha.ashx.cs">
       <DependentUpon>Capcha.ashx</DependentUpon>

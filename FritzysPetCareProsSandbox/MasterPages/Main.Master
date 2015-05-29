@@ -19,7 +19,29 @@
 
     <script type="text/javascript" defer="defer">
         $(document).ready(function () {
+            
             $(".jquery h1").prepend("<span></span>");
+
+            $("#nav1 li a").click(function () {
+                
+                aObj = $(this).attr("id"); 
+
+                $(this).addClass("active");
+                //for (i = 0; i < aObj.length; i++) {
+                //    alert(aObj);
+                //    if (document.location.href.indexOf(aObj[i].href) >= 0) {
+
+                //        aObj[i].className = 'active';
+                //    }
+                //}
+
+                //$(this).addClass("active");
+            }); alert($(location).attr('pathname'));
+            if ($(location).attr('pathname') == $("#nav1 li a").att("id")) {
+                alert("hi");
+                $("#nav1 li a").addClass("active");
+            }
+
         });
     </script>
     <script lang="javascript" src="../Scripts/swfobject.js" type="text/javascript" defer="defer"></script>
@@ -33,19 +55,34 @@
         }
         preloadImages("http://localhost:50372/Images/mainBg.jpg", "http://localhost:50372/Images/header.jpg", "http://localhost:50372/Images/content-bg.jpg", "http://localhost:50372/Images/main-content-background.jpg")
     </script>
-    <script type="text/javascript" defer="defer">
+    <script type="text/javascript">
+        
         function setActive() {
-            aObj = document.getElementById('nav1').getElementsByTagName('a');
+            
+            
+            $("#nav1 li a").click(function () {
+                alert("Hiiiiiii");
+                aObj = $(this).attr("id"); alert("HI"+aObj);
+                for (i = 0; i < aObj.length; i++) {
+                    alert(aObj);
+                    if (document.location.href.indexOf(aObj[i].href) >= 0) {
 
-            for (i = 0; i < aObj.length; i++) {
-
-                if (document.location.href.indexOf(aObj[i].href) >= 0) {
-
-                    aObj[i].className = 'active';
+                        aObj[i].className = 'active';
+                    }
                 }
-            }
+
+                //$(this).addClass("active");
+            });
+            window.onload = setActive;
+            //for (i = 0; i < aObj.length; i++) {
+            //    //alert(document.location.href.indexOf(aObj[i].href));
+            //    if (document.location.href.indexOf(aObj[i].href) >= 0) {
+                   
+            //        aObj[i].className = 'active';
+            //    }
+            //}
         }
-        window.onload = setActive;
+       // 
         function FormPanel_FireDefaultButton(event, target) {
             if ((event.keyCode == 13 || event.which == 13) && !(event.srcElement && (event.srcElement.tagName.toLowerCase() == 'textarea'))) {
 

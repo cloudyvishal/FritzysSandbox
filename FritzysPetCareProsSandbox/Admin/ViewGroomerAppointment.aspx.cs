@@ -180,6 +180,8 @@ namespace FritzysPetCareProsSandbox.Admin
 
                 DateTime olddate = Convert.ToDateTime("01/01/0001");
 
+                TodaysDate = TodaysDate.AddMonths(-20);
+
                 if (calDate.SelectedDate == olddate)
                 {
                     //
@@ -249,7 +251,8 @@ namespace FritzysPetCareProsSandbox.Admin
 
                     lblSelectDate.Text = calDate.SelectedDate.ToLongDateString();
                 }
-            } finally{}
+            }
+            finally { }
         }
 
         #endregion
@@ -467,7 +470,8 @@ namespace FritzysPetCareProsSandbox.Admin
                         BindGroomersAppointment();
                     }
                 }
-            } finally{}
+            }
+            finally { }
         }
 
         protected void GrdUsers_RowEditing(object sender, GridViewEditEventArgs e)
@@ -591,7 +595,8 @@ namespace FritzysPetCareProsSandbox.Admin
                         e.Row.Cells[11].Enabled = false;
                     }
                 }
-            } finally{}
+            }
+            finally { }
         }
 
         #region GridEvent
@@ -737,7 +742,7 @@ namespace FritzysPetCareProsSandbox.Admin
                         for (int n = 0; n < ds5.Tables[0].Rows.Count; n++)
                         {
                             objGroomer.UpdateGroomerSequence(Convert.ToInt32(lblGId.Text), Session["SelectedDate"].ToString(), n + 1, Convert.ToInt32(ds5.Tables[0].Rows[n]["AppointmentId"]));
-                            
+
                             BindGroomersAppointment();
 
                             SuccessMessage("Groomer(s) appointment deleted successfully.");
@@ -750,7 +755,8 @@ namespace FritzysPetCareProsSandbox.Admin
                         SuccessMessage("Groomer(s) appointment deleted successfully.");
                     }
                 }
-            } finally{}
+            }
+            finally { }
         }
 
         public void BindDayYear()
@@ -773,7 +779,7 @@ namespace FritzysPetCareProsSandbox.Admin
 
         protected void btnDeleteAppointment_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         protected void btnDelete_Click(object sender, EventArgs e)
@@ -808,7 +814,8 @@ namespace FritzysPetCareProsSandbox.Admin
                 {
                     ErrorMessage("Select month should be two months less than current date.");
                 }
-            } finally{}
+            }
+            finally { }
         }
 
         protected void calDate_DayRender(object sender, DayRenderEventArgs e)
@@ -843,7 +850,8 @@ namespace FritzysPetCareProsSandbox.Admin
                 {
                     DateTime TodaysDate = System.DateTime.Now;
                 }
-            } finally{}
+            }
+            finally { }
         }
     }
 }
