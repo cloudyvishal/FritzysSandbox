@@ -36,9 +36,9 @@
                 //}
 
                 //$(this).addClass("active");
-            }); alert($(location).attr('pathname'));
-            if ($(location).attr('pathname') == $("#nav1 li a").att("id")) {
-                alert("hi");
+            }); 
+            if ($(location).attr('pathname') == $("#nav1 li a").attr("id")) {
+                
                 $("#nav1 li a").addClass("active");
             }
 
