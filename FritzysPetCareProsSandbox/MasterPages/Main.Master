@@ -19,57 +19,7 @@
 
     <script type="text/javascript" defer="defer">
         $(document).ready(function () {
-            
             $(".jquery h1").prepend("<span></span>");
-
-            $("#nav1 li a").click(function () {
-                
-                aObj = $(this).attr("id"); alert(aObj);
-
-                switch (aObj)
-                {
-                    case "home":
-                        $("#nav1 li a#home").addClass("active");
-                        break;
-
-                    case "services":
-                        $("#nav1 li a#services").addClass("active");
-                        break;
-
-                    case "products":
-                        
-                        alert($("#nav1 li a#products").attr("id"));
-                        $("#nav1 li a#products").addClass("active");
-                        break;
-
-                    case "flea": alert($(this));
-                        $("#nav1 li a#flea").addClass("active");
-                        break;
-
-                    case "fritzyfriends":
-                        $("#nav1 li a#fritzyfriends").addClass("active");
-                        break;
-
-                    case "contactus":
-                        $("#nav1 li a#contactus").addClass("active");
-                        break;
-                }
-                
-                //for (i = 0; i < aObj.length; i++) {
-                //    alert(aObj);
-                //    if (document.location.href.indexOf(aObj[i].href) >= 0) {
-
-                //        aObj[i].className = 'active';
-                //    }
-                //}
-
-                //$(this).addClass("active");
-            }); 
-            if ($(location).attr('pathname') == $("#nav1 li a").attr("id")) {
-                
-                $("#nav1 li a").addClass("active");
-            }
-
         });
     </script>
     <script lang="javascript" src="../Scripts/swfobject.js" type="text/javascript" defer="defer"></script>
@@ -83,34 +33,19 @@
         }
         preloadImages("http://localhost:50372/Images/mainBg.jpg", "http://localhost:50372/Images/header.jpg", "http://localhost:50372/Images/content-bg.jpg", "http://localhost:50372/Images/main-content-background.jpg")
     </script>
-    <script type="text/javascript">
-        
+    <script type="text/javascript" defer="defer">
         function setActive() {
-            
-            
-            $("#nav1 li a").click(function () {
-                alert("Hiiiiiii");
-                aObj = $(this).attr("id"); alert("HI"+aObj);
-                for (i = 0; i < aObj.length; i++) {
-                    alert(aObj);
-                    if (document.location.href.indexOf(aObj[i].href) >= 0) {
+            aObj = document.getElementById('nav1').getElementsByTagName('a');
 
-                        aObj[i].className = 'active';
-                    }
+            for (i = 0; i < aObj.length; i++) {
+
+                if (document.location.href.indexOf(aObj[i].href) >= 0) {
+
+                    aObj[i].className = 'active';
                 }
-
-                //$(this).addClass("active");
-            });
-            window.onload = setActive;
-            //for (i = 0; i < aObj.length; i++) {
-            //    //alert(document.location.href.indexOf(aObj[i].href));
-            //    if (document.location.href.indexOf(aObj[i].href) >= 0) {
-                   
-            //        aObj[i].className = 'active';
-            //    }
-            //}
+            }
         }
-       // 
+        window.onload = setActive;
         function FormPanel_FireDefaultButton(event, target) {
             if ((event.keyCode == 13 || event.which == 13) && !(event.srcElement && (event.srcElement.tagName.toLowerCase() == 'textarea'))) {
 
