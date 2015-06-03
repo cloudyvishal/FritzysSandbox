@@ -24,9 +24,37 @@
 
             $("#nav1 li a").click(function () {
                 
-                aObj = $(this).attr("id"); 
+                aObj = $(this).attr("id"); alert(aObj);
 
-                $(this).addClass("active");
+                switch (aObj)
+                {
+                    case "home":
+                        $("#nav1 li a#home").addClass("active");
+                        break;
+
+                    case "services":
+                        $("#nav1 li a#services").addClass("active");
+                        break;
+
+                    case "products":
+                        
+                        alert($("#nav1 li a#products").attr("id"));
+                        $("#nav1 li a#products").addClass("active");
+                        break;
+
+                    case "flea": alert($(this));
+                        $("#nav1 li a#flea").addClass("active");
+                        break;
+
+                    case "fritzyfriends":
+                        $("#nav1 li a#fritzyfriends").addClass("active");
+                        break;
+
+                    case "contactus":
+                        $("#nav1 li a#contactus").addClass("active");
+                        break;
+                }
+                
                 //for (i = 0; i < aObj.length; i++) {
                 //    alert(aObj);
                 //    if (document.location.href.indexOf(aObj[i].href) >= 0) {

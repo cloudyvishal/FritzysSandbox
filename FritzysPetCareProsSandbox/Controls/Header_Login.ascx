@@ -80,12 +80,12 @@
             <!-- top navigation start here -->
             <div id="topnav">
                 <ul id="nav1">
-                    <li><a href="Index.aspx" id="home" title="Fritzy's pet care pros"></a></li>
-                    <li><a href="Services.aspx" id="services" title="Fritzy's pet care pros : SERVICES"></a></li>
-                    <li><a href="Products.aspx" id="products" title="Fritzy's pet care pros : PRODUCTS"></a></li>
-                    <li><a href="FleaTick.aspx" id="flea" title="Fritzy's pet care pros : FLEA, TICK &amp; HOT SPOT"></a></li>
-                    <li><a href="FritzyFriends.aspx" id="fritzyfriends" title="Fritzy's pet care pros : FRITZY'S FRIENDS"></a></li>
-                    <li><a href="Contactus.aspx" id="contactus" title="Fritzy's pet care pros : CONTACT US"></a></li>
+                    <li><a href="Index.aspx" id="home" title="Fritzy's pet care pros" runat="server"></a></li>
+                    <li><a href="Services.aspx" id="services" title="Fritzy's pet care pros : SERVICES" runat="server"></a></li>
+                    <li><a href="Products.aspx" id="products" title="Fritzy's pet care pros : PRODUCTS" runat="server"></a></li>
+                    <li><a href="FleaTick.aspx" id="flea" title="Fritzy's pet care pros : FLEA, TICK &amp; HOT SPOT" runat="server"></a></li>
+                    <li><a href="FritzyFriends.aspx" id="fritzyfriends" title="Fritzy's pet care pros : FRITZY'S FRIENDS" runat="server"></a></li>
+                    <li><a href="Contactus.aspx" id="contactus" title="Fritzy's pet care pros : CONTACT US" runat="server"></a></li>
                     <li><asp:LinkButton ID="login" runat="server" ToolTip="LOGIN" CssClass="loginlink"></asp:LinkButton></li>
                 </ul>
             </div>

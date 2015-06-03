@@ -12,6 +12,13 @@
 	    <link href="ie.css" rel="stylesheet" type="text/css" />
    
     <![endif]-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            alert("Hello...on service page");
+            $(this).addClass("active");
+
+        });
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cntBody" runat="server">
     <div id="mainPlaceholder">
