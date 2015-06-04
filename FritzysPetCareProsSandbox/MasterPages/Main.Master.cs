@@ -71,6 +71,7 @@ namespace FritzysPetCarePros.Pages.Master
                 else
                 {
                     Control bodyCntrl = LoadControl("../Controls/Header_Login.ascx");
+
                     PhHeader.Controls.Add(bodyCntrl);
                 }
 

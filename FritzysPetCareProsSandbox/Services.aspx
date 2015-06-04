@@ -12,13 +12,14 @@
 	    <link href="ie.css" rel="stylesheet" type="text/css" />
    
     <![endif]-->
-   <%-- <script type="text/javascript">
+    <script lang="javascript" src="http://localhost:50372/Script/jquery.js" type="text/javascript"></script>
+   <script type="text/javascript">
         $(document).ready(function () {
             alert("Hello...on service page");
-            $(this).addClass("active");
+            $("div#topnav > ul#nav1 > li > a#services").addClass("active");
 
         });
-    </script>--%>
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cntBody" runat="server">
     <div id="mainPlaceholder">
