@@ -700,5 +700,11 @@ namespace BCL.Common.StoreProcedure
         public const string NEWS_POSITION = "NewsPosition";
 
         public const string INVENTORY_LIQUIDS_GET_ALL = "InventoryLiquids_GetAll";
+
+        public const string GROOMER_CUSTOMER_EMAIL_EXISTS = "Groomer_CustomerEmail_Exits";
+
+        public const string INSERT_GROOMER_FAILED_APPOINTMENT = "Groomer_Failed_Appointment_Insert";
+
+        public const string GROOMERS_GET_ALL_FAILED_APPOINTMENTS = "Groomers_Failed_Appointments_Get_All";
     }
 }

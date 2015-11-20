@@ -348,7 +348,7 @@ namespace BCL.Admin.GroomerMngmt
         /// </summary>
         /// <param name="groomer"></param>
         /// <returns></returns>
-        public bool IsGroomerExists(string groomer)
+        public bool IsGroomerExists(int groomer)
         {
             string[] paramNames = null;
 
@@ -2305,6 +2305,90 @@ namespace BCL.Admin.GroomerMngmt
                 paramList = databaseObj.BuildParameterArray(paramNames, paramValues);
 
                 return databaseObj.GetDataSet(StoreProcedure.INVENTORY_LIQUIDS_GET_ALL, Enumerations.Command_Type.StoredProcedure, paramList);
+            }
+            finally
+            {
+                paramNames = null;
+
+                paramValues = null;
+
+                paramList = null;
+            }
+        }
+
+        public int findCustomerInList(string NameofCustomer)
+        {
+            string[] paramNames = null;
+
+            object[] paramValues = null;
+
+            IDataParameter[] paramList = null;
+
+            try
+            {
+                paramNames = new string[] { "@EmailId" };
+
+                paramValues = new object[] { NameofCustomer };
+
+                paramList = databaseObj.BuildParameterArray(paramNames, paramValues);
+
+                return databaseObj.GetCount(StoreProcedure.GROOMER_CUSTOMER_EMAIL_EXISTS, Enumerations.Command_Type.StoredProcedure, paramList);
+            }
+            finally
+            {
+                paramNames = null;
+
+                paramValues = null;
+
+                paramList = null;
+            }
+        }
+
+        public void InsertFailedAppointments(string Apptdate, string ApptStart_Time, string ApptString, string ExpApptTime, string NameofCustomer, string customerEmail, string scheduledBy, int gid)
+        {
+            string[] paramNames = null;
+
+            object[] paramValues = null;
+
+            IDataParameter[] paramList = null;
+
+            try
+            {
+                paramNames = new string[] { "@AppointmentDate", "@AppointmentTime", "@Duration", "@CustomerName", "@CustomerEmail", "@AppointmentString", "@ScheduleBy", "@GroomerId" };
+
+                paramValues = new object[] { Convert.ToDateTime(Apptdate), ApptStart_Time, ExpApptTime, NameofCustomer, customerEmail, ApptString, scheduledBy, gid };
+
+                paramList = databaseObj.BuildParameterArray(paramNames, paramValues);
+
+                databaseObj.InsertData(StoreProcedure.INSERT_GROOMER_FAILED_APPOINTMENT, Enumerations.Command_Type.StoredProcedure, paramList);
+            }
+            finally
+            {
+                paramNames = null;
+
+                paramValues = null;
+
+                paramList = null;
+            }
+        }
+
+        public DataSet GetFailedAppointments()
+        {
+            string[] paramNames = null;
+
+            object[] paramValues = null;
+
+            IDataParameter[] paramList = null;
+
+            try
+            {
+                paramNames = new string[] { };
+
+                paramValues = new object[] { };
+
+                paramList = databaseObj.BuildParameterArray(paramNames, paramValues);
+
+                return databaseObj.GetDataSet(StoreProcedure.GROOMERS_GET_ALL_FAILED_APPOINTMENTS, Enumerations.Command_Type.StoredProcedure, paramList);
             }
             finally
             {
