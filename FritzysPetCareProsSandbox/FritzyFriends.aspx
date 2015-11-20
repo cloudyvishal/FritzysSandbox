@@ -7,6 +7,19 @@
 <%@ Register Src="~/Controls/giftcard.ascx" TagName="Gift" TagPrefix="GF" %>
 <%@ Register Src="~/Controls/Banner.ascx" TagName="Banner" TagPrefix="BN" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+      <!--[if IE]>
+	
+	    <link href="ie.css" rel="stylesheet" type="text/css" />
+   
+    <![endif]-->
+    <script lang="javascript" src="http://localhost:50372/Script/jquery.js" type="text/javascript"></script>
+   <script type="text/javascript">
+       $(document).ready(function () {
+
+           $("div#topnav > ul#nav1 > li > a#fritzyfriends").addClass("active");
+
+       });
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cntBody" runat="server">
     <!--[if IE]>

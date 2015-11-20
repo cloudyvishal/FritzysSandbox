@@ -16,6 +16,14 @@
     <![endif]-->
     <script type="text/javascript" src="../Scripts/phone_validation.js"></script>
     <script type="text/javascript" src="../Scripts/Validation.js"></script>
+     <script lang="javascript" src="http://localhost:50372/Script/jquery.js" type="text/javascript"></script>
+   <script type="text/javascript">
+       $(document).ready(function () {
+           
+           $("div#topnav > ul#nav1 > li > a#home").addClass("active");
+
+       });
+    </script>
     <script type="text/javascript" lang="javascript">
 
         // function Use to check maxlength of textbox 

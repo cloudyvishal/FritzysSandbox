@@ -9,6 +9,19 @@
 <%@ Register Src="~/Controls/Banner.ascx" TagName="Banner" TagPrefix="BN" %>
 <%@ Register Src="~/Controls/Product.ascx" TagName="Product" TagPrefix="PR" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+     <!--[if IE]>
+	
+	    <link href="ie.css" rel="stylesheet" type="text/css" />
+   
+    <![endif]-->
+    <script lang="javascript" src="http://localhost:50372/Script/jquery.js" type="text/javascript"></script>
+   <script type="text/javascript">
+       $(document).ready(function () {
+
+           $("div#topnav > ul#nav1 > li > a#products").addClass("active");
+
+       });
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cntBody" runat="server">
     <div style="width: 95%" id="divError" runat="server" visible="false">

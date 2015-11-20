@@ -15,7 +15,7 @@
     <script lang="javascript" src="http://localhost:50372/Script/jquery.js" type="text/javascript"></script>
    <script type="text/javascript">
         $(document).ready(function () {
-            alert("Hello...on service page");
+            
             $("div#topnav > ul#nav1 > li > a#services").addClass("active");
 
         });
