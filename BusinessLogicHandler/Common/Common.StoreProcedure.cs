@@ -706,5 +706,7 @@ namespace BCL.Common.StoreProcedure
         public const string INSERT_GROOMER_FAILED_APPOINTMENT = "Groomer_Failed_Appointment_Insert";
 
         public const string GROOMERS_GET_ALL_FAILED_APPOINTMENTS = "Groomers_Failed_Appointments_Get_All";
+
+        public const string UPDATE_LABELS = "sp_Update_Labels";
     }
 }

@@ -2160,132 +2160,32 @@ namespace BCL.Admin.GroomerMngmt
         string Marketing1, string Marketing2, string Marketing3, string Marketing4, string Marketing5
         )
         {
+            string[] paramNames = null;
+
+            object[] paramValues = null;
+
+            IDataParameter[] paramList = null;
+
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=FRITZYS;Initial Catalog=fritzyslive_replicaV1;Persist Security Info=True;User ID=sa;PWD=fritzys;");
+                paramNames = new string[] { "@liq1", "@liq2", "@liq3", "@liq4", "@liq5", "@liq6", "@liq7", "@liq8", "@liq9", "@liq10", "@liq11", "@liq12", "@liq13", "@liq14", "@liq15", "@liq16", "@liq17", "@liq18", "@liq19", "@liq20", "@liq21", "@liq22", "@liq23", "@liq24", "@liq25", "@FleaTick22", "@FleaTick44", "@FleaTick88", "@FleaTick132", "@FleaTickCat", "@Toothbrushes", "@Wham", "@Towels", "@Treats", "@Wipes", "@CottonSwabs", "@VetWrap", "@PaperTowels", "@GarbageBags", "@Receipts", "@Envelopes", "@BusinessCards", "@Other1", "@Other2", "@Other3", "@Other4", "@Other5", "@Marketing1", "@Marketing2", "@Marketing3", "@Marketing4", "@Marketing5", "@liqId" };
 
-                con.Open();
+                paramValues = new object[] { liq1, liq2, liq3, liq4, liq5, liq6, liq7, liq8, liq9, liq10, liq11, liq12, liq13, liq14, liq15, liq16, liq17, liq18, liq19, liq20, liq21, liq22, liq23, liq24, liq25, FleaTick22, FleaTick44, FleaTick88, FleaTick132, FleaTickCat, Toothbrushes, Wham, Towels, Treats, Wipes, CottonSwabs, VetWrap, PaperTowels, GarbageBags, Receipts, Envelopes, BusinessCards, Other1, Other2, Other3, Other4, Other5, Marketing1, Marketing2, Marketing3, Marketing4, Marketing5, 1 };
 
-                string updateQuery = "update InventoryLiquids set Liquid1=@liq1,Liquid2=@liq2,Liquid3=@liq3,Liquid4=@liq4,Liquid5=@liq5,Liquid6=@liq6,Liquid7=@liq7,Liquid8=@liq8,Liquid9=@liq9,Liquid10=@liq10,Liquid11=@liq11,Liquid12=@liq12,Liquid13=@liq13,Liquid14=@liq14,Liquid15=@liq15,Liquid16=@liq16,Liquid17=@liq17,Liquid18=@liq18,Liquid19=@liq19,Liquid20=@liq20,Liquid21=@liq21,Liquid22=@liq22,Liquid23=@liq23,Liquid24=@liq24,Liquid25=@liq25,";
+                paramList = databaseObj.BuildParameterArray(paramNames, paramValues);
 
-                updateQuery += "FleaTick22=@FleaTick22,FleaTick44=@FleaTick44,FleaTick88=@FleaTick88,FleaTick132=@FleaTick132,FleaTickCat=@FleaTickCat,Toothbrushes=@Toothbrushes,Wham=@Wham,Towels=@Towels,Treats=@Treats,Wipes=@Wipes,CottonSwabs=@CottonSwabs,VetWrap=@VetWrap,PaperTowels=@PaperTowels,GarbageBags=@GarbageBags,Receipts=@Receipts,Envelopes=@Envelopes,BusinessCards=@BusinessCards,";
+                databaseObj.UpdateData(StoreProcedure.UPDATE_LABELS, Enumerations.Command_Type.StoredProcedure, paramList);
 
-                updateQuery += "Other1=@Other1,Other2=@Other2,Other3=@Other3,Other4=@Other4,Other5=@Other5,Marketing1=@Marketing1,Marketing2=@Marketing2,Marketing3=@Marketing3,Marketing4=@Marketing4,Marketing5=@Marketing5 where id=@liqId";
 
-                SqlCommand cmd = new SqlCommand(updateQuery, con);
-
-                cmd.Parameters.AddWithValue("@liq1", liq1);
-
-                cmd.Parameters.AddWithValue("@liq2", liq2);
-
-                cmd.Parameters.AddWithValue("@liq3", liq3);
-
-                cmd.Parameters.AddWithValue("@liq4", liq4);
-
-                cmd.Parameters.AddWithValue("@liq5", liq5);
-
-                cmd.Parameters.AddWithValue("@liq6", liq6);
-
-                cmd.Parameters.AddWithValue("@liq7", liq7);
-
-                cmd.Parameters.AddWithValue("@liq8", liq8);
-
-                cmd.Parameters.AddWithValue("@liq9", liq9);
-
-                cmd.Parameters.AddWithValue("@liq10", liq10);
-
-                cmd.Parameters.AddWithValue("@liq11", liq11);
-
-                cmd.Parameters.AddWithValue("@liq12", liq12);
-
-                cmd.Parameters.AddWithValue("@liq13", liq13);
-
-                cmd.Parameters.AddWithValue("@liq14", liq14);
-
-                cmd.Parameters.AddWithValue("@liq15", liq15);
-
-                cmd.Parameters.AddWithValue("@liq16", liq16);
-
-                cmd.Parameters.AddWithValue("@liq17", liq17);
-
-                cmd.Parameters.AddWithValue("@liq18", liq18);
-
-                cmd.Parameters.AddWithValue("@liq19", liq19);
-
-                cmd.Parameters.AddWithValue("@liq20", liq20);
-
-                cmd.Parameters.AddWithValue("@liq21", liq21);
-
-                cmd.Parameters.AddWithValue("@liq22", liq22);
-
-                cmd.Parameters.AddWithValue("@liq23", liq23);
-
-                cmd.Parameters.AddWithValue("@liq24", liq24);
-
-                cmd.Parameters.AddWithValue("@liq25", liq25);
-
-                cmd.Parameters.AddWithValue("@FleaTick22", FleaTick22);
-
-                cmd.Parameters.AddWithValue("@FleaTick44", FleaTick44);
-
-                cmd.Parameters.AddWithValue("@FleaTick88", FleaTick88);
-
-                cmd.Parameters.AddWithValue("@FleaTick132", FleaTick132);
-
-                cmd.Parameters.AddWithValue("@FleaTickCat", FleaTickCat);
-
-                cmd.Parameters.AddWithValue("@Toothbrushes", Toothbrushes);
-
-                cmd.Parameters.AddWithValue("@Wham", Wham);
-
-                cmd.Parameters.AddWithValue("@Towels", Towels);
-
-                cmd.Parameters.AddWithValue("@Treats", Treats);
-
-                cmd.Parameters.AddWithValue("@Wipes", Wipes);
-
-                cmd.Parameters.AddWithValue("@CottonSwabs", CottonSwabs);
-
-                cmd.Parameters.AddWithValue("@VetWrap", VetWrap);
-
-                cmd.Parameters.AddWithValue("@PaperTowels", PaperTowels);
-
-                cmd.Parameters.AddWithValue("@GarbageBags", GarbageBags);
-
-                cmd.Parameters.AddWithValue("@Receipts", Receipts);
-
-                cmd.Parameters.AddWithValue("@Envelopes", Envelopes);
-
-                cmd.Parameters.AddWithValue("@BusinessCards", BusinessCards);
-
-                cmd.Parameters.AddWithValue("@Other1", Other1);
-
-                cmd.Parameters.AddWithValue("@Other2", Other2);
-
-                cmd.Parameters.AddWithValue("@Other3", Other3);
-
-                cmd.Parameters.AddWithValue("@Other4", Other4);
-
-                cmd.Parameters.AddWithValue("@Other5", Other5);
-
-                cmd.Parameters.AddWithValue("@Marketing1", Marketing1);
-
-                cmd.Parameters.AddWithValue("@Marketing2", Marketing2);
-
-                cmd.Parameters.AddWithValue("@Marketing3", Marketing3);
-
-                cmd.Parameters.AddWithValue("@Marketing4", Marketing4);
-
-                cmd.Parameters.AddWithValue("@Marketing5", Marketing5);
-
-                cmd.Parameters.AddWithValue("@liqId", 1);
-
-                cmd.ExecuteNonQuery();
-
-                con.Close();
             }
             finally
-            { }
+            {
+                paramNames = null;
+
+                paramValues = null;
+
+                paramList = null;
+            }
         }
 
         public DataSet getInventoryLabels()

@@ -2,7 +2,7 @@
 using System.Text;
 using System.Configuration;
 using System.Collections.Generic;
-using System.Web.Mail;
+using System.Net.Mail;
 
 namespace BCL.Utility.SendMailMgr
 {
@@ -17,105 +17,95 @@ namespace BCL.Utility.SendMailMgr
 
         public void SendEmails(string FromEmailId, string ToEmailId, string Subject, string message)
         {
-            MailMessage mail = null;
+            MailMessage myMessage = new System.Net.Mail.MailMessage();
 
             try
             {
                 string smtpHost = ConfigurationManager.AppSettings["SmtpServer"].ToString();
 
-                //string smtpPort = "25";
+                myMessage.To.Add(ToEmailId);
 
-                mail = new MailMessage();
+                myMessage.From = new MailAddress(ConfigurationManager.AppSettings["FromEmail"].ToString(), "Fritzy's Pet Care Pros");
 
-                mail.To = ToEmailId;
+                myMessage.Subject = Subject;
 
-                mail.From = FromEmailId;
+                myMessage.Body = message;
 
-                mail.Subject = Subject;
+                myMessage.IsBodyHtml = true;
 
-                mail.Body = message;
+                System.Net.NetworkCredential myCredential = new System.Net.NetworkCredential("info@fritzys.net", "");
 
-                mail.BodyEncoding = System.Text.Encoding.UTF8;
+                SmtpClient mySmtpClient = new SmtpClient();
 
-                mail.BodyFormat = MailFormat.Html;
+                mySmtpClient.Host = ConfigurationManager.AppSettings["SmtpServer"].ToString();
 
-                mail.Priority = MailPriority.High;
+                mySmtpClient.UseDefaultCredentials = false;
 
-                SmtpMail.SmtpServer = ConfigurationManager.AppSettings["SmtpServer"];
+                mySmtpClient.Credentials = myCredential;
 
-                mail.Fields["http://schemas.microsoft.com/cdo/configuration/smtpserver"] = ConfigurationManager.AppSettings["SmtpServer"];
+                mySmtpClient.ServicePoint.MaxIdleTime = 1;
 
-                mail.Fields["http://schemas.microsoft.com/cdo/configuration/smtpauthenticate"] = 2;
-
-                SmtpMail.Send(mail);
+                mySmtpClient.Send(myMessage);
             }
             finally
             {
-                mail = null;
+                myMessage.Dispose();
             }
         }
 
         public bool SendEmailsWithVal(string FromEmailId, string ToEmailId, string Subject, string message)
         {
-            MailMessage mail = null;
+            MailMessage myMessage = new System.Net.Mail.MailMessage();
 
             try
             {
                 string smtpHost = ConfigurationManager.AppSettings["SmtpServer"].ToString();
 
-                //string smtpPort = ConfigurationManager.AppSettings["SmtpPort"].ToString();
+                myMessage.To.Add(ToEmailId);
 
-                mail = new MailMessage();
+                myMessage.From = new MailAddress(ConfigurationManager.AppSettings["FromEmail"].ToString(), "Fritzy's Pet Care Pros");
 
-                mail.To = ToEmailId;
+                myMessage.Subject = Subject;
 
-                mail.From = FromEmailId;
+                myMessage.Body = message;
 
-                mail.Subject = Subject;
+                myMessage.IsBodyHtml = true;
 
-                mail.Body = message;
+                System.Net.NetworkCredential myCredential = new System.Net.NetworkCredential("info@fritzys.net", "");
 
-                mail.BodyEncoding = System.Text.Encoding.UTF8;
+                SmtpClient mySmtpClient = new SmtpClient();
 
-                mail.BodyFormat = MailFormat.Html;
+                mySmtpClient.Host = ConfigurationManager.AppSettings["SmtpServer"].ToString();
 
-                mail.Priority = MailPriority.High;
+                mySmtpClient.UseDefaultCredentials = false;
 
-                SmtpMail.SmtpServer = ConfigurationManager.AppSettings["SmtpServer"];
+                mySmtpClient.Credentials = myCredential;
 
-                mail.Fields["http://schemas.microsoft.com/cdo/configuration/smtpserver"] = ConfigurationManager.AppSettings["SmtpServer"];
+                mySmtpClient.ServicePoint.MaxIdleTime = 1;
 
-                mail.Fields["http://schemas.microsoft.com/cdo/configuration/smtpauthenticate"] = 2;
-
-                SmtpMail.Send(mail);
-
-                return true;
+                mySmtpClient.Send(myMessage);
             }
             finally
             {
-                mail = null;
+                myMessage.Dispose();
             }
+            return true;
         }
 
         public void SendRequestEmails(string FromEmailId, string ToEmailId, string Subject, string FName, string LName, string SenderName)
         {
-            MailMessage mail = null;
-
+            MailMessage myMessage = new System.Net.Mail.MailMessage();
             try
             {
                 string smtpHost = ConfigurationManager.AppSettings["SmtpServer"].ToString();
 
-               // string smtpPort = ConfigurationManager.AppSettings["SmtpPort"].ToString();
+                myMessage.To.Add(ToEmailId);
 
-                mail = new MailMessage();
+                myMessage.From = new MailAddress(ConfigurationManager.AppSettings["FromEmail"].ToString(), "Fritzy's Pet Care Pros");
 
-                mail.To = ToEmailId;
+                myMessage.Subject = Subject;
 
-                mail.From = FromEmailId;
-
-                mail.Subject = Subject;
-
-                mail.BodyFormat = MailFormat.Html;
+                myMessage.IsBodyHtml = true;
 
                 string message = "<div style='font-family: Arial; font-size: 12px;'>";
 
@@ -129,157 +119,148 @@ namespace BCL.Utility.SendMailMgr
 
                 message = message + "</div>";
 
-                mail.Body = message;
-                try
-                {
-                    SmtpMail.SmtpServer = ConfigurationManager.AppSettings["SmtpServer"];
+                myMessage.Body = message;
 
-                    mail.Fields["http://schemas.microsoft.com/cdo/configuration/smtpserver"] = ConfigurationManager.AppSettings["SmtpServer"];
+                System.Net.NetworkCredential myCredential = new System.Net.NetworkCredential("info@fritzys.net", "");
 
-                    mail.Fields["http://schemas.microsoft.com/cdo/configuration/smtpauthenticate"] = 2;
+                SmtpClient mySmtpClient = new SmtpClient();
 
-                    SmtpMail.Send(mail);
+                mySmtpClient.Host = ConfigurationManager.AppSettings["SmtpServer"].ToString();
 
-                }
-                finally
-                {
-                    
-                }
+                mySmtpClient.UseDefaultCredentials = false;
+
+                mySmtpClient.Credentials = myCredential;
+
+                mySmtpClient.ServicePoint.MaxIdleTime = 1;
+
+                mySmtpClient.Send(myMessage);
             }
             finally
             {
-                mail = null;
+                myMessage = null;
             }
 
         }
 
         public void SendProviderRequestEmails(string FromEmailId, string ToEmailId, string Subject, string FName, string LName, string SenderName)
         {
-
-            string smtpHost = ConfigurationManager.AppSettings["SmtpServer"].ToString();
-
-            //string smtpPort = ConfigurationManager.AppSettings["SmtpPort"].ToString();
-
-            MailMessage mail = new MailMessage();
-
-            mail.To = ToEmailId;
-
-            mail.From = FromEmailId;
-
-            mail.Subject = Subject;
-
-            mail.BodyFormat = MailFormat.Html;
-
-            string message = "<div style='font-family: Arial; font-size: 12px;'>";
-
-            message = message + "<p>Hi&nbsp;<b>" + FName + "&nbsp;" + LName + "</b> </p>";
-
-            message = message + "<p>" + SenderName + "&nbsp;is now added to your subscriber list. </p>";
-
-            message = message + "<p>For more information visit www.hicpics.com  <br />  <p>";
-
-            message = message + "Thanks,&nbsp;" + SenderName + "</p>";
-
-            message = message + "</div>";
-
-            mail.Body = message;
+            MailMessage myMessage = new System.Net.Mail.MailMessage();
 
             try
             {
-                SmtpMail.SmtpServer = ConfigurationManager.AppSettings["SmtpServer"];
 
-                mail.Fields["http://schemas.microsoft.com/cdo/configuration/smtpserver"] = ConfigurationManager.AppSettings["SmtpServer"];
+                string smtpHost = ConfigurationManager.AppSettings["SmtpServer"].ToString();
 
-                mail.Fields["http://schemas.microsoft.com/cdo/configuration/smtpauthenticate"] = 2;
+                myMessage.To.Add(ToEmailId);
 
-                SmtpMail.Send(mail);
+                myMessage.From = new MailAddress(ConfigurationManager.AppSettings["FromEmail"].ToString(), "Fritzy's Pet Care Pros");
 
+                myMessage.Subject = Subject;
+
+                myMessage.IsBodyHtml = true;
+
+                string message = "<div style='font-family: Arial; font-size: 12px;'>";
+
+                message = message + "<p>Hi&nbsp;<b>" + FName + "&nbsp;" + LName + "</b> </p>";
+
+                message = message + "<p>" + SenderName + "&nbsp;is now added to your subscriber list. </p>";
+
+                message = message + "<p>For more information visit www.hicpics.com  <br />  <p>";
+
+                message = message + "Thanks,&nbsp;" + SenderName + "</p>";
+
+                message = message + "</div>";
+
+                myMessage.Body = message;
+
+                System.Net.NetworkCredential myCredential = new System.Net.NetworkCredential("info@fritzys.net", "");
+
+                SmtpClient mySmtpClient = new SmtpClient();
+
+                mySmtpClient.Host = ConfigurationManager.AppSettings["SmtpServer"].ToString();
+
+                mySmtpClient.UseDefaultCredentials = false;
+
+                mySmtpClient.Credentials = myCredential;
+
+                mySmtpClient.ServicePoint.MaxIdleTime = 1;
+
+                mySmtpClient.Send(myMessage);
             }
             finally
             {
-                
+                myMessage = null;
             }
         }
 
         public void AppointmentMail(string ToMail, string subject, string MailBody)
         {
-            MailMessage mail = null;
+            MailMessage myMessage = new System.Net.Mail.MailMessage();
 
             try
             {
                 string smtpHost = ConfigurationManager.AppSettings["SmtpServer"].ToString();
 
-                //string smtpPort = ConfigurationManager.AppSettings["SmtpPort"].ToString();
+                myMessage.To.Add(ToMail);
 
-                mail = new MailMessage();
+                myMessage.From = new MailAddress(ConfigurationManager.AppSettings["FromEmail"].ToString(), "Fritzy's Pet Care Pros");
 
-                mail.To = ToMail;
+                myMessage.Subject = subject;
 
-                mail.From = ConfigurationManager.AppSettings["FromEmail"];
+                myMessage.Body = MailBody;
 
-                mail.Subject = subject;
+                myMessage.IsBodyHtml = true;
 
-                mail.Body = MailBody;
+                System.Net.NetworkCredential myCredential = new System.Net.NetworkCredential("info@fritzys.net", "");
 
-                mail.BodyEncoding = System.Text.Encoding.UTF8;
+                SmtpClient mySmtpClient = new SmtpClient();
 
-                mail.BodyFormat = MailFormat.Html;
+                mySmtpClient.Host = ConfigurationManager.AppSettings["SmtpServer"].ToString();
 
-                mail.Priority = MailPriority.High;
+                mySmtpClient.UseDefaultCredentials = false;
 
-                SmtpMail.SmtpServer = ConfigurationManager.AppSettings["SmtpServer"];
+                mySmtpClient.Credentials = myCredential;
 
-                mail.Fields["http://schemas.microsoft.com/cdo/configuration/smtpserver"] = ConfigurationManager.AppSettings["SmtpServer"];
+                mySmtpClient.ServicePoint.MaxIdleTime = 1;
 
-                mail.Fields["http://schemas.microsoft.com/cdo/configuration/smtpauthenticate"] = 2;
-
-                SmtpMail.Send(mail);
+                mySmtpClient.Send(myMessage);
             }
             finally
             {
-                mail = null;
+                myMessage.Dispose();
             }
         }
 
         public void PaymentMail(string p, string datenew, string Appoinment, string Appoinment_Date, string emailadd, string totalprice, string CC_Name, string mMessage, string Mailbody)
         {
-            MailMessage mail = null;
+            MailMessage myMessage = new System.Net.Mail.MailMessage();
             try
             {
                 string smtpHost = ConfigurationManager.AppSettings["SmtpServer"].ToString();
 
-                mail = new MailMessage();
+                myMessage.To.Add(emailadd);
 
-                MailMessage msgpayment = new MailMessage();
-                mail.From =  ConfigurationManager.AppSettings["FromEmail"];
+                myMessage.From = new MailAddress(ConfigurationManager.AppSettings["FromEmail"].ToString(), "Fritzy's Pet Care Pros");
 
-                mail.To=emailadd;
-                
-                string Subject = "Payment Details For Fritzys Pet Care Pros Mobile Grooming Services";
+                myMessage.Subject = "Payment Details For Fritzys Pet Care Pros Mobile Grooming Services";
 
-                mail.Subject = Subject;
+                myMessage.Body = Mailbody;
 
-                mail.Body = Mailbody;
+                myMessage.IsBodyHtml = true;
 
-                mail.BodyEncoding = System.Text.Encoding.UTF8;
+                System.Net.NetworkCredential myCredential = new System.Net.NetworkCredential("info@fritzys.net", "");
 
-                mail.BodyFormat = MailFormat.Html;
+                SmtpClient mySmtpClient = new SmtpClient();
 
-                msgpayment.Priority = MailPriority.Normal;
+                mySmtpClient.Host = ConfigurationManager.AppSettings["SmtpServer"].ToString();
 
-                string payment_message = Mailbody;
+                mySmtpClient.UseDefaultCredentials = false;
 
-                msgpayment.Body = payment_message;
+                mySmtpClient.Credentials = myCredential;
 
-                //client = new SmtpClient();
+                mySmtpClient.ServicePoint.MaxIdleTime = 1;
 
-                SmtpMail.SmtpServer = ConfigurationManager.AppSettings["SmtpServer"];
-
-                mail.Fields["http://schemas.microsoft.com/cdo/configuration/smtpserver"] = ConfigurationManager.AppSettings["SmtpServer"];
-
-                mail.Fields["http://schemas.microsoft.com/cdo/configuration/smtpauthenticate"] = 2;
-
-                SmtpMail.Send(mail);
+                mySmtpClient.Send(myMessage);
             }
             catch (Exception ex)
             {
@@ -289,45 +270,34 @@ namespace BCL.Utility.SendMailMgr
 
         public void PrePaymentMail(string p, string datenew, string emailadd, string totalprice, string CC_Name, string mMessage, string Mailbody)
         {
-            MailMessage mail = null;
-
-            //SmtpClient client = null;
+            MailMessage myMessage = new System.Net.Mail.MailMessage();
             try
             {
                 string smtpHost = ConfigurationManager.AppSettings["SmtpServer"].ToString();
 
-                //string smtpPort = ConfigurationManager.AppSettings["SmtpPort"].ToString();
+                myMessage.To.Add(emailadd);
 
-                mail = new MailMessage();
+                myMessage.From = new MailAddress(ConfigurationManager.AppSettings["FromEmail"].ToString(), "Fritzy's Pet Care Pros");
 
-                MailMessage msgpayment = new MailMessage();
-                mail.From = ConfigurationManager.AppSettings["FromEmail"];
+                myMessage.Subject = "Payment Details For Fritzys Pet Care Pros Mobile Grooming Services";
 
-                mail.To=emailadd;
+                myMessage.Body = Mailbody;
 
-                string Subject = "Payment Details For Fritzys Pet Care Pros Mobile Grooming Services";
+                myMessage.IsBodyHtml = true;
 
-                mail.Subject = Subject;
+                System.Net.NetworkCredential myCredential = new System.Net.NetworkCredential("info@fritzys.net", "");
 
-                mail.Body = Mailbody;
+                SmtpClient mySmtpClient = new SmtpClient();
 
-                mail.BodyEncoding = System.Text.Encoding.UTF8;
+                mySmtpClient.Host = ConfigurationManager.AppSettings["SmtpServer"].ToString();
 
-                mail.BodyFormat = MailFormat.Html;
+                mySmtpClient.UseDefaultCredentials = false;
 
-                msgpayment.Priority = MailPriority.Normal;
+                mySmtpClient.Credentials = myCredential;
 
-                string payment_message = Mailbody;
+                mySmtpClient.ServicePoint.MaxIdleTime = 1;
 
-                msgpayment.Body = payment_message;
-
-                SmtpMail.SmtpServer = ConfigurationManager.AppSettings["SmtpServer"];
-
-                mail.Fields["http://schemas.microsoft.com/cdo/configuration/smtpserver"] = ConfigurationManager.AppSettings["SmtpServer"];
-
-                mail.Fields["http://schemas.microsoft.com/cdo/configuration/smtpauthenticate"] = 2;
-
-                SmtpMail.Send(mail);
+                mySmtpClient.Send(myMessage);
             }
             catch (Exception ex)
             {
