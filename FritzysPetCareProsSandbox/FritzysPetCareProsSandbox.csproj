@@ -203,6 +203,7 @@
     <Content Include="Admin\Suggestion.aspx" />
     <Content Include="Admin\UploadBanners.aspx" />
     <Content Include="Admin\UploadDnloadExcel.aspx" />
+    <Content Include="Admin\UploadFailedAppointments.aspx" />
     <Content Include="Admin\UploadGroomerAppointments.aspx" />
     <Content Include="Admin\UserAccess.aspx" />
     <Content Include="Admin\Users.aspx" />
@@ -3656,6 +3657,13 @@
     </Compile>
     <Compile Include="Admin\UploadDnloadExcel.aspx.designer.cs">
       <DependentUpon>UploadDnloadExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UploadFailedAppointments.aspx.cs">
+      <DependentUpon>UploadFailedAppointments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UploadFailedAppointments.aspx.designer.cs">
+      <DependentUpon>UploadFailedAppointments.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\UploadGroomerAppointments.aspx.cs">
       <DependentUpon>UploadGroomerAppointments.aspx</DependentUpon>

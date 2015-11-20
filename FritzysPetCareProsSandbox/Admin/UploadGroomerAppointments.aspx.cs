@@ -59,22 +59,22 @@ namespace FritzysPetCareProsSandbox.Admin
 
         }
 
-        protected bool IsValidAppointment(string dtApptDate, string dtTime, string Others, string gname, string exppettime, int Seqno, string AptSTime, string ExpApptTime)
+        protected bool IsValidAppointment(string dtApptDate, string dtTime, string Others, int gname, string exppettime, int Seqno, string AptSTime, string ExpApptTime)
         {
             bool IsValidAppt = true;
 
-            if (null == dtApptDate || dtApptDate == "" || dtTime == "" || Others == "" || gname == "" || exppettime == "" || exppettime == "0" || exppettime == "0.00" || Seqno == 0 || AptSTime == "" || ExpApptTime == "")
+            if (null == dtApptDate || dtApptDate == "" || dtTime == "" || Others == "" || gname == 0 || exppettime == "" || exppettime == "0" || exppettime == "0.00" || Seqno == 0 || AptSTime == "" || ExpApptTime == "")
             {
                 IsValidAppt = false;
 
             }
 
-            bool IsGroomerAvail = objgroomer.IsGroomerExists(gname);
-            if (IsGroomerAvail.Equals(false))
-            {
-                IsValidAppt = false;
+            //bool IsGroomerAvail = objgroomer.IsGroomerExists(gname);
+            //if (IsGroomerAvail.Equals(false))
+            //{
+            //    IsValidAppt = false;
 
-            }
+            //}
 
             //--------------
 
@@ -202,6 +202,8 @@ namespace FritzysPetCareProsSandbox.Admin
 
                                 string ExpEndTimeStr = "";
 
+                                bool isAvailable = false;
+
                                 for (int row = 0; row < (objDataset1.Tables["XLData"].Rows.Count); row++)
                                 {
                                     string RowInitialValue = objDataset1.Tables["XLData"].Rows[row][0].ToString();
@@ -209,434 +211,465 @@ namespace FritzysPetCareProsSandbox.Admin
                                     if (!(RowInitialValue).Equals(""))
                                     {
                                         string dtPart2 = "";
-                                        string Apptdate = objDataset1.Tables["XLData"].Rows[row][3].ToString();
 
-                                        string ApptStart_Time = objDataset1.Tables["XLData"].Rows[row][4].ToString();
+                                        string Apptdate = objDataset1.Tables["XLData"].Rows[row]["Date"].ToString();
 
-                                        string ApptString = objDataset1.Tables["XLData"].Rows[row][6].ToString();
+                                        string ApptStart_Time = objDataset1.Tables["XLData"].Rows[row]["Time"].ToString();
 
-                                        string ExpApptTime = objDataset1.Tables["XLData"].Rows[row][8].ToString();
+                                        string ApptString = objDataset1.Tables["XLData"].Rows[row]["Regarding"].ToString();
 
-                                        string NameofCustomer = objDataset1.Tables["XLData"].Rows[row][5].ToString();
+                                        string ExpApptTime = objDataset1.Tables["XLData"].Rows[row]["Duration"].ToString();
 
-                                        gname = objDataset1.Tables["XLData"].Rows[row][10].ToString();
+                                        string NameofCustomer = objDataset1.Tables["XLData"].Rows[row]["Scheduled With"].ToString();
 
-                                        string ZipCode, zip = "";
+                                        string customerEmail = objDataset1.Tables["XLData"].Rows[row]["Email Address"].ToString();
 
-                                        if (ApptString != "")
+                                        gname = objDataset1.Tables["XLData"].Rows[row]["Scheduled For"].ToString();
+
+                                        string scheduledBy = objDataset1.Tables["XLData"].Rows[row]["Scheduled By"].ToString();
+
+                                        DataSet dsgId = objgroomer.GetGroomername(gname);
+
+                                        if (dsgId.Tables.Count > 0)
                                         {
-                                            string[] arraptstr = new string[25];
-
-                                            arraptstr = ApptString.Split(',');
-
-                                            if (arraptstr.Length > 0)
+                                            if (dsgId.Tables[0].Rows.Count > 0)
                                             {
-                                                for (int i = 0; i < arraptstr.Length; i++)
+                                                gid = Convert.ToInt32(dsgId.Tables[0].Rows[0]["GID"].ToString());
+                                            }
+                                        }
+
+                                        if (customerEmail != "")
+                                        {
+                                            isAvailable = findCustomerInList(customerEmail);
+                                        }
+
+                                        if (isAvailable.Equals(true))
+                                        {
+
+                                            string ZipCode, zip = "";
+
+                                            if (ApptString != "")
+                                            {
+                                                string[] arraptstr = new string[25];
+
+                                                arraptstr = ApptString.Split(',');
+
+                                                if (arraptstr.Length > 0)
                                                 {
-                                                    if (!(null == arraptstr[i]))
+                                                    for (int i = 0; i < arraptstr.Length; i++)
                                                     {
-                                                        if (arraptstr[i].Trim().Length == 5 || arraptstr[i].Trim().Length == 6)
+                                                        if (!(null == arraptstr[i]))
                                                         {
-                                                            string zcode = "";
-                                                            if (arraptstr[i].Trim().Length == 5)
+                                                            if (arraptstr[i].Trim().Length == 5 || arraptstr[i].Trim().Length == 6)
                                                             {
-                                                                zcode = arraptstr[i].Trim().ToString();
+                                                                string zcode = "";
+                                                                if (arraptstr[i].Trim().Length == 5)
+                                                                {
+                                                                    zcode = arraptstr[i].Trim().ToString();
+                                                                }
+                                                                else
+                                                                {
+                                                                    if (arraptstr[i].Trim().ToString().StartsWith("*"))
+                                                                    {
+                                                                        zcode = arraptstr[i].Trim().ToString().Substring(1, arraptstr[i].Trim().ToString().Length - 1);
+                                                                    }
+                                                                }
+                                                                // check for valid zip code
+                                                                bool IsValidZip = CheckZipCode(zcode);
+
+                                                                if (IsValidZip.Equals(true))
+                                                                {
+                                                                    zip = zcode;
+
+                                                                    break;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            ZipCode = zip;
+
+                                            bool IsValidApptDate = false;
+
+                                            if (Apptdate != "")
+                                            {
+                                                string AptDt = Apptdate;
+
+                                                if (Apptdate.Contains(' '))
+                                                {
+                                                    string[] arraptdt = Apptdate.Split(' ');
+
+                                                    AptDt = arraptdt[0].ToString();
+                                                }
+                                                Regex regexDt = new Regex("^(((0?[1-9]|1[012])/(0?[1-9]|1\\d|2[0-8])|(0?[13456789]|1[012])/(29|30)|(0?[13578]|1[02])/31)/(19|[2-9]\\d)\\d{2}|0?2/29/((19|[2-9]\\d)(0[48]|[2468][048]|[13579][26])|(([2468][048]|[3579][26])00)))$");
+
+                                                Match mtApptDt = Regex.Match(AptDt, regexDt.ToString());
+
+                                                if (mtApptDt.Success)
+                                                {
+                                                    IsValidApptDate = true;
+                                                }
+
+                                            }
+
+                                            if (IsValidApptDate.Equals(true))
+                                            {
+
+                                                string mon = Convert.ToDateTime(Apptdate).Month.ToString();
+
+                                                if (mon.Length == 1)
+                                                {
+                                                    mon = "0" + Convert.ToDateTime(Apptdate).Month.ToString();
+                                                }
+                                                string dd = Convert.ToDateTime(Apptdate).Day.ToString();
+
+                                                if (dd.Length == 1)
+                                                {
+                                                    dd = "0" + Convert.ToDateTime(Apptdate).Day.ToString();
+                                                }
+
+                                                string dtPart1 = mon + dd;
+
+                                                dtPart2 = dtPart1 + ".";
+                                            }
+
+                                            string Start_FullTime = "";
+
+                                            string[] arraptStiming0 = null;
+
+                                            if (ApptStart_Time != "")
+                                            {
+                                                string ActualAptSTime = "";
+
+                                                if (ApptStart_Time.Contains(" "))
+                                                {
+                                                    arraptStiming0 = ApptStart_Time.Split(' ');
+
+                                                    if (arraptStiming0.Length > 1)
+                                                    {
+                                                        ActualAptSTime = arraptStiming0[1].ToString();
+                                                    }
+                                                }
+
+                                                if (ActualAptSTime.Contains(":"))
+                                                {
+
+                                                    string[] arraptStiming1 = ActualAptSTime.Split(':');
+
+                                                    if (arraptStiming1.Length > 1)
+                                                    {
+                                                        if (!(null == arraptStiming1[1]))
+                                                        {
+                                                            StartHours = Convert.ToInt32(arraptStiming1[0].ToString());
+
+                                                            StartMinutes = Convert.ToInt32(arraptStiming1[1].ToString());
+
+                                                            StartTm = arraptStiming0[2].ToString();
+
+                                                            if (StartMinutes == 0)
+                                                            {
+                                                                Start_FullTime = StartHours.ToString() + "00";
                                                             }
                                                             else
                                                             {
-                                                                if (arraptstr[i].Trim().ToString().StartsWith("*"))
-                                                                {
-                                                                    zcode = arraptstr[i].Trim().ToString().Substring(1, arraptstr[i].Trim().ToString().Length - 1);
-                                                                }
+                                                                Start_FullTime = StartHours.ToString() + StartMinutes.ToString();
                                                             }
-                                                            // check for valid zip code
-                                                            bool IsValidZip = CheckZipCode(zcode);
+                                                        }
 
-                                                            if (IsValidZip.Equals(true))
+                                                    }
+
+                                                    // get end time.
+                                                    ExpEndTimeStr = "";
+
+                                                    if (ExpApptTime != "")
+                                                    {
+                                                        if (ExpApptTime.Contains(' '))
+                                                        {
+                                                            string[] arrEndTimes = ExpApptTime.Split(' ');
+
+                                                            int arrlen = arrEndTimes.Length;
+
+                                                            int EndHours = 0, EndMinutes = 0;
+
+                                                            if (arrlen <= 2)
                                                             {
-                                                                zip = zcode;
 
+                                                                if (!(null == arrEndTimes[0]))
+                                                                {
+                                                                    if (!(null == arrEndTimes[1]))
+                                                                    {
+                                                                        if (arrEndTimes[1].ToString().Equals("hour") || arrEndTimes[1].ToString().Equals("hours"))
+                                                                        {
+                                                                            EndHours = Convert.ToInt32(arrEndTimes[0].ToString());
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            if (arrEndTimes[1].ToString().Equals("minute") || arrEndTimes[1].ToString().Equals("minutes"))
+                                                                            {
+                                                                                EndMinutes = Convert.ToInt32(arrEndTimes[0].ToString());
+
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+
+                                                            }
+                                                            else
+                                                            {
+                                                                if (!(null == arrEndTimes[2]))
+                                                                {
+                                                                    if (arrlen == 4)
+                                                                    {
+                                                                        if ((arrEndTimes[1].ToString().Equals("hour") || arrEndTimes[1].ToString().Equals("hours")) && (arrEndTimes[3].ToString().Equals("minute") || arrEndTimes[3].ToString().Equals("minutes")))
+                                                                        {
+                                                                            EndHours = Convert.ToInt32(arrEndTimes[0].ToString());
+
+                                                                            EndMinutes = Convert.ToInt32(arrEndTimes[2].ToString());
+                                                                        }
+                                                                    }
+                                                                }
+
+                                                            }
+
+                                                            TimeSpan Stime = new TimeSpan(StartHours, StartMinutes, 0);
+
+                                                            TimeSpan Etime = new TimeSpan(EndHours, EndMinutes, 0);
+
+                                                            TimeSpan CalcTime = Stime + Etime;
+
+                                                            time = 0;
+
+                                                            time = Math.Round(Convert.ToDecimal(new TimeSpan(EndHours, EndMinutes, 0).TotalHours), 2);
+
+                                                            string EndMin = CalcTime.Minutes.ToString();
+
+                                                            if (EndMin.Equals("0"))
+                                                            {
+                                                                EndMin = "00";
+                                                            }
+                                                            string EndHoursStr = CalcTime.Hours.ToString();
+
+                                                            string tt = StartTm;
+
+                                                            if (CalcTime.Hours >= 12)
+                                                            {
+                                                                string time_str = CalcTime.Hours + ":00:00";
+
+                                                                TimeSpan time_span = TimeSpan.Parse(time_str);
+
+                                                                DateTime d = new DateTime(time_span.Ticks);
+
+                                                                string tm = d.ToString("hh");
+
+                                                                EndHoursStr = tm;
+
+                                                                tt = "PM";
+                                                            }
+
+                                                            ExpEndTimeStr = EndHoursStr + ":" + CalcTime.Minutes.ToString() + " " + tt;
+
+                                                            Start_EndTime = Convert.ToInt32(EndHoursStr) + EndMin;
+                                                        }
+                                                    }
+
+                                                }
+                                            }
+                                            string ExpRevAmount = "";
+                                            if (ApptString.Contains("$"))
+                                            {
+                                                string[] apptstr = ApptString.Split(',');
+
+                                                if (apptstr.Length > 0)
+                                                {
+                                                    for (int i = 0; i < apptstr.Length; i++)
+                                                    {
+                                                        if (!(null == apptstr[i]))
+                                                        {
+                                                            if (apptstr[i].ToString().Trim().StartsWith("$"))
+                                                            {
+                                                                ExpRevAmount = apptstr[i].ToString().Trim().Substring(1).ToString();
                                                                 break;
                                                             }
                                                         }
                                                     }
                                                 }
-                                            }
-                                        }
 
-                                        ZipCode = zip;
-
-                                        bool IsValidApptDate = false;
-
-                                        if (Apptdate != "")
-                                        {
-                                            string AptDt = Apptdate;
-
-                                            if (Apptdate.Contains(' '))
-                                            {
-                                                string[] arraptdt = Apptdate.Split(' ');
-
-                                                AptDt = arraptdt[0].ToString();
-                                            }
-                                            Regex regexDt = new Regex("^(((0?[1-9]|1[012])/(0?[1-9]|1\\d|2[0-8])|(0?[13456789]|1[012])/(29|30)|(0?[13578]|1[02])/31)/(19|[2-9]\\d)\\d{2}|0?2/29/((19|[2-9]\\d)(0[48]|[2468][048]|[13579][26])|(([2468][048]|[3579][26])00)))$");
-
-                                            Match mtApptDt = Regex.Match(AptDt, regexDt.ToString());
-
-                                            if (mtApptDt.Success)
-                                            {
-                                                IsValidApptDate = true;
                                             }
 
-                                        }
+                                            dtTime = dtPart2 + Start_FullTime + "-" + Start_EndTime;
 
-                                        if (IsValidApptDate.Equals(true))
-                                        {
+                                            string ExpectedPetTime = time.ToString();
 
-                                            string mon = Convert.ToDateTime(Apptdate).Month.ToString();
-
-                                            if (mon.Length == 1)
+                                            if (IsValidApptDate.Equals(true))
                                             {
-                                                mon = "0" + Convert.ToDateTime(Apptdate).Month.ToString();
-                                            }
-                                            string dd = Convert.ToDateTime(Apptdate).Day.ToString();
 
-                                            if (dd.Length == 1)
-                                            {
-                                                dd = "0" + Convert.ToDateTime(Apptdate).Day.ToString();
-                                            }
-
-                                            string dtPart1 = mon + dd;
-
-                                            dtPart2 = dtPart1 + ".";
-                                        }
-
-                                        string Start_FullTime = "";
-
-                                        string[] arraptStiming0 = null;
-
-                                        if (ApptStart_Time != "")
-                                        {
-                                            string ActualAptSTime = "";
-
-                                            if (ApptStart_Time.Contains(" "))
-                                            {
-                                                arraptStiming0 = ApptStart_Time.Split(' ');
-
-                                                if (arraptStiming0.Length > 1)
+                                                DataSet ds = objgroomer.GetGroomername(gname);
+                                                if (ds.Tables.Count > 0)
                                                 {
-                                                    ActualAptSTime = arraptStiming0[1].ToString();
-                                                }
-                                            }
-
-                                            if (ActualAptSTime.Contains(":"))
-                                            {
-
-                                                string[] arraptStiming1 = ActualAptSTime.Split(':');
-
-                                                if (arraptStiming1.Length > 1)
-                                                {
-                                                    if (!(null == arraptStiming1[1]))
+                                                    if (ds.Tables[0].Rows.Count > 0)
                                                     {
-                                                        StartHours = Convert.ToInt32(arraptStiming1[0].ToString());
+                                                        gid = Convert.ToInt32(ds.Tables[0].Rows[0]["GID"].ToString());
 
-                                                        StartMinutes = Convert.ToInt32(arraptStiming1[1].ToString());
+                                                        DataSet dsseq = new DataSet();
 
-                                                        StartTm = arraptStiming0[2].ToString();
+                                                        Apptdate = Convert.ToDateTime(Apptdate).Date.ToString("MM/dd/yyyy") + " 12:00:00 AM";
 
-                                                        if (StartMinutes == 0)
+                                                        dsseq = objgroomer.GetMaxSequencenoOfGroomer(gid, Apptdate);
+                                                        SeqNum = 0;
+                                                        if (dsseq.Tables.Count > 0)
                                                         {
-                                                            Start_FullTime = StartHours.ToString() + "00";
-                                                        }
-                                                        else
-                                                        {
-                                                            Start_FullTime = StartHours.ToString() + StartMinutes.ToString();
+                                                            if (dsseq.Tables[0].Rows.Count > 0)
+                                                            {
+                                                                SeqNum = Convert.ToInt32(dsseq.Tables[0].Rows[0]["sequence"].ToString());
+                                                            }
+                                                            else
+                                                            {
+                                                                SeqNum = 1;
+                                                            }
                                                         }
                                                     }
+                                                }
+                                            }
+
+                                            bool IsValidAppt = IsValidAppointment(Apptdate, dtTime, ApptString, gid, ExpectedPetTime, SeqNum, ApptStart_Time, ExpApptTime);
+
+                                            bool IsValidApptRevenue = IsValidRevAmt(ExpRevAmount);
+                                            if (IsValidApptRevenue.Equals(false))
+                                            {
+                                                ExpRevAmount = "0";
+                                            }
+
+                                            if (IsValidAppt.Equals(true))
+                                            {
+
+                                                bool IsValidDateSel = false;
+
+                                                if (Convert.ToDateTime(Apptdate).Date >= DateTime.Now.Date)
+                                                {
+                                                    IsValidDateSel = true;
 
                                                 }
 
-                                                // get end time.
-                                                ExpEndTimeStr = "";
-
-                                                if (ExpApptTime != "")
+                                                if (IsValidDateSel.Equals(true))
                                                 {
-                                                    if (ExpApptTime.Contains(' '))
+                                                    int IsValidApptment = objgroomer.CheckApptExists(gid, Apptdate, dtTime);
+
+                                                    string aptSTiming = arraptStiming0[1].ToString() + " " + arraptStiming0[2].ToString();
+
+                                                    if (IsValidApptment.Equals(true))
                                                     {
-                                                        string[] arrEndTimes = ExpApptTime.Split(' ');
+                                                        int ApptID = objgroomer.InsertGroomerAppointment(gid, Apptdate, "", "", ExpRevAmount, ApptString, dtTime, SeqNum, Convert.ToDecimal(ExpectedPetTime), ZipCode, aptSTiming, NameofCustomer, ExpEndTimeStr);
 
-                                                        int arrlen = arrEndTimes.Length;
-
-                                                        int EndHours = 0, EndMinutes = 0;
-
-                                                        if (arrlen <= 2)
+                                                        if (ApptID > 0)
                                                         {
+                                                            NoofInsertedAppt++;
+                                                        }
 
-                                                            if (!(null == arrEndTimes[0]))
+                                                        if (ApptString.Contains("REC"))
+                                                        {
+                                                            DateTime dtAptCreationLastDate = Convert.ToDateTime(Apptdate).AddMonths(6).Date;
+
+                                                            string AppointmentsSpan = "";
+
+                                                            string[] apptstr = ApptString.Split(',');
+
+                                                            if (apptstr.Length > 0)
                                                             {
-                                                                if (!(null == arrEndTimes[1]))
+                                                                for (int i = 0; i < apptstr.Length; i++)
                                                                 {
-                                                                    if (arrEndTimes[1].ToString().Equals("hour") || arrEndTimes[1].ToString().Equals("hours"))
+                                                                    if (!(null == apptstr[i]))
                                                                     {
-                                                                        EndHours = Convert.ToInt32(arrEndTimes[0].ToString());
-                                                                    }
-                                                                    else
-                                                                    {
-                                                                        if (arrEndTimes[1].ToString().Equals("minute") || arrEndTimes[1].ToString().Equals("minutes"))
+                                                                        if (apptstr[i].ToString().Trim().StartsWith("REC") && apptstr[i].ToString().Trim().Length <= 5)
                                                                         {
-                                                                            EndMinutes = Convert.ToInt32(arrEndTimes[0].ToString());
+                                                                            AppointmentsSpan = apptstr[i].ToString().Trim().Substring(3).ToString();
 
+                                                                            break;
                                                                         }
                                                                     }
                                                                 }
                                                             }
 
-                                                        }
-                                                        else
-                                                        {
-                                                            if (!(null == arrEndTimes[2]))
+
+                                                            if (AppointmentsSpan != "")
                                                             {
-                                                                if (arrlen == 4)
+                                                                int SpanDays = Convert.ToInt32(Convert.ToInt32(AppointmentsSpan) * 7);
+
+                                                                DateTime NextAptDate = Convert.ToDateTime(Apptdate).AddDays(SpanDays).Date;
+
+                                                                while (NextAptDate <= dtAptCreationLastDate)
                                                                 {
-                                                                    if ((arrEndTimes[1].ToString().Equals("hour") || arrEndTimes[1].ToString().Equals("hours")) && (arrEndTimes[3].ToString().Equals("minute") || arrEndTimes[3].ToString().Equals("minutes")))
+
+                                                                    string mon = NextAptDate.Month.ToString();
+                                                                    if (mon.Length == 1)
                                                                     {
-                                                                        EndHours = Convert.ToInt32(arrEndTimes[0].ToString());
-
-                                                                        EndMinutes = Convert.ToInt32(arrEndTimes[2].ToString());
+                                                                        mon = "0" + NextAptDate.Month.ToString();
                                                                     }
-                                                                }
-                                                            }
 
-                                                        }
+                                                                    string dd = NextAptDate.Day.ToString();
 
-                                                        TimeSpan Stime = new TimeSpan(StartHours, StartMinutes, 0);
-
-                                                        TimeSpan Etime = new TimeSpan(EndHours, EndMinutes, 0);
-
-                                                        TimeSpan CalcTime = Stime + Etime;
-
-                                                        time = 0;
-
-                                                        time = Math.Round(Convert.ToDecimal(new TimeSpan(EndHours, EndMinutes, 0).TotalHours), 2);
-
-                                                        string EndMin = CalcTime.Minutes.ToString();
-
-                                                        if (EndMin.Equals("0"))
-                                                        {
-                                                            EndMin = "00";
-                                                        }
-                                                        string EndHoursStr = CalcTime.Hours.ToString();
-
-                                                        string tt = StartTm;
-
-                                                        if (CalcTime.Hours >= 12)
-                                                        {
-                                                            string time_str = CalcTime.Hours + ":00:00";
-
-                                                            TimeSpan time_span = TimeSpan.Parse(time_str);
-
-                                                            DateTime d = new DateTime(time_span.Ticks);
-
-                                                            string tm = d.ToString("hh");
-
-                                                            EndHoursStr = tm;
-
-                                                            tt = "PM";
-                                                        }
-
-                                                        ExpEndTimeStr = EndHoursStr + ":" + CalcTime.Minutes.ToString() + " " + tt;
-
-                                                        Start_EndTime = Convert.ToInt32(EndHoursStr) + EndMin;
-                                                    }
-                                                }
-
-                                            }
-                                        }
-                                        string ExpRevAmount = "";
-                                        if (ApptString.Contains("$"))
-                                        {
-                                            string[] apptstr = ApptString.Split(',');
-
-                                            if (apptstr.Length > 0)
-                                            {
-                                                for (int i = 0; i < apptstr.Length; i++)
-                                                {
-                                                    if (!(null == apptstr[i]))
-                                                    {
-                                                        if (apptstr[i].ToString().Trim().StartsWith("$"))
-                                                        {
-                                                            ExpRevAmount = apptstr[i].ToString().Trim().Substring(1).ToString();
-                                                            break;
-                                                        }
-                                                    }
-                                                }
-                                            }
-
-                                        }
-
-                                        dtTime = dtPart2 + Start_FullTime + "-" + Start_EndTime;
-
-                                        string ExpectedPetTime = time.ToString();
-
-                                        if (IsValidApptDate.Equals(true))
-                                        {
-
-                                            DataSet ds = objgroomer.GetGroomername(gname);
-                                            if (ds.Tables.Count > 0)
-                                            {
-                                                if (ds.Tables[0].Rows.Count > 0)
-                                                {
-                                                    gid = Convert.ToInt32(ds.Tables[0].Rows[0]["GID"].ToString());
-
-                                                    DataSet dsseq = new DataSet();
-
-                                                    Apptdate = Convert.ToDateTime(Apptdate).Date.ToString("MM/dd/yyyy") + " 12:00:00 AM";
-
-                                                    dsseq = objgroomer.GetMaxSequencenoOfGroomer(gid, Apptdate);
-                                                    SeqNum = 0;
-                                                    if (dsseq.Tables.Count > 0)
-                                                    {
-                                                        if (dsseq.Tables[0].Rows.Count > 0)
-                                                        {
-                                                            SeqNum = Convert.ToInt32(dsseq.Tables[0].Rows[0]["sequence"].ToString());
-                                                        }
-                                                        else
-                                                        {
-                                                            SeqNum = 1;
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-
-                                        bool IsValidAppt = IsValidAppointment(Apptdate, dtTime, ApptString, gname, ExpectedPetTime, SeqNum, ApptStart_Time, ExpApptTime);
-
-                                        bool IsValidApptRevenue = IsValidRevAmt(ExpRevAmount);
-                                        if (IsValidApptRevenue.Equals(false))
-                                        {
-                                            ExpRevAmount = "0";
-                                        }
-
-                                        if (IsValidAppt.Equals(true))
-                                        {
-
-                                            bool IsValidDateSel = false;
-
-                                            if (Convert.ToDateTime(Apptdate).Date >= DateTime.Now.Date)
-                                            {
-                                                IsValidDateSel = true;
-
-                                            }
-
-                                            if (IsValidDateSel.Equals(true))
-                                            {
-                                                int IsValidApptment = objgroomer.CheckApptExists(gid, Apptdate, dtTime);
-
-                                                string aptSTiming = arraptStiming0[1].ToString() + " " + arraptStiming0[2].ToString();
-
-                                                if (IsValidApptment.Equals(true))
-                                                {
-                                                    int ApptID = objgroomer.InsertGroomerAppointment(gid, Apptdate, "", "", ExpRevAmount, ApptString, dtTime, SeqNum, Convert.ToDecimal(ExpectedPetTime), ZipCode, aptSTiming, NameofCustomer, ExpEndTimeStr);
-
-                                                    if (ApptID > 0)
-                                                    {
-                                                        NoofInsertedAppt++;
-                                                    }
-
-                                                    if (ApptString.Contains("REC"))
-                                                    {
-                                                        DateTime dtAptCreationLastDate = Convert.ToDateTime(Apptdate).AddMonths(6).Date;
-
-                                                        string AppointmentsSpan = "";
-
-                                                        string[] apptstr = ApptString.Split(',');
-
-                                                        if (apptstr.Length > 0)
-                                                        {
-                                                            for (int i = 0; i < apptstr.Length; i++)
-                                                            {
-                                                                if (!(null == apptstr[i]))
-                                                                {
-                                                                    if (apptstr[i].ToString().Trim().StartsWith("REC") && apptstr[i].ToString().Trim().Length <= 5)
+                                                                    if (dd.Length == 1)
                                                                     {
-                                                                        AppointmentsSpan = apptstr[i].ToString().Trim().Substring(3).ToString();
-
-                                                                        break;
+                                                                        dd = "0" + NextAptDate.Day.ToString();
                                                                     }
-                                                                }
-                                                            }
-                                                        }
 
+                                                                    string dtPart1 = mon + dd;
 
-                                                        if (AppointmentsSpan != "")
-                                                        {
-                                                            int SpanDays = Convert.ToInt32(Convert.ToInt32(AppointmentsSpan) * 7);
+                                                                    dtPart2 = dtPart1 + ".";
 
-                                                            DateTime NextAptDate = Convert.ToDateTime(Apptdate).AddDays(SpanDays).Date;
+                                                                    dtTime = dtPart2 + Start_FullTime + "-" + Start_EndTime;
 
-                                                            while (NextAptDate <= dtAptCreationLastDate)
-                                                            {
+                                                                    DataSet dsseqNo = objgroomer.GetMaxSequencenoOfGroomer(gid, NextAptDate.ToString());
 
-                                                                string mon = NextAptDate.Month.ToString();
-                                                                if (mon.Length == 1)
-                                                                {
-                                                                    mon = "0" + NextAptDate.Month.ToString();
-                                                                }
+                                                                    int SeqNumber = 0;
 
-                                                                string dd = NextAptDate.Day.ToString();
-
-                                                                if (dd.Length == 1)
-                                                                {
-                                                                    dd = "0" + NextAptDate.Day.ToString();
-                                                                }
-
-                                                                string dtPart1 = mon + dd;
-
-                                                                dtPart2 = dtPart1 + ".";
-
-                                                                dtTime = dtPart2 + Start_FullTime + "-" + Start_EndTime;
-
-                                                                DataSet dsseqNo = objgroomer.GetMaxSequencenoOfGroomer(gid, NextAptDate.ToString());
-
-                                                                int SeqNumber = 0;
-
-                                                                if (dsseqNo.Tables.Count > 0)
-                                                                {
-                                                                    if (dsseqNo.Tables[0].Rows.Count > 0)
+                                                                    if (dsseqNo.Tables.Count > 0)
                                                                     {
-                                                                        SeqNumber = Convert.ToInt32(dsseqNo.Tables[0].Rows[0]["sequence"].ToString());
+                                                                        if (dsseqNo.Tables[0].Rows.Count > 0)
+                                                                        {
+                                                                            SeqNumber = Convert.ToInt32(dsseqNo.Tables[0].Rows[0]["sequence"].ToString());
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            SeqNumber = 1;
+                                                                        }
                                                                     }
-                                                                    else
+
+                                                                    int IsValidApptments = objgroomer.CheckApptExists(gid, NextAptDate.ToString(), dtTime);
+
+                                                                    if (IsValidApptment > 0)
                                                                     {
-                                                                        SeqNumber = 1;
+                                                                        int RECApptID = objgroomer.InsertGroomerAppointment(gid, NextAptDate.ToString(), "", "", ExpRevAmount, ApptString, dtTime, SeqNumber, Convert.ToDecimal(ExpectedPetTime), ZipCode, aptSTiming, NameofCustomer, ExpEndTimeStr);
+
+                                                                        if (RECApptID > 0)
+                                                                        {
+                                                                            NoofInsertedAppt++;
+                                                                        }
                                                                     }
+
+                                                                    NextAptDate = NextAptDate.AddDays(SpanDays).Date;
+
                                                                 }
-
-                                                                int IsValidApptments = objgroomer.CheckApptExists(gid, NextAptDate.ToString(), dtTime);
-
-                                                                if (IsValidApptment > 0)
-                                                                {
-                                                                    int RECApptID = objgroomer.InsertGroomerAppointment(gid, NextAptDate.ToString(), "", "", ExpRevAmount, ApptString, dtTime, SeqNumber, Convert.ToDecimal(ExpectedPetTime), ZipCode, aptSTiming, NameofCustomer, ExpEndTimeStr);
-
-                                                                    if (RECApptID > 0)
-                                                                    {
-                                                                        NoofInsertedAppt++;
-                                                                    }
-                                                                }
-
-                                                                NextAptDate = NextAptDate.AddDays(SpanDays).Date;
-
                                                             }
                                                         }
                                                     }
                                                 }
                                             }
+                                        }
+                                        else
+                                        {
+                                            //Insert Failed Appointments
+                                            Groomer objgrm = new Groomer();
+
+                                            objgrm.InsertFailedAppointments(Convert.ToDateTime(Apptdate).ToString("yyyy-MM-dd"), Convert.ToDateTime(ApptStart_Time).ToString("hh:mm tt"), ApptString, ExpApptTime, NameofCustomer, customerEmail, scheduledBy, gid);
                                         }
                                     }
-                                }
 
-                                SuccesfullMessage(NoofInsertedAppt.ToString() + " Appointments created Successfully.");
+                                    SuccesfullMessage(NoofInsertedAppt.ToString() + " Appointments created Successfully.");
+                                }
                             }
-                        }
+                        }//Customer Check End
                     }
                 }
                 else
@@ -647,6 +680,28 @@ namespace FritzysPetCareProsSandbox.Admin
             catch (Exception ex)
             {
                 ErrMessage("Error occured while uploading the appointments data.");
+            }
+        }
+
+        private bool findCustomerInList(string NameofCustomer)
+        {
+            Groomer objgroomer = new Groomer();
+
+            bool IsAvailable = false;
+            try
+            {
+                int returnVal = objgroomer.findCustomerInList(NameofCustomer);
+
+                if (returnVal == -1)
+                {
+                    IsAvailable = true;
+                }
+
+                return IsAvailable;
+            }
+            finally
+            {
+                objgroomer = null;
             }
         }
 

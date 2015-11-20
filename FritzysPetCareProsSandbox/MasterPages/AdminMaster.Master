@@ -166,6 +166,9 @@
                                         <li>
                                             <asp:HyperLink ID="lnkUploadgroomerapt" runat="server" Text="Upload Groomer Appointments"
                                                 ToolTip="Upload Groomer Appointments"></asp:HyperLink></li>
+                                        <li>
+                                            <asp:HyperLink ID="lnkUploadFailedAppointment" runat="server" Text="View Failed Appointments"
+                                                ToolTip="View Failed Appointments"></asp:HyperLink></li>
                                     </ul>
                                 </li>
                             </ul>
