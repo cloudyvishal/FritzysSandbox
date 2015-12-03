@@ -58,3 +58,12 @@ C:\Users\Vishal\Documents\GitHub\FritzysSandbox\MobileWeb\bin\BusinessLogicHandl
 C:\Users\Vishal\Documents\GitHub\FritzysSandbox\MobileWeb\obj\Debug\FritzysMobile.csprojResolveAssemblyReference.cache
 C:\Users\Vishal\Documents\GitHub\FritzysSandbox\MobileWeb\obj\Debug\MobileWeb.dll
 C:\Users\Vishal\Documents\GitHub\FritzysSandbox\MobileWeb\obj\Debug\MobileWeb.pdb
+E:\Project_Repository\Projects\FritzysSandbox\MobileWeb\bin\MobileWeb.dll.config
+E:\Project_Repository\Projects\FritzysSandbox\MobileWeb\bin\MobileWeb.dll
+E:\Project_Repository\Projects\FritzysSandbox\MobileWeb\bin\MobileWeb.pdb
+E:\Project_Repository\Projects\FritzysSandbox\MobileWeb\bin\BusinessLogicHandler.dll
+E:\Project_Repository\Projects\FritzysSandbox\MobileWeb\bin\DataBaseHandler35.dll
+E:\Project_Repository\Projects\FritzysSandbox\MobileWeb\bin\BusinessLogicHandler.pdb
+E:\Project_Repository\Projects\FritzysSandbox\MobileWeb\obj\Debug\FritzysMobile.csprojResolveAssemblyReference.cache
+E:\Project_Repository\Projects\FritzysSandbox\MobileWeb\obj\Debug\MobileWeb.dll
+E:\Project_Repository\Projects\FritzysSandbox\MobileWeb\obj\Debug\MobileWeb.pdb

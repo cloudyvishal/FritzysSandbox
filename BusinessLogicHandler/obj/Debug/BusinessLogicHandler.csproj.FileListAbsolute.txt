@@ -41,3 +41,8 @@ C:\Users\Vishal\Documents\GitHub\FritzysSandbox\BusinessLogicHandler\bin\Debug\B
 C:\Users\Vishal\Documents\GitHub\FritzysSandbox\BusinessLogicHandler\obj\Debug\BusinessLogicHandler.csprojResolveAssemblyReference.cache
 C:\Users\Vishal\Documents\GitHub\FritzysSandbox\BusinessLogicHandler\obj\Debug\BusinessLogicHandler.dll
 C:\Users\Vishal\Documents\GitHub\FritzysSandbox\BusinessLogicHandler\obj\Debug\BusinessLogicHandler.pdb
+E:\Project_Repository\Projects\FritzysSandbox\BusinessLogicHandler\bin\Debug\BusinessLogicHandler.dll
+E:\Project_Repository\Projects\FritzysSandbox\BusinessLogicHandler\bin\Debug\BusinessLogicHandler.pdb
+E:\Project_Repository\Projects\FritzysSandbox\BusinessLogicHandler\obj\Debug\BusinessLogicHandler.csprojResolveAssemblyReference.cache
+E:\Project_Repository\Projects\FritzysSandbox\BusinessLogicHandler\obj\Debug\BusinessLogicHandler.dll
+E:\Project_Repository\Projects\FritzysSandbox\BusinessLogicHandler\obj\Debug\BusinessLogicHandler.pdb
