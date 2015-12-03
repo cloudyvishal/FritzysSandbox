@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -49,11 +50,13 @@ namespace FritzysPetCareProsSandbox
 
                 if (Ismobile.Equals(true))
                 {
-                    Response.Redirect("../fritzymobile/MB_services.aspx".ToLower());
+                    string path = ConfigurationManager.AppSettings["HomePathValue"];
+
+                    Response.Redirect(path + "fritzymobile/MB_services.aspx".ToLower());
 
                     HttpContext.Current.Response.Status = "301 Moved Permanently";
 
-                    HttpContext.Current.Response.AddHeader("Location", Request.Url.ToString().Replace("../", "../fritzymobile/MB_services.aspx"));
+                    HttpContext.Current.Response.AddHeader("Location", Request.Url.ToString().Replace("../", path + "/fritzymobile/MB_services.aspx"));
                 }
 
                 else

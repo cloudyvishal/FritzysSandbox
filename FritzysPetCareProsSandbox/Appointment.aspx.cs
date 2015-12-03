@@ -841,6 +841,7 @@ namespace FritzysPetCareProsSandbox
                 ds.Dispose();
             }
         }
+
         public void GetBreed2(string PetType)
         {
             StoreFrontUser ObjReg = null;
@@ -885,6 +886,7 @@ namespace FritzysPetCareProsSandbox
             } finally{}
 
         }
+
         public void GetBreed3(string PetType)
         {
             StoreFrontUser ObjReg = null;
@@ -1147,6 +1149,7 @@ namespace FritzysPetCareProsSandbox
                 ViewState["DateType"] = "0";
             }
         }
+
         protected void imgAddmore_Click(object sender, ImageClickEventArgs e)
         {
             try

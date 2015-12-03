@@ -85,9 +85,12 @@ namespace FritzysPetCareProsSandbox
 
                 string passURL = strUrl + "FritzysMobile/Default.aspx";
 
+                string newURL = "http://mobile.naturesfreshpet.com/";
+
                 HttpContext.Current.Response.Status = "301 Moved Permanently";
 
-                Response.Redirect(passURL, false);
+                Response.Redirect(newURL, false);
+               
             }
 
             else
