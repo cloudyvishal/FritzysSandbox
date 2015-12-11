@@ -975,6 +975,8 @@
     <Content Include="PayList.aspx" />
     <Content Include="PaymentInfo.aspx" />
     <Content Include="PrePaymentInfo.aspx" />
+    <Content Include="PrintCoupon.aspx" />
+    <Content Include="PrintFinalCoupon.aspx" />
     <Content Include="Products.aspx" />
     <Content Include="Registration.aspx" />
     <Content Include="Script\addListServices.js" />
@@ -3152,6 +3154,20 @@
     </Compile>
     <Compile Include="PrePaymentInfo.aspx.designer.cs">
       <DependentUpon>PrePaymentInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintCoupon.aspx.cs">
+      <DependentUpon>PrintCoupon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintCoupon.aspx.designer.cs">
+      <DependentUpon>PrintCoupon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintFinalCoupon.aspx.cs">
+      <DependentUpon>PrintFinalCoupon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintFinalCoupon.aspx.designer.cs">
+      <DependentUpon>PrintFinalCoupon.aspx</DependentUpon>
     </Compile>
     <Compile Include="Products.aspx.cs">
       <DependentUpon>Products.aspx</DependentUpon>
