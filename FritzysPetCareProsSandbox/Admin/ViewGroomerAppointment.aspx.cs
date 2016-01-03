@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using BCL.Utility.CommonMethods;
 
 namespace FritzysPetCareProsSandbox.Admin
 {
@@ -776,12 +777,7 @@ namespace FritzysPetCareProsSandbox.Admin
             ddlYear.DataBind();
 
         }
-
-        protected void btnDeleteAppointment_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             try
@@ -852,6 +848,52 @@ namespace FritzysPetCareProsSandbox.Admin
                 }
             }
             finally { }
+        }
+
+        protected void btnResetSelectedAppt_Click(object sender, EventArgs e)
+        {
+            string AppointmentID = CommonFunctions.GetCheckedRow(GrdUsers, "chkSelect");
+
+            Groomer objGroomer = null;
+
+            try
+            {
+                if (AppointmentID != "")
+                {
+                    objGroomer = new Groomer();
+
+                    objGroomer.ResetGroomerAppointmentStatus(AppointmentID);
+
+                    BindGroomersAppointment();
+                }
+            }
+            finally
+            {
+                objGroomer = null;
+            }
+        }
+
+        protected void btnDeleteSelectedAppt_Click(object sender, EventArgs e)
+        {
+            string AppointmentID = CommonFunctions.GetCheckedRow(GrdUsers, "chkSelect");
+
+            Groomer objGroomer = null;
+
+            try
+            {
+                if (AppointmentID != "")
+                {
+                    objGroomer = new Groomer();
+
+                    objGroomer.ChangeGroomerAppointmentStatus(AppointmentID);
+
+                    BindGroomersAppointment();
+                }
+            }
+            finally
+            {
+                objGroomer = null;
+            }
         }
     }
 }

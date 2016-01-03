@@ -85,7 +85,8 @@
                 OnClick="btnDeleteAppointment_Click" />
             &nbsp;&nbsp;&nbsp;
             <asp:Button ID="Button1" runat="server" Text="View List" CssClass="btnBg" />
-            <input id="buttonDeleteSelectedAppt" class="btnBg" type="submit" value="Delete Selected Appointments" disabled onclick="return delconfirm();" />
+            <asp:Button ID="btnDeleteSelectedAppt" CssClass="btnBg" Text="Delete Selected Appointments" runat="server" OnClick="btnDeleteSelectedAppt_Click"></asp:Button>
+            <asp:Button ID="btnResetSelectedAppt" CssClass="btnBg" Text="Reset Selected Appointments" runat="server" OnClick="btnResetSelectedAppt_Click"></asp:Button>
         </div>
         <asp:Panel ID="Panel1" Style="display: none" runat="server">
             
@@ -272,7 +273,14 @@
                         <asp:TemplateField HeaderText="">
                             <ItemStyle CssClass="itemstyle" Width="5%" HorizontalAlign="left" />
                             <ItemTemplate>
-                                <input type="image" src="/images/deleteicon.gif" onclick="return singleDelete('chkDelete<%# Eval("AppointmentID") %>    ')" /><input type="checkbox" name="chkDelete<%# Eval("AppointmentID") %>" id="chkDelete<%# Eval("AppointmentID") %>" onclick="    showDeleteAllButton();" />
+                                <input type="image" src="/images/deleteicon.gif" onclick="return singleDelete('chkDelete<%# Eval("AppointmentID") %>    ')" /><input type="checkbox" name="chkDelete<%# Eval("AppointmentID") %>" id="chkDelete<%# Eval("AppointmentID") %>" onclick="showDeleteAllButton();" />
+                            </ItemTemplate>
+                            <HeaderStyle CssClass="headerStyle1" />
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="">
+                            <ItemStyle CssClass="itemstyle" Width="5%" HorizontalAlign="left" />
+                            <ItemTemplate>
+                                <input type="image" src="/images/deleteicon.gif" onclick="return singleDelete('chkReset<%# Eval("AppointmentID") %>    ')" /><input type="checkbox" name="chkDelete<%# Eval("AppointmentID") %>" id="chkDelete<%# Eval("AppointmentID") %>" onclick="showResetAllButton();" />
                             </ItemTemplate>
                             <HeaderStyle CssClass="headerStyle1" />
                         </asp:TemplateField>
@@ -388,6 +396,31 @@
             if (flag != "13") {
 
                 return confirm("Do You Want To Delete Selected Groomer(s) Appointment?");
+            }
+
+        }
+
+        function showResetAllButton() {
+
+            var countChecked = 0;
+            var inputs = document.getElementsByTagName("input");
+
+            for (i in inputs) {
+                if (inputs[i].id != null && inputs[i].id.startsWith("chkDelete")) {
+                    if (inputs[i].checked) {
+                        countChecked++;
+                    }
+                }
+            }
+
+           // document.getElementById("buttonDeleteSelectedAppt").disabled = (countChecked == 0);
+        }
+
+        function resetconfirm(flag) {
+            //alert(flag);
+            if (flag != "13") {
+
+                return confirm("Do You Want To Reset Selected Groomer(s) Appointment?");
             }
 
         }

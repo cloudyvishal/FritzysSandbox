@@ -93,7 +93,7 @@ namespace FritzysPetCareProsSandbox.Admin
         Excel.Worksheet excelSheetGift = null;
         #endregion
 
-        protected void InitializeExcel1()
+        protected void InitializeExcel()
         {
             try
             {
@@ -151,10 +151,10 @@ namespace FritzysPetCareProsSandbox.Admin
         {
             try
             {
-                InitializeExcel1();
-                InitializeExcel2();
-                InitializeExcel3();
-                InitializeExcel4();
+                InitializeExcel();
+                //InitializeExcel2();
+                //InitializeExcel3();
+               // InitializeExcel4();
                 ExcelFilePath = System.Configuration.ConfigurationManager.AppSettings["ExcelFile"].ToString();
                 ExcelFilePath = ExcelFilePath.Substring(0, ExcelFilePath.LastIndexOf('/') + 1);
 
