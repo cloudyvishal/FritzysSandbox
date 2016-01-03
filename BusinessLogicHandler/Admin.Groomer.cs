@@ -1955,6 +1955,10 @@ namespace BCL.Admin.GroomerMngmt
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public DataSet GetAllPreAppointmentID()
         {
             string[] paramNames = null;
@@ -1983,6 +1987,11 @@ namespace BCL.Admin.GroomerMngmt
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="userID"></param>
+        /// <returns></returns>
         public DataSet GetFutureAppointment(int userID)
         {
             string[] paramNames = null;
@@ -2011,6 +2020,11 @@ namespace BCL.Admin.GroomerMngmt
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="custUserName"></param>
+        /// <returns></returns>
         public DataSet GetPastAppointment(string custUserName)
         {
             string[] paramNames = null;
@@ -2039,6 +2053,10 @@ namespace BCL.Admin.GroomerMngmt
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="AppointmentId"></param>
         public void DeleteCustomerAppointment(int AppointmentId)
         {
             string[] paramNames = null;
@@ -2067,6 +2085,11 @@ namespace BCL.Admin.GroomerMngmt
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="appid"></param>
+        /// <returns></returns>
         public DataSet GetCustAppointmentbyID(int appid)
         {
             string[] paramNames = null;
@@ -2095,6 +2118,10 @@ namespace BCL.Admin.GroomerMngmt
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public DataSet GetPrePaymentData()
         {
             string[] paramNames = null;
@@ -2123,6 +2150,10 @@ namespace BCL.Admin.GroomerMngmt
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="prePayId"></param>
         public void updatePrepaymentExcelExported(int prePayId)
         {
             string[] paramNames = null;
@@ -2151,6 +2182,61 @@ namespace BCL.Admin.GroomerMngmt
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="liq1"></param>
+        /// <param name="liq2"></param>
+        /// <param name="liq3"></param>
+        /// <param name="liq4"></param>
+        /// <param name="liq5"></param>
+        /// <param name="liq6"></param>
+        /// <param name="liq7"></param>
+        /// <param name="liq8"></param>
+        /// <param name="liq9"></param>
+        /// <param name="liq10"></param>
+        /// <param name="liq11"></param>
+        /// <param name="liq12"></param>
+        /// <param name="liq13"></param>
+        /// <param name="liq14"></param>
+        /// <param name="liq15"></param>
+        /// <param name="liq16"></param>
+        /// <param name="liq17"></param>
+        /// <param name="liq18"></param>
+        /// <param name="liq19"></param>
+        /// <param name="liq20"></param>
+        /// <param name="liq21"></param>
+        /// <param name="liq22"></param>
+        /// <param name="liq23"></param>
+        /// <param name="liq24"></param>
+        /// <param name="liq25"></param>
+        /// <param name="FleaTick22"></param>
+        /// <param name="FleaTick44"></param>
+        /// <param name="FleaTick88"></param>
+        /// <param name="FleaTick132"></param>
+        /// <param name="FleaTickCat"></param>
+        /// <param name="Toothbrushes"></param>
+        /// <param name="Wham"></param>
+        /// <param name="Towels"></param>
+        /// <param name="Treats"></param>
+        /// <param name="Wipes"></param>
+        /// <param name="CottonSwabs"></param>
+        /// <param name="VetWrap"></param>
+        /// <param name="PaperTowels"></param>
+        /// <param name="GarbageBags"></param>
+        /// <param name="Receipts"></param>
+        /// <param name="Envelopes"></param>
+        /// <param name="BusinessCards"></param>
+        /// <param name="Other1"></param>
+        /// <param name="Other2"></param>
+        /// <param name="Other3"></param>
+        /// <param name="Other4"></param>
+        /// <param name="Other5"></param>
+        /// <param name="Marketing1"></param>
+        /// <param name="Marketing2"></param>
+        /// <param name="Marketing3"></param>
+        /// <param name="Marketing4"></param>
+        /// <param name="Marketing5"></param>
         public void updateLabels(string liq1, string liq2, string liq3, string liq4, string liq5, string liq6, string liq7, string liq8,
         string liq9, string liq10, string liq11, string liq12, string liq13, string liq14, string liq15, string liq16, string liq17, string liq18,
         string liq19, string liq20, string liq21, string liq22, string liq23, string liq24, string liq25,
@@ -2188,6 +2274,10 @@ namespace BCL.Admin.GroomerMngmt
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public DataSet getInventoryLabels()
         {
             string[] paramNames = null;
@@ -2216,6 +2306,11 @@ namespace BCL.Admin.GroomerMngmt
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="NameofCustomer"></param>
+        /// <returns></returns>
         public int findCustomerInList(string NameofCustomer)
         {
             string[] paramNames = null;
@@ -2244,6 +2339,17 @@ namespace BCL.Admin.GroomerMngmt
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Apptdate"></param>
+        /// <param name="ApptStart_Time"></param>
+        /// <param name="ApptString"></param>
+        /// <param name="ExpApptTime"></param>
+        /// <param name="NameofCustomer"></param>
+        /// <param name="customerEmail"></param>
+        /// <param name="scheduledBy"></param>
+        /// <param name="gid"></param>
         public void InsertFailedAppointments(string Apptdate, string ApptStart_Time, string ApptString, string ExpApptTime, string NameofCustomer, string customerEmail, string scheduledBy, int gid)
         {
             string[] paramNames = null;
@@ -2272,6 +2378,10 @@ namespace BCL.Admin.GroomerMngmt
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public DataSet GetFailedAppointments()
         {
             string[] paramNames = null;
@@ -2289,6 +2399,38 @@ namespace BCL.Admin.GroomerMngmt
                 paramList = databaseObj.BuildParameterArray(paramNames, paramValues);
 
                 return databaseObj.GetDataSet(StoreProcedure.GROOMERS_GET_ALL_FAILED_APPOINTMENTS, Enumerations.Command_Type.StoredProcedure, paramList);
+            }
+            finally
+            {
+                paramNames = null;
+
+                paramValues = null;
+
+                paramList = null;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="AppointmentID"></param>
+        public void ResetGroomerAppointmentStatus(string AppointmentID)
+        {
+            string[] paramNames = null;
+
+            object[] paramValues = null;
+
+            IDataParameter[] paramList = null;
+
+            try
+            {
+                paramNames = new string[] { };
+
+                paramValues = new object[] { };
+
+                paramList = databaseObj.BuildParameterArray(paramNames, paramValues);
+
+                databaseObj.GetDataSet(StoreProcedure.RESET_GROOMER_APPOINTMENT_STATUS, Enumerations.Command_Type.StoredProcedure, paramList);
             }
             finally
             {
