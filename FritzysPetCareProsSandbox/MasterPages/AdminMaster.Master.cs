@@ -113,6 +113,8 @@ namespace FritzysPetCareProsSandbox.MasterPages
 
                 lnkUploadFailedAppointment.NavigateUrl = Session["AdminPath"] + "UploadFailedAppointments.aspx";
 
+                lnkApptType.NavigateUrl = Session["AdminPath"] + "ManageAppointmentType.aspx";
+
                 AccessNew();
             }
         }

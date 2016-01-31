@@ -179,6 +179,7 @@
     <Content Include="Admin\Logout.aspx" />
     <Content Include="Admin\ManageAdditionalService.aspx" />
     <Content Include="Admin\ManageAgents.aspx" />
+    <Content Include="Admin\ManageAppointmentType.aspx" />
     <Content Include="Admin\ManageBaners.aspx" />
     <Content Include="Admin\ManageBreed.aspx" />
     <Content Include="Admin\ManageEmail.aspx" />
@@ -2364,6 +2365,13 @@
     </Compile>
     <Compile Include="Admin\ManageAgents.aspx.designer.cs">
       <DependentUpon>ManageAgents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageAppointmentType.aspx.cs">
+      <DependentUpon>ManageAppointmentType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageAppointmentType.aspx.designer.cs">
+      <DependentUpon>ManageAppointmentType.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ManageBaners.aspx.cs">
       <DependentUpon>ManageBaners.aspx</DependentUpon>

@@ -88,8 +88,6 @@
             <asp:Button ID="btnDeleteSelectedAppt" CssClass="btnBg" Text="Delete Selected Appointments" runat="server" OnClick="btnDeleteSelectedAppt_Click"></asp:Button>
             <asp:Button ID="btnResetSelectedAppt" CssClass="btnBg" Text="Reset Selected Appointments" runat="server" OnClick="btnResetSelectedAppt_Click"></asp:Button>
         </div>
-        <asp:Panel ID="Panel1" Style="display: none" runat="server">
-            
         <div class="ViewAptGrid" id="DvAptGrid" runat="server">
             <div class="PopupHeader" id="PopupHeader">Header</div>
             <div class="PopupBody">
@@ -273,14 +271,14 @@
                         <asp:TemplateField HeaderText="">
                             <ItemStyle CssClass="itemstyle" Width="5%" HorizontalAlign="left" />
                             <ItemTemplate>
-                                <input type="image" src="/images/deleteicon.gif" onclick="return singleDelete('chkDelete<%# Eval("AppointmentID") %>    ')" /><input type="checkbox" name="chkDelete<%# Eval("AppointmentID") %>" id="chkDelete<%# Eval("AppointmentID") %>" onclick="showDeleteAllButton();" />
+                                <input type="image" src="/images/deleteicon.gif" onclick="return singleDelete('chkDelete<%# Eval("AppointmentID") %>    ')" /><input type="checkbox" name="chkDelete<%# Eval("AppointmentID") %>" id="chkDelete<%# Eval("AppointmentID") %>" onclick="    showDeleteAllButton();" />
                             </ItemTemplate>
                             <HeaderStyle CssClass="headerStyle1" />
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="">
                             <ItemStyle CssClass="itemstyle" Width="5%" HorizontalAlign="left" />
                             <ItemTemplate>
-                                <input type="image" src="/images/deleteicon.gif" onclick="return singleDelete('chkReset<%# Eval("AppointmentID") %>    ')" /><input type="checkbox" name="chkDelete<%# Eval("AppointmentID") %>" id="chkDelete<%# Eval("AppointmentID") %>" onclick="showResetAllButton();" />
+                                <input type="image" src="/images/deleteicon.gif" onclick="return singleDelete('chkReset<%# Eval("AppointmentID") %>    ')" /><input type="checkbox" name="chkDelete<%# Eval("AppointmentID") %>" id="chkDelete<%# Eval("AppointmentID") %>" onclick="    showResetAllButton();" />
                             </ItemTemplate>
                             <HeaderStyle CssClass="headerStyle1" />
                         </asp:TemplateField>
@@ -317,6 +315,7 @@
                 <input id="btnCancel" type="button" value="Cancel" />
             </div>
         </div>
+        <asp:Panel ID="Panel1" Visible="false" runat="server">
         </asp:Panel>
         <ajaxToolkit:ModalPopupExtender ID="ModalPopupExtender2" runat="server"
             CancelControlID="btnCancel" OkControlID="btnOkay"
@@ -413,7 +412,7 @@
                 }
             }
 
-           // document.getElementById("buttonDeleteSelectedAppt").disabled = (countChecked == 0);
+            // document.getElementById("buttonDeleteSelectedAppt").disabled = (countChecked == 0);
         }
 
         function resetconfirm(flag) {

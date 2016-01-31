@@ -128,6 +128,10 @@
                                             <asp:HyperLink ID="lnkUserAccess" runat="Server" Text="Manage User Page Access"
                                                 ToolTip="Manage User Page Access"></asp:HyperLink>
                                         </li>
+                                        <li>
+                                            <asp:HyperLink ID="lnkApptType" runat="Server" Text="Manage Appointnment Type"
+                                                ToolTip="Manage Appointnment Type"></asp:HyperLink>
+                                        </li>
                                     </ul>
                                 </li>
                                 <%-- Banner --%>

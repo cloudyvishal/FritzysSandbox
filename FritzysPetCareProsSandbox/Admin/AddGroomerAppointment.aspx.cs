@@ -15,14 +15,43 @@ namespace FritzysPetCareProsSandbox.Admin
         Groomer objGroomer = new Groomer();
         DataSet ds = new DataSet();
         string fomateds1;
-        int UserAppId;
+        int UserAppId = 0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 BindGroomers();
+
+                BindAppointmentType();
             }
+        }
+
+        private void BindAppointmentType()
+        {
+            objGroomer = new Groomer();
+
+            ds = new DataSet();
+            try
+            {
+                ListItem lst = new ListItem();
+
+                ds = objGroomer.GetAppointmentType();
+
+                lst.Selected = true; lst.Value = "0"; lst.Text = "Select One";
+
+                ddlApptType.DataTextField = "ApptType";
+
+                ddlApptType.DataValueField = "ApptTypeId";
+
+                ddlApptType.DataSource = ds.Tables[0];
+
+                ddlApptType.DataBind();
+
+                ddlApptType.Items.Insert(0, lst);
+            }
+            finally
+            { }
         }
 
         public void ErrorMessage(string Message)
@@ -58,7 +87,8 @@ namespace FritzysPetCareProsSandbox.Admin
                     ddlGroomerlist.DataBind();
                     ddlGroomerlist.Items.Insert(0, lst);
                 }
-            } finally{}
+            }
+            finally { }
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
@@ -103,20 +133,23 @@ namespace FritzysPetCareProsSandbox.Admin
 
                     if (caldate1.Length > 0)
                     {
-                        if (oldmonth == caldate1[0].ToString() && appdate == caldate1[0].ToString())//&& oldmonth == caldate1[0].ToString())
+                        string newMonth = caldate1[0].Substring(0, 2);
+                        string newDate = caldate1[0].Substring(2, 3);
+                        string[] newDate1 = newDate.Split('-');
+                        if (oldmonth == newMonth.ToString() && appdate == newDate1[1].ToString())//&& oldmonth == caldate1[0].ToString())
                         {
                             Groomer objGroomer = new Groomer();
                             DataSet dsseq = new DataSet();
                             DataSet ds4 = new DataSet();
 
-                            dsseq = objGroomer.GetMaxSequencenoOfGroomer(Convert.ToInt32(ddlGroomerlist.SelectedValue), Session["SelectedDate"].ToString());
+                            dsseq = objGroomer.GetMaxSequencenoOfGroomer(Convert.ToInt32(ddlGroomerlist.SelectedValue), Convert.ToDateTime(Session["SelectedDate"].ToString()));
                             if (dsseq.Tables[0].Rows.Count > 0)
                             {
                                 if (Convert.ToInt32(txtSequence.Text) > Convert.ToInt32(dsseq.Tables[0].Rows[0]["sequence"]))
                                 {
                                     txtSequence.Text = dsseq.Tables[0].Rows[0]["sequence"].ToString();
                                 }
-                               ds4 = objGroomer.GetGroomerNextsequenceForupdate(Convert.ToInt32(dsseq.Tables[0].Rows[0]["GId"]), Session["SelectedDate"].ToString(), Convert.ToInt32(txtSequence.Text));
+                                ds4 = objGroomer.GetGroomerNextsequenceForupdate(Convert.ToInt32(dsseq.Tables[0].Rows[0]["GId"]), Session["SelectedDate"].ToString(), Convert.ToInt32(txtSequence.Text));
                                 if (ds4.Tables[0].Rows.Count > 0)
                                 {
                                     for (int m = 0; m < ds4.Tables[0].Rows.Count; m++)
@@ -125,7 +158,7 @@ namespace FritzysPetCareProsSandbox.Admin
                                         objGroomer.UpdateGroomerSequence(Convert.ToInt32(ds4.Tables[0].Rows[0]["GId"]), Session["SelectedDate"].ToString(), h, Convert.ToInt32(ds4.Tables[0].Rows[m]["AppointmentId"]));
                                     }
                                 }
-                                int i = objGroomer.AddGroomerAppointment(Convert.ToInt32(ddlGroomerlist.SelectedValue), Session["SelectedDate"].ToString(), "", "", txtTotalRevnueExpected.Text, txtOthers.Text, txtDate.Text, Convert.ToInt32(txtSequence.Text), Convert.ToDecimal(txtExpectedpettime.Text), txtCustEmail.Text, fomateds1, UserAppId);
+                                int i = objGroomer.AddGroomerAppointment(Convert.ToInt32(ddlGroomerlist.SelectedValue), Session["SelectedDate"].ToString(), "", "", txtTotalRevnueExpected.Text, txtOthers.Text, txtDate.Text, Convert.ToInt32(txtSequence.Text), Convert.ToDecimal(txtExpectedpettime.Text), txtCustEmail.Text, fomateds1, UserAppId, Convert.ToInt32(ddlApptType.SelectedValue));
                                 if (i > 0)
                                 {
                                     Response.Redirect("ViewGroomerAppointment.aspx");
@@ -136,10 +169,10 @@ namespace FritzysPetCareProsSandbox.Admin
                             else
                             {
                                 txtSequence.Text = "1";
-                                int i = objGroomer.AddGroomerAppointment(Convert.ToInt32(ddlGroomerlist.SelectedValue), Session["SelectedDate"].ToString(), "", "", txtTotalRevnueExpected.Text, txtOthers.Text, txtDate.Text, Convert.ToInt32(txtSequence.Text), Convert.ToDecimal(txtExpectedpettime.Text), txtCustEmail.Text, fomateds1, UserAppId);
+                                int i = objGroomer.AddGroomerAppointment(Convert.ToInt32(ddlGroomerlist.SelectedValue), Session["SelectedDate"].ToString(), "", "", txtTotalRevnueExpected.Text, txtOthers.Text, txtDate.Text, Convert.ToInt32(txtSequence.Text), Convert.ToDecimal(txtExpectedpettime.Text), txtCustEmail.Text, fomateds1, UserAppId, Convert.ToInt32(ddlApptType.SelectedValue));
                                 if (i > 0)
                                 {
-                                    Response.Redirect("ViewGroomerAppointmentv2.aspx");
+                                    Response.Redirect("ViewGroomerAppointment.aspx");
                                 }
                             }
                         }
@@ -172,7 +205,7 @@ namespace FritzysPetCareProsSandbox.Admin
 
                 DataSet dsseq = new DataSet();
 
-                dsseq = objGroomer.GetMaxSequencenoOfGroomer(Convert.ToInt32(ddlGroomerlist.SelectedValue), Session["SelectedDate"].ToString());
+                dsseq = objGroomer.GetMaxSequencenoOfGroomer(Convert.ToInt32(ddlGroomerlist.SelectedValue), Convert.ToDateTime(Session["SelectedDate"].ToString()));
 
                 if (dsseq.Tables[0].Rows.Count > 0)
                 {
@@ -190,7 +223,8 @@ namespace FritzysPetCareProsSandbox.Admin
                 {
                     txtSequence.Text = "1";
                 }
-            } finally{}
+            }
+            finally { }
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)
@@ -205,7 +239,8 @@ namespace FritzysPetCareProsSandbox.Admin
                 GetMaxSequencenoOfGroomer();
 
                 divError.Visible = false;
-            } finally{}
+            }
+            finally { }
         }
     }
 }

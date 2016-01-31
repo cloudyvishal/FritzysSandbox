@@ -355,6 +355,15 @@ namespace FritzysPetCareProsSandbox.MasterPages {
         protected global::System.Web.UI.WebControls.HyperLink lnkUserAccess;
         
         /// <summary>
+        /// lnkApptType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lnkApptType;
+        
+        /// <summary>
         /// HypBanner control.
         /// </summary>
         /// <remarks>

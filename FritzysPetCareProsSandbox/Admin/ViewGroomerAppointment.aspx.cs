@@ -48,6 +48,8 @@ namespace FritzysPetCareProsSandbox.Admin
                 BindDayYear();
 
                 DvAptGrid.Attributes["class"] = "ViewAptGrid";
+
+                lblSelectDate.Text = DateTime.Now.ToShortDateString();
             }
         }
 
@@ -181,7 +183,7 @@ namespace FritzysPetCareProsSandbox.Admin
 
                 DateTime olddate = Convert.ToDateTime("01/01/0001");
 
-                TodaysDate = TodaysDate.AddMonths(-20);
+                //TodaysDate = TodaysDate.AddMonths(-20);
 
                 if (calDate.SelectedDate == olddate)
                 {
@@ -238,7 +240,12 @@ namespace FritzysPetCareProsSandbox.Admin
 
                     divError.Visible = false;
 
+                    GrdUsers.Visible = true;
+
+                    Panel1.Visible = true;
+
                     CheckAll();
+                    
                     check();
 
                 }
@@ -894,6 +901,11 @@ namespace FritzysPetCareProsSandbox.Admin
             {
                 objGroomer = null;
             }
+        }
+
+        protected void btnDeleteAppointment_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -516,7 +516,7 @@ namespace FritzysPetCareProsSandbox.Admin
 
                                                         Apptdate = Convert.ToDateTime(Apptdate).Date.ToString("MM/dd/yyyy") + " 12:00:00 AM";
 
-                                                        dsseq = objgroomer.GetMaxSequencenoOfGroomer(gid, Apptdate);
+                                                        dsseq = objgroomer.GetMaxSequencenoOfGroomer(gid, Convert.ToDateTime(Apptdate));
                                                         SeqNum = 0;
                                                         if (dsseq.Tables.Count > 0)
                                                         {
@@ -620,7 +620,7 @@ namespace FritzysPetCareProsSandbox.Admin
 
                                                                     dtTime = dtPart2 + Start_FullTime + "-" + Start_EndTime;
 
-                                                                    DataSet dsseqNo = objgroomer.GetMaxSequencenoOfGroomer(gid, NextAptDate.ToString());
+                                                                    DataSet dsseqNo = objgroomer.GetMaxSequencenoOfGroomer(gid, Convert.ToDateTime(NextAptDate.ToString()));
 
                                                                     int SeqNumber = 0;
 

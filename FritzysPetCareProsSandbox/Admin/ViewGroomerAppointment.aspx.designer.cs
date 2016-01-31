@@ -103,15 +103,6 @@ namespace FritzysPetCareProsSandbox.Admin {
         protected global::System.Web.UI.WebControls.Button btnResetSelectedAppt;
         
         /// <summary>
-        /// Panel1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
-        
-        /// <summary>
         /// DvAptGrid control.
         /// </summary>
         /// <remarks>
@@ -128,6 +119,15 @@ namespace FritzysPetCareProsSandbox.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GrdUsers;
+        
+        /// <summary>
+        /// Panel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel1;
         
         /// <summary>
         /// ModalPopupExtender2 control.

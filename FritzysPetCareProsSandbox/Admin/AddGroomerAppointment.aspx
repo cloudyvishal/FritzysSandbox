@@ -136,6 +136,19 @@
                         Enabled="true" TargetControlID="RegularExpressionValidator1" />
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <asp:Label ID="Label4" runat="server" Text="Appointment Type:"></asp:Label>
+                </td>
+                <td>
+                    <asp:DropDownList ID="ddlApptType" runat="server"></asp:DropDownList>
+                     <asp:RequiredFieldValidator ID="rfvApptType" Text="Select One" InitialValue="0" ControlToValidate="ddlApptType"
+                        ErrorMessage="<b>Required Field Missing</b><br />Appointment type required" Display="none"
+                        ValidationGroup="valContactus" runat="server" SetFocusOnError="true" />
+                    <ajaxToolkit:ValidatorCalloutExtender ID="ValidatorCalloutExtender9" TargetControlID="rfvApptType"
+                        Enabled="true" runat="Server" />
+                </td>
+            </tr>
         </table>
         <asp:Button ID="btnSave" runat="server" Text="Save" ToolTip="Save" CssClass="btnBg"
             ValidationGroup="valContactus" OnClick="btnSave_Click" />&nbsp;
