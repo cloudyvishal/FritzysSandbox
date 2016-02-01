@@ -477,7 +477,7 @@ namespace BCL.Admin.GroomerMngmt
         /// <param name="SequenceNo"></param>
         /// <param name="ExpPetTime"></param>
         /// <returns></returns>
-        public int AddGroomerAppointment(int GID, string AppointmentDate, string StartTime, string EndTime, string ExpectedTotalRevenue, string Others, string DateTimeFormat, int SequenceNo, decimal ExpPetTime, string custemail, string expectStartTime, int UserAppID)
+        public int AddGroomerAppointment(int GID, string AppointmentDate, string StartTime, string EndTime, string ExpectedTotalRevenue, string Others, string DateTimeFormat, int SequenceNo, decimal ExpPetTime, string custemail, string expectStartTime, int UserAppID, int ApptType)
         {
             string[] paramNames = null;
 
@@ -487,9 +487,9 @@ namespace BCL.Admin.GroomerMngmt
 
             try
             {
-                paramNames = new string[] { "@GID", "@AppointmentDate", "@StartTime", "@EndTime", "@ExpectedTotalRevenue", "@Others", "@DateTimeFormat", "@SequenceNo", "@ExpPetTime", "@custEmail" };
+                paramNames = new string[] { "@GID", "@AppointmentDate", "@StartTime", "@EndTime", "@ExpectedTotalRevenue", "@Others", "@DateTimeFormat", "@SequenceNo", "@ExpPetTime", "@custEmail", "@ApptType" };
 
-                paramValues = new object[] { GID, Convert.ToDateTime(AppointmentDate), StartTime, EndTime, ExpectedTotalRevenue, Others, DateTimeFormat, SequenceNo, ExpPetTime, custemail };
+                paramValues = new object[] { GID, Convert.ToDateTime(AppointmentDate), StartTime, EndTime, ExpectedTotalRevenue, Others, DateTimeFormat, SequenceNo, ExpPetTime, custemail, ApptType };
 
                 paramList = databaseObj.BuildParameterArray(paramNames, paramValues);
 
@@ -1019,7 +1019,7 @@ namespace BCL.Admin.GroomerMngmt
         /// <param name="GId"></param>
         /// <param name="AppointmentDate"></param>
         /// <returns></returns>
-        public DataSet GetMaxSequencenoOfGroomer(int GId, string AppointmentDate)
+        public DataSet GetMaxSequencenoOfGroomer(int GId, DateTime AppointmentDate)
         {
             string[] paramNames = null;
 
@@ -2431,6 +2431,34 @@ namespace BCL.Admin.GroomerMngmt
                 paramList = databaseObj.BuildParameterArray(paramNames, paramValues);
 
                 databaseObj.GetDataSet(StoreProcedure.RESET_GROOMER_APPOINTMENT_STATUS, Enumerations.Command_Type.StoredProcedure, paramList);
+            }
+            finally
+            {
+                paramNames = null;
+
+                paramValues = null;
+
+                paramList = null;
+            }
+        }
+
+        public DataSet GetAppointmentType()
+        {
+            string[] paramNames = null;
+
+            object[] paramValues = null;
+
+            IDataParameter[] paramList = null;
+
+            try
+            {
+                paramNames = new string[] { };
+
+                paramValues = new object[] { };
+
+                paramList = databaseObj.BuildParameterArray(paramNames, paramValues);
+
+                return databaseObj.GetDataSet(StoreProcedure.APPOINTMENT_TYPE_GET_ALL, Enumerations.Command_Type.StoredProcedure, paramList);
             }
             finally
             {

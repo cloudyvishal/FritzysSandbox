@@ -710,5 +710,11 @@ namespace BCL.Common.StoreProcedure
         public const string UPDATE_LABELS = "sp_Update_Labels";
 
         public const string RESET_GROOMER_APPOINTMENT_STATUS = "ResetGroomerAppointmentStatus";
+
+        public const string APPOINTMENT_TYPE_GET_ALL = "AppointmentType_GetAll";
+
+        public const string APPOINTMENT_TYPE_UPDATE = "AppointmentType_Update";
+
+        public const string APPOINTMENT_TYPE_INSERT="AppointmentType_Insert";
     }
 }

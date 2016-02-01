@@ -70,8 +70,6 @@ E:\Project_Repository\Projects\FritzysSandbox\MobileWeb\obj\Debug\MobileWeb.pdb
 E:\VisualStudioOnline\FritzysSandbox\MobileWeb\bin\MobileWeb.dll.config
 E:\VisualStudioOnline\FritzysSandbox\MobileWeb\bin\MobileWeb.dll
 E:\VisualStudioOnline\FritzysSandbox\MobileWeb\bin\MobileWeb.pdb
-E:\VisualStudioOnline\FritzysSandbox\MobileWeb\bin\MobileWeb.dll.CodeAnalysisLog.xml
-E:\VisualStudioOnline\FritzysSandbox\MobileWeb\bin\MobileWeb.dll.lastcodeanalysissucceeded
 E:\VisualStudioOnline\FritzysSandbox\MobileWeb\bin\BusinessLogicHandler.dll
 E:\VisualStudioOnline\FritzysSandbox\MobileWeb\bin\DataBaseHandler35.dll
 E:\VisualStudioOnline\FritzysSandbox\MobileWeb\bin\BusinessLogicHandler.pdb

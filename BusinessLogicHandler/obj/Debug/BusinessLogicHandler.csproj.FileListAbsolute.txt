@@ -48,8 +48,6 @@ E:\Project_Repository\Projects\FritzysSandbox\BusinessLogicHandler\obj\Debug\Bus
 E:\Project_Repository\Projects\FritzysSandbox\BusinessLogicHandler\obj\Debug\BusinessLogicHandler.pdb
 E:\VisualStudioOnline\FritzysSandbox\BusinessLogicHandler\bin\Debug\BusinessLogicHandler.dll
 E:\VisualStudioOnline\FritzysSandbox\BusinessLogicHandler\bin\Debug\BusinessLogicHandler.pdb
-E:\VisualStudioOnline\FritzysSandbox\BusinessLogicHandler\bin\Debug\BusinessLogicHandler.dll.CodeAnalysisLog.xml
-E:\VisualStudioOnline\FritzysSandbox\BusinessLogicHandler\bin\Debug\BusinessLogicHandler.dll.lastcodeanalysissucceeded
 E:\VisualStudioOnline\FritzysSandbox\BusinessLogicHandler\obj\Debug\BusinessLogicHandler.csprojResolveAssemblyReference.cache
 E:\VisualStudioOnline\FritzysSandbox\BusinessLogicHandler\obj\Debug\BusinessLogicHandler.dll
 E:\VisualStudioOnline\FritzysSandbox\BusinessLogicHandler\obj\Debug\BusinessLogicHandler.pdb

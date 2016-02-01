@@ -1815,7 +1815,7 @@ namespace BCL.Admin.StoreFrontMgr
 
             try
             {
-                paramNames = new string[] { "@GID" ,"@FirstName" ,"@LastName" ,"@Address1","@Address2","@City" ,"@State","@Zip","@Country","@Phone","@Email","@Cardtype" ,"@CreditCardNo","@ValidYear","@ValidMonth","@VerificationCode","@Payment_Amount" ,"@SandH","@Tax","@OrdRefNo" };
+                paramNames = new string[] { "@GID", "@FirstName", "@LastName", "@Address1", "@Address2", "@City", "@State", "@Zip", "@Country", "@Phone", "@Email", "@Cardtype", "@CreditCardNo", "@ValidYear", "@ValidMonth", "@VerificationCode", "@Payment_Amount", "@SandH", "@Tax", "@OrdRefNo" };
 
                 paramValues = new object[] { GId, FirstName, LastName, Address1, Address2, City, State, Zip, Country, Phone, Email, CardType, cardno, ValidYear, ValidMonth, VerificationCode, Payment_Amount, SandH, Tax, ordno };
 
@@ -1906,6 +1906,62 @@ namespace BCL.Admin.StoreFrontMgr
                 paramList = databaseObj.BuildParameterArray(paramNames, paramValues);
 
                 databaseObj.InsertData(StoreProcedure.INSERT_APPOINTMENT_PRE_PAYMENT, Enumerations.Command_Type.StoredProcedure, paramList);
+            }
+            finally
+            {
+                paramNames = null;
+
+                paramValues = null;
+
+                paramList = null;
+            }
+        }
+
+        public int UpdateAppointment(int ApptTypeId, string ApptType)
+        {
+            string[] paramNames = null;
+
+            object[] paramValues = null;
+
+            IDataParameter[] paramList = null;
+
+            try
+            {
+                paramNames = new string[] { "@ApptTypeId", "@ApptType" };
+
+                paramValues = new object[] { ApptTypeId, ApptType };
+
+                paramList = databaseObj.BuildParameterArray(paramNames, paramValues);
+
+                return databaseObj.UpdateData(StoreProcedure.APPOINTMENT_TYPE_UPDATE, Enumerations.Command_Type.StoredProcedure, paramList);
+            }
+            finally
+            {
+                paramNames = null;
+
+                paramValues = null;
+
+                paramList = null;
+            }
+        }
+
+        public int AddAppointmentType(string AppointmentType)
+        {
+            string[] paramNames = null;
+
+            object[] paramValues = null;
+
+            IDataParameter[] paramList = null;
+
+            try
+            {
+                paramNames = new string[] { "@AppointmentType" };
+
+                paramValues = new object[] { AppointmentType };
+
+                paramList = databaseObj.BuildParameterArray(paramNames, paramValues);
+
+                return databaseObj.InsertData(StoreProcedure.APPOINTMENT_TYPE_INSERT, Enumerations.Command_Type.StoredProcedure, paramList);
             }
             finally
             {

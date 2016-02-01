@@ -301,6 +301,12 @@
                                 <asp:Label ID="lblAStatusId" runat="server" Text='<%# Bind("AStatus")%>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
+                         <asp:TemplateField HeaderText="Appt Type" Visible="true">
+                            <ItemStyle CssClass="itemstyle" Width="1%" />
+                            <ItemTemplate>
+                                <asp:Label ID="lblApptType" runat="server" Text='<%# Bind("ApptType")%>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
                         <asp:TemplateField HeaderText="Astatus" Visible="false">
                             <ItemStyle CssClass="itemstyle" Width="1%" />
                             <ItemTemplate>
